@@ -1325,6 +1325,10 @@ html.tablet .ui-to-top {
 	}
 }
 
+.rd-navbar {
+	background: #222d4f;
+}
+
 .rd-navbar-wrap, .rd-navbar,
 .rd-menu,
 .rd-navbar-nav,
@@ -1342,7 +1346,6 @@ html.tablet .ui-to-top {
 	left: 0;
 	right: 0;
 	z-index: 1080;
-	background: #222d4f;
 }
 
 .rd-navbar,
