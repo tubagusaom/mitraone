@@ -673,7 +673,7 @@ body.vjs-full-window {
 		cursor: pointer;
 		opacity: 1;
 		border: 0.06666em solid #fff;
-		background-color: #f47f20;
+		background-color: #204198;
 		/* background-color: rgba(43, 51, 63, 0.7); */
 		border-radius: 0.3em;
 		transition: all 0.4s;
@@ -690,7 +690,7 @@ body.vjs-full-window {
 .video-js:hover .vjs-big-play-button,
 .video-js .vjs-big-play-button:focus {
 	border-color: #fff;
-	background-color: #204198;
+	background-color: #f47f20;
 	/* background-color: rgba(115, 133, 159, 0.5); */
 	transition: all 0s;
 }
@@ -1308,6 +1308,7 @@ body.vjs-full-window {
 	background-size: contain;
 	/* background-color: #000000; */
 	/* background-color: rgba(255, 255, 255, 0.1); */
+	background-color: #fff;
 	/* border: 1px solid rgba(255, 255, 255, 0.3); */
 	/* border-radius: 8px; */
 	cursor: pointer;

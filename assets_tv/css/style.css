@@ -899,7 +899,8 @@ html [class*='section-'].section-bottom-0 {
 }
 
 .bg-default {
-	background-color: #222d4f;
+	/* background-color: #222d4f; */
+	background-color: whitesmoke;
 }
 
 .bg-default:not([style*="background-"]) + .bg-default:not([style*="background-"]) {

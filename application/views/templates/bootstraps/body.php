@@ -23,7 +23,7 @@
 
                     <video
                       id="hls-example"
-                      class="video-js vjs-default-skin video-bg"
+                      class="video-js vjs-default-skin"
                       width="2000"
                       height="400"
                       controls
