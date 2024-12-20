@@ -1342,7 +1342,7 @@ html.tablet .ui-to-top {
 	left: 0;
 	right: 0;
 	z-index: 1080;
-	background-color: #222d4f;
+	background: #222d4f;
 }
 
 .rd-navbar,
