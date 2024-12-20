@@ -30,8 +30,8 @@
   </body>
 
   <script>
-    var player1 = videojs("hls-example-1");
-    player1.play();
+    // var player_1 = videojs("hls-example-1");
+    // player_1.play();
   </script>
 
 

@@ -80,7 +80,7 @@
                     <video
                       id="hls-example-2"
                       class="video-js vjs-default-skin"
-                      width="700"
+                      width="2000"
                       height="400"
                       controls
                       poster="<?=base_url()?>assets_tv/images/tv/poster_video.png"
@@ -98,7 +98,7 @@
                     <video
                       id="hls-example-3"
                       class="video-js vjs-default-skin"
-                      width="700"
+                      width="2000"
                       height="400"
                       controls
                       poster="<?=base_url()?>assets_tv/images/tv/poster_video.png"
@@ -116,7 +116,7 @@
                     <video
                       id="hls-example-4"
                       class="video-js vjs-default-skin"
-                      width="700"
+                      width="2000"
                       height="400"
                       controls
                       poster="<?=base_url()?>assets_tv/images/tv/poster_video.png"

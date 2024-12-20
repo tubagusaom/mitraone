@@ -3,8 +3,6 @@ var player2 = videojs("hls-example-2");
 var player3 = videojs("hls-example-3");
 var player4 = videojs("hls-example-4");
 
-
-
 $('#myAnchor-1').click(function(){
     // var buttonhref = $('#myAnchor-1').attr('href');
     // alert(buttonhref);
@@ -30,6 +28,9 @@ $('#myAnchor-2').click(function(){
     player3.pause();
     player4.pause();
 
+    // player2.addClass("video-bg");
+    player2.removeClass('video-bg');
+
     $('#myAnchor-1').removeClass("active");
     $('#myAnchor-1').removeClass("show");
     $('#myAnchor-3').removeClass("active");
@@ -45,6 +46,9 @@ $('#myAnchor-3').click(function(){
     // player3.play();
     player4.pause();
 
+    // player3.addClass("video-bg");
+    player3.removeClass('video-bg');
+
     $('#myAnchor-1').removeClass("active");
     $('#myAnchor-1').removeClass("show");
     $('#myAnchor-2').removeClass("active");
@@ -59,6 +63,9 @@ $('#myAnchor-4').click(function(){
     player2.pause();
     player3.pause();
     // player4.play();
+
+    // player4.addClass("video-bg");
+    player4.removeClass('video-bg');
 
     $('#myAnchor-1').removeClass("active");
     $('#myAnchor-1').removeClass("show");
