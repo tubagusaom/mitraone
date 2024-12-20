@@ -1,3 +1,50 @@
+      
+<style>
+
+        .fixedContainer {
+          position: fixed;
+          width: 600px;
+          left: 50%;
+          top: 83px;
+          z-index: 10;
+        }
+
+@media (max-width: 388px) {
+  .fixedContainer {
+    margin-left: -194px;
+  }
+}
+@media (min-width: 389px) {
+  .fixedContainer {
+    margin-left: -300px;
+  }
+}
+
+
+        
+</style>
+
+
+<!-- <section class="section section-tb">
+      
+      <div class="fixedContainer tab-content">
+        <video
+          id="hls-example"
+          class="video-js vjs-default-skin"
+          width="2000"
+          height="400"
+          controls
+          poster="<?=base_url()?>assets_tv/images/tv/poster_video.png"
+        >
+          <source
+            type="application/x-mpegURL"
+            src="https://b1world.beritasatumedia.com/Beritasatu/B1World_1280x720.m3u8?aux=eroz_brebes.m3u8"
+          />
+        </video>
+      </div>
+
+</section> -->
+
 <section class="section section-tb bg-default text-center">
         <div id="ctnHeader" class="container">
           <!-- <h6 class="text-gray-600">TV streaming from multiple channels</h6>
@@ -77,15 +124,52 @@
               </div> -->
 
             </div>
+
+            <!-- <div class="container" style="padding-top: 20px;">
+              <div class="row">
+                <div class="col-md-3">
+                  <a class="nav-link" href="#tabs-2-1" data-toggle="tab">
+                    <div class="nav-video">
+                      <figure class="nav-video-figure"><img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt="" width="140" height="40"/></figure>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-3">
+                <a class="nav-link" href="#tabs-2-1" data-toggle="tab">
+                    <div class="nav-video">
+                      <figure class="nav-video-figure"><img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt="" width="140" height="40"/></figure>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-3">
+                <a class="nav-link" href="#tabs-2-1" data-toggle="tab">
+                    <div class="nav-video">
+                      <figure class="nav-video-figure"><img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt="" width="140" height="40"/></figure>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-3">
+                <a class="nav-link" href="#tabs-2-1" data-toggle="tab">
+                    <div class="nav-video">
+                      <figure class="nav-video-figure"><img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt="" width="140" height="40"/></figure>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div> -->
+
             <div class="scroll-wrap">
+              
               <!--Nav tabs-->
               <ul class="nav nav-tabs">
 
-                <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-2-1" data-toggle="tab">
-                  <div class="nav-video">
-                    <figure class="nav-video-figure"><img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt="" width="140" height="40"/></figure>
-                    <h6 class="nav-video-title">Investor Daily TV</h6>
-                  </div></a>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" href="#tabs-2-1" data-toggle="tab">
+                    <div class="nav-video">
+                      <figure class="nav-video-figure"><img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt="" width="140" height="40"/></figure>
+                      <h6 class="nav-video-title">Investor Daily TV</h6>
+                    </div>
+                  </a>
                 </li>
 
                 <!-- <li class="nav-item" role="presentation"><a class="nav-link active" href="#tabs-2-1" data-toggle="tab">

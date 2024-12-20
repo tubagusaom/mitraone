@@ -46,6 +46,30 @@
 
     <!-- <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet" /> -->
 
+    <style>
+        .li-svg {
+            width: 25px;
+            margin-left: 15px;
+            padding: 0;
+        }
+
+        .image-hover {
+            width: 16px;
+            height: 19px;
+            margin: 2px;
+            background-image: url('<?=base_url()?>assets_tv/images/tv/icon/tiktok_white.png');
+            background-size: cover;
+            /* transition: background-image 0.5s ease-in-out; */
+        }
+
+        .image-hover:hover {
+            background-image: url('<?=base_url()?>assets_tv/images/tv/icon/tiktok_circle.png');
+            width: 24px;
+            height: 24px;
+            margin: 0;
+        }
+    </style>
+
 </head>
 
 
@@ -107,29 +131,6 @@
                 <ul class="socialite-list">
                     <li><a class="icon novi-icon socialite fa-facebook" href="https://www.facebook.com/mitraonetv" target="_blank"></a></li>
                     <li><a class="icon novi-icon socialite fa-instagram" href="https://www.instagram.com/mitraonetv_official/" target="_blank"></a></li>
-                    <!-- <li><a class="icon novi-icon socialite fa-youtube" href="https://www.youtube.com/@MitraoneTV" target="_blank"></a></li> -->
-
-                    <style>
-                        .li-svg {
-                            width: 25px;
-                            margin-left: 15px;
-                            padding: 0;
-                        }
-                        .image-hover {
-                            width: 16px;
-                            height: 19px;
-                            margin: 2px;
-                            background-image: url('<?=base_url()?>assets_tv/images/tv/icon/tiktok_white.png');
-                            background-size: cover;
-                            /* transition: background-image 0.5s ease-in-out; */
-                        }
-                        .image-hover:hover {
-                            background-image: url('<?=base_url()?>assets_tv/images/tv/icon/tiktok_circle.png');
-                            width: 24px;
-                            height: 24px;
-                            margin: 0;
-                        }
-                    </style>
 
                     <li class="li-svg">
                         <a href="https://www.tiktok.com/@mitraonetv" target="_blank">
@@ -142,12 +143,17 @@
                             <div class="image-hover"></div>
                         </a>
                     </li>
+
                     <li><a class="icon novi-icon socialite fa-youtube" href="https://www.youtube.com/@MitraoneTV" target="_blank"></a></li>
                 </ul>
                 </div>
             </div>
+
             </div>
         </nav>
+
+        
+
         </div>
     </header>
 
