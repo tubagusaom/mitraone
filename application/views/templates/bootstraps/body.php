@@ -1,30 +1,3 @@
-      
-<style>
-
-        .fixedContainer {
-          position: fixed;
-          width: 600px;
-          left: 50%;
-          top: 83px;
-          z-index: 10;
-        }
-
-@media (max-width: 388px) {
-  .fixedContainer {
-    margin-left: -194px;
-  }
-}
-@media (min-width: 389px) {
-  .fixedContainer {
-    margin-left: -300px;
-  }
-}
-
-
-        
-</style>
-
-
 <!-- <section class="section section-tb">
       
       <div class="fixedContainer tab-content">
@@ -125,89 +98,53 @@
 
             </div>
 
-            <!-- <div class="container" style="padding-top: 20px;">
-              <div class="row">
-                <div class="col-md-3">
-                  <a class="nav-link" href="#tabs-2-1" data-toggle="tab">
-                    <div class="nav-video">
-                      <figure class="nav-video-figure"><img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt="" width="140" height="40"/></figure>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-3">
-                <a class="nav-link" href="#tabs-2-1" data-toggle="tab">
-                    <div class="nav-video">
-                      <figure class="nav-video-figure"><img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt="" width="140" height="40"/></figure>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-3">
-                <a class="nav-link" href="#tabs-2-1" data-toggle="tab">
-                    <div class="nav-video">
-                      <figure class="nav-video-figure"><img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt="" width="140" height="40"/></figure>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-3">
-                <a class="nav-link" href="#tabs-2-1" data-toggle="tab">
-                    <div class="nav-video">
-                      <figure class="nav-video-figure"><img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt="" width="140" height="40"/></figure>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div> -->
-
-            <div class="scroll-wrap">
-              
-              <!--Nav tabs-->
-              <ul class="nav nav-tabs">
-
-                <li class="nav-item" role="presentation">
-                  <a class="nav-link" href="#tabs-2-1" data-toggle="tab">
-                    <div class="nav-video">
-                      <figure class="nav-video-figure"><img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt="" width="140" height="40"/></figure>
-                      <h6 class="nav-video-title">Investor Daily TV</h6>
-                    </div>
-                  </a>
-                </li>
-
-                <!-- <li class="nav-item" role="presentation"><a class="nav-link active" href="#tabs-2-1" data-toggle="tab">
-                    <div class="nav-video">
-                      <figure class="nav-video-figure"><img src="https://mitraonetv.com/assets_tv/images/live_streaming.png" alt="" width="140" height="40"/>
-                      </figure>
-                      <h6 class="nav-video-title">Achmad widjaja - Issues Gas National</h6>
-                    </div></a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-2-2" data-toggle="tab">
-                    <div class="nav-video">
-                      <figure class="nav-video-figure"><img src="https://mitraonetv.com/assets_tv/images/live_streaming.png" alt="" width="140" height="40"/>
-                      </figure>
-                      <h6 class="nav-video-title">Achmad widjaja - Polemik harga gas Industry/h6>
-                    </div></a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-2-3" data-toggle="tab">
-                    <div class="nav-video">
-                    <figure class="nav-video-figure"><img src="https://mitraonetv.com/assets_tv/images/live_streaming.png" alt="" width="140" height="40"/>
-                    </figure>
-                      <h6 class="nav-video-title">Achmad widjaja - Energy Security for Industry</h6>
-                    </div></a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-2-4" data-toggle="tab">
-                    <div class="nav-video">
-                      <figure class="nav-video-figure"><img src="https://mitraonetv.com/assets_tv/images/live_streaming.png" alt="" width="140" height="40"/>
-                      </figure>
-                      <h6 class="nav-video-title">Slank - Aktor Intelektual</h6>
-                    </div></a></li> -->
-
-                <!--<li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-2-5" data-toggle="tab">-->
-                <!--    <div class="nav-video">-->
-                <!--      <figure class="nav-video-figure"><img src="<?= base_url() ?>assets_tv/images/live_streaming.png" alt="" width="140" height="40"/>-->
-                <!--      </figure>-->
-                <!--      <h6 class="nav-video-title">Slank - Full Moon Blues</h6>-->
-                <!--    </div></a></li>-->
-              </ul>
-            </div>
+            
           </div>
         </div>
       </section>
+      
+      <!-- <section class="section" data-lightgallery="group"> -->
+      <div class="bg-column" role="presentation">
+            <div class="row">
+              <div class="column_tb">
+                <a class="nav-link" href="#tabs-2-1" data-toggle="tab">
+                  <div class="nav-video">
+                    <figure class="nav-video-figure">
+                      <img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt="" width="140" height="40"/>
+                    </figure>
+                  </div>
+                </a>
+              </div>
+              <div class="column_tb">
+                <a class="nav-link" href="#tabs-2-2" data-toggle="tab">
+                  <div class="nav-video">
+                    <figure class="nav-video-figure">
+                      <img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt=""/>
+                    </figure>
+                  </div>
+                </a>
+              </div>
+              <div class="column_tb">
+                <a class="nav-link" href="#tabs-2-3" data-toggle="tab">
+                  <div class="nav-video">
+                    <figure class="nav-video-figure">
+                      <img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt="" width="140" height="40"/>
+                    </figure>
+                  </div>
+                </a>
+              </div>
+              <div class="column_tb">
+                <a class="nav-link" href="#tabs-2-4" data-toggle="tab">
+                  <div class="nav-video">
+                    <figure class="nav-video-figure">
+                      <img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt="" width="140" height="40"/>
+                    </figure>
+                  </div>
+                </a>
+              </div>
+            </div>
+            </div>
+            <!-- </section> -->
 
       <!--<section class="section" data-lightgallery="group">-->
       <!--  <div class="row no-gutters">-->
