@@ -40,6 +40,16 @@ body {
 	/* border: 1px solid #000; */
 }
 
+.nav-item {
+    float: none;
+    border: 0;
+    cursor: pointer;
+    transition: .33s all ease;
+}
+.nav-item .active {
+    cursor: not-allowed;
+}
+
 .row:after {
 	content: "";
 	display: table;
@@ -53,7 +63,7 @@ body {
 @media (min-width: 481px) {
     .nav-video {
         border-radius: 0px 15px 0px 15px!important;
-        background: #ffeee0!important;
+        background: #fff!important;
         border: 2px solid #c9d8ff!important;
     }
 }
@@ -69,4 +79,10 @@ body {
 	height: 77px!important;
     border: 1px solid #c9d8ff!important;
     border-radius: 5px!important;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    background-color: #ffeee0!important;
+    border-color: #dee2e6 #dee2e6 #fff;
+    border-radius: 0px 15px 0px 15px!important;
 }

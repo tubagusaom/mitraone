@@ -42,7 +42,7 @@
                     <!-- <iframe width="886" height="668" src="https://sindikasi.inews.id/embed/video/YWdlbnQ9ZGVza3RvcCZ1cmw9aHR0cHMlM0ElMkYlMkZlbWJlZC5yY3RpcGx1cy5jb20lMkZsaXZlJTJGcmN0aSUyRmluZXdzaWQmaGVpZ2h0PTEwMCUyNSZ3aWR0aD0xMDAlMjU=" allowfullscreen=""></iframe> -->
 
                     <video
-                      id="hls-example"
+                      id="hls-example-1"
                       class="video-js vjs-default-skin"
                       width="2000"
                       height="400"
@@ -75,76 +75,130 @@
                 </div>
               </div>
 
-              <!-- <div class="tab-pane fade" id="tabs-2-2">
-                <div class="entry-video embed-responsive embed-responsive-16by9">
-                  <iframe width="886" height="668" src="//www.youtube.com/embed/-f6TJnoWAQo?si=shnFSKL_UJm7_ssC" allowfullscreen=""></iframe>
+              <div class="tab-pane" id="tabs-2-2">
+                <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9 ">
+                    <video
+                      id="hls-example-2"
+                      class="video-js vjs-default-skin"
+                      width="700"
+                      height="400"
+                      controls
+                      poster="<?=base_url()?>assets_tv/images/tv/poster_video.png"
+                    >
+                      <source
+                        type="application/x-mpegURL"
+                        src="http://103.140.188.211:1935/radarlampungtv/myStream/playlist.m3u8"
+                      />
+                    </video>
                 </div>
               </div>
-              <div class="tab-pane fade" id="tabs-2-3">
-                <div class="entry-video embed-responsive embed-responsive-16by9">
-                  <iframe width="886" height="668" src="//www.youtube.com/embed/CeegDDDyzPI?si=bn5Z43yPWibq70U4" allowfullscreen=""></iframe>
+
+              <div class="tab-pane" id="tabs-2-3">
+                <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9 ">
+                    <video
+                      id="hls-example-3"
+                      class="video-js vjs-default-skin"
+                      width="700"
+                      height="400"
+                      controls
+                      poster="<?=base_url()?>assets_tv/images/tv/poster_video.png"
+                    >
+                      <source
+                        type="application/x-mpegURL"
+                        src="https://v10.siar.us/rctv/live/playlist.m3u8"
+                      />
+                    </video>
                 </div>
               </div>
-              <div class="tab-pane fade" id="tabs-2-4">
-                <div class="entry-video embed-responsive embed-responsive-16by9">
-                  <iframe width="886" height="668" src="//www.youtube.com/embed/7ONfxObUIOU?si=hOqiKCOtnKBeZ4nU" allowfullscreen=""></iframe>
+
+              <div class="tab-pane" id="tabs-2-4">
+                <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9 ">
+                    <video
+                      id="hls-example-4"
+                      class="video-js vjs-default-skin"
+                      width="700"
+                      height="400"
+                      controls
+                      poster="<?=base_url()?>assets_tv/images/tv/poster_video.png"
+                    >
+                      <source
+                        type="application/x-mpegURL"
+                        src="https://streams.spacetoon.com/live/stchannel/smil:livesmil.smil/playlist.m3u8"
+                      />
+                    </video>
                 </div>
               </div>
-              <div class="tab-pane fade" id="tabs-2-5">
-                <div class="entry-video embed-responsive embed-responsive-16by9">
-                  <iframe width="886" height="668" src="//www.youtube.com/embed/NtsMB1YHvIQ?si=GY6gXY9N3bbp2hnN" allowfullscreen=""></iframe>
-                </div>
-              </div> -->
 
             </div>
-
-            
           </div>
         </div>
       </section>
       
       <!-- <section class="section" data-lightgallery="group"> -->
-      <div class="bg-column" role="presentation">
+        <div class="scroll-wrap">
+        <div class="bg-column">
             <div class="row">
               <div class="column_tb">
-                <a class="nav-link" href="#tabs-2-1" data-toggle="tab">
-                  <div class="nav-video">
-                    <figure class="nav-video-figure">
-                      <img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt=""/>
-                    </figure>
+                <div class="nav nav-tabs">
+                  <div class="nav-item" role="presentation">
+                    <a id="myAnchor-1" class="nav-link active" href="#tabs-2-1" data-toggle="tab">
+                      <div class="nav-video">
+                        <figure class="nav-video-figure">
+                          <img src="<?=base_url()?>assets_tv/images/tv/id_tv.png" alt=""/>
+                        </figure>
+                      </div>
+                    </a>
                   </div>
-                </a>
+                </div>
+
               </div>
-              <div class="column_tb">
-                <a class="nav-link" href="#tabs-2-2" data-toggle="tab">
-                  <div class="nav-video">
-                    <figure class="nav-video-figure">
-                      <img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt=""/>
-                    </figure>
+
+              <div class="column_tb" role="presentation">
+                <div class="nav nav-tabs">
+                  <div class="nav-item" role="presentation">
+                    <a id="myAnchor-2" class="nav-link" href="#tabs-2-2" data-toggle="tab">
+                      <div class="nav-video">
+                        <figure class="nav-video-figure">
+                          <img src="<?=base_url()?>assets_tv/images/tv/radar_lampung.jpg" alt=""/>
+                        </figure>
+                      </div>
+                    </a>
                   </div>
-                </a>
+                </div>
               </div>
-              <div class="column_tb">
-                <a class="nav-link" href="#tabs-2-3" data-toggle="tab">
-                  <div class="nav-video">
-                    <figure class="nav-video-figure">
-                      <img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt=""/>
-                    </figure>
+
+              <div class="column_tb" role="presentation">
+                <div class="nav nav-tabs">
+                  <div class="nav-item" role="presentation">
+                    <a id="myAnchor-3" class="nav-link" href="#tabs-2-3" data-toggle="tab">
+                      <div class="nav-video">
+                        <figure class="nav-video-figure">
+                          <img src="<?=base_url()?>assets_tv/images/tv/rctv.png" alt=""/>
+                        </figure>
+                      </div>
+                    </a>
                   </div>
-                </a>
+                </div>
               </div>
-              <div class="column_tb">
-                <a class="nav-link" href="#tabs-2-4" data-toggle="tab">
-                  <div class="nav-video">
-                    <figure class="nav-video-figure">
-                      <img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt=""/>
-                    </figure>
+
+              <div class="column_tb" role="presentation">
+                <div class="nav nav-tabs">
+                  <div class="nav-item" role="presentation">
+                    <a id="myAnchor-4" class="nav-link" href="#tabs-2-4" data-toggle="tab">
+                      <div class="nav-video">
+                        <figure class="nav-video-figure">
+                          <img src="<?=base_url()?>assets_tv/images/tv/spacetoon.png" alt=""/>
+                        </figure>
+                      </div>
+                    </a>
                   </div>
-                </a>
+                </div>
               </div>
+
             </div>
-            </div>
-            <!-- </section> -->
+          </div>
+          </div>
+          <!-- </section> -->
 
       <!--<section class="section" data-lightgallery="group">-->
       <!--  <div class="row no-gutters">-->
