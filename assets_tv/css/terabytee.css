@@ -48,9 +48,14 @@ body {
 
 .nav-video {
 	padding: 3px 0px 8px 0!important;
-    border-radius: 0px 15px 0px 15px!important;
-    background: #ffeee0!important;
-	border: 2px solid #c9d8ff!important;
+}
+
+@media (min-width: 481px) {
+    .nav-video {
+        border-radius: 0px 15px 0px 15px!important;
+        background: #ffeee0!important;
+        border: 2px solid #c9d8ff!important;
+    }
 }
 
 .nav-video-figure {
