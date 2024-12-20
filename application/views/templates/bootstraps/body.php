@@ -168,7 +168,7 @@
           <div class="row row-125">
             <div class="col-md-6 col-lg-4">
               <article class="post-classic">
-                <figure class="post-classic-figure"><a href="#"><img src="https://mitraonetv.com/assets_tv/images/breaking_news.png" alt="" width="346" height="130"/></a></figure>
+                <figure class="post-classic-figure"><a href="#"><img src="<?=base_url()?>assets_tv/images/breaking_news.png" alt="" width="346" height="130"/></a></figure>
                 <div class="post-classic-content">
                   <time class="post-classic-time" datetime="2019-09-19">Aug 17, 2024</time>
                   <h5 class="post-classic-title"><a href="#">Issues Gas National</a></h5><a class="post-classic-link" href="#">read more</a>
@@ -177,7 +177,7 @@
             </div>
             <div class="col-md-6 col-lg-4">
               <article class="post-classic">
-                <figure class="post-classic-figure"><a href="#"><img src="https://mitraonetv.com/assets_tv/images/breaking_news.png" alt="" width="346" height="130"/></a></figure>
+                <figure class="post-classic-figure"><a href="#"><img src="<?=base_url()?>assets_tv/images/breaking_news.png" alt="" width="346" height="130"/></a></figure>
                 <div class="post-classic-content">
                   <time class="post-classic-time" datetime="2019-09-19">Aug 17, 2024</time>
                   <h5 class="post-classic-title"><a href="#">Industry gas price polemic</a></h5><a class="post-classic-link" href="#">read more</a>
@@ -186,7 +186,7 @@
             </div>
             <div class="col-md-6 col-lg-4">
               <article class="post-classic">
-                <figure class="post-classic-figure"><a href="#"><img src="https://mitraonetv.com/assets_tv/images/breaking_news.png" alt="" width="346" height="130"/></a></figure>
+                <figure class="post-classic-figure"><a href="#"><img src="<?=base_url()?>assets_tv/images/breaking_news.png" alt="" width="346" height="130"/></a></figure>
                 <div class="post-classic-content">
                   <time class="post-classic-time" datetime="2019-09-19">Aug 17, 2024</time>
                   <h5 class="post-classic-title"><a href="#">Energy Security for Industry</a></h5><a class="post-classic-link" href="#">read more</a>
