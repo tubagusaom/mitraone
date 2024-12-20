@@ -1325,24 +1325,8 @@ html.tablet .ui-to-top {
 	}
 }
 
-.svg-icon {
-	fill: white;
-	margin-top: 5px;
-	width: 17px;
-	height: 17px;
-}
-
-.svg-icon:hover {
-	fill: #4ac4cf;
-}
-.li-svg:hover {
-	/* position: relative; */
-	background-color: #ffffff;
-	border-radius: 50%;
-	width: 25px;
-	height: 25px;
-	text-align: center;
-	margin: 2px;
+.li-svg {
+	margin-left: 15px;
 }
 
 .rd-navbar-classic {

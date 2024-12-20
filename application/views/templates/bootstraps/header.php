@@ -108,11 +108,36 @@
                     <li><a class="icon novi-icon socialite fa-facebook" href="https://www.facebook.com/mitraonetv" target="_blank"></a></li>
                     <li><a class="icon novi-icon socialite fa-instagram" href="https://www.instagram.com/mitraonetv_official/" target="_blank"></a></li>
                     <!-- <li><a class="icon novi-icon socialite fa-youtube" href="https://www.youtube.com/@MitraoneTV" target="_blank"></a></li> -->
+
+                    <style>
+                        .li-svg {
+                            margin-left: 15px;
+                        }
+                        .image-hover {
+                            width: 16px;
+                            height: 19px;
+                            margin: 2px;
+                            background-image: url('<?=base_url()?>assets_tv/images/tv/icon/tiktok_white.png');
+                            background-size: cover;
+                            /* transition: background-image 0.5s ease-in-out; */
+                        }
+                        .image-hover:hover {
+                            background-image: url('<?=base_url()?>assets_tv/images/tv/icon/tiktok_circle.png');
+                            width: 24px;
+                            height: 24px;
+                            margin: 0;
+                        }
+                    </style>
+
                     <li class="li-svg">
-                        <a href="https://www.tiktok.com/@mitraonetv" target="_blank">
-                            <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <a class="a-svg" href="https://www.tiktok.com/@mitraonetv" target="_blank">
+                            <!-- <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                 <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/>
-                            </svg>
+                            </svg> -->
+                            <!-- <img class="tiktok-white" src="<?=base_url()?>assets_tv/images/tv/icon/tiktok_white.png" alt="">
+                            <img class="tiktok-hover" src="<?=base_url()?>assets_tv/images/tv/icon/tiktok_hover.png" alt=""> -->
+
+                            <div class="image-hover"></div>
                         </a>
                     </li>
                     <li><a class="icon novi-icon socialite fa-youtube" href="https://www.youtube.com/@MitraoneTV" target="_blank"></a></li>
