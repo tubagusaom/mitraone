@@ -1325,8 +1325,9 @@ html.tablet .ui-to-top {
 	}
 }
 
-.rd-navbar {
+.rd-navbar-classic {
 	background: #222d4f;
+	/* background: red; */
 }
 
 .rd-navbar-wrap, .rd-navbar,
