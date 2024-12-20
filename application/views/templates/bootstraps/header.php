@@ -111,7 +111,9 @@
 
                     <style>
                         .li-svg {
+                            width: 25px;
                             margin-left: 15px;
+                            padding: 0;
                         }
                         .image-hover {
                             width: 16px;
@@ -130,7 +132,7 @@
                     </style>
 
                     <li class="li-svg">
-                        <a class="a-svg" href="https://www.tiktok.com/@mitraonetv" target="_blank">
+                        <a href="https://www.tiktok.com/@mitraonetv" target="_blank">
                             <!-- <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                 <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/>
                             </svg> -->
