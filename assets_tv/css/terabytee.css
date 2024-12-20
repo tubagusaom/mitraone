@@ -49,11 +49,15 @@ body {
 	border: 2px solid #c9d8ff;
 }
 
-/* .nav-video-figure {
-	height: 35px;
-} */
+.nav-video-figure {
+	min-width: 77px;
+    border: 1px solid #c9d8ff;
+    border-radius: 5px 0 5px 0;
+}
 
 .nav-video-figure img {
-	width: 77px;
+    width: 77px;
 	height: 77px;
+    border: 1px solid #c9d8ff;
+    border-radius: 5px;
 }

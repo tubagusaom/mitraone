@@ -110,7 +110,7 @@
                 <a class="nav-link" href="#tabs-2-1" data-toggle="tab">
                   <div class="nav-video">
                     <figure class="nav-video-figure">
-                      <img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt="" width="140" height="40"/>
+                      <img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt=""/>
                     </figure>
                   </div>
                 </a>
@@ -128,7 +128,7 @@
                 <a class="nav-link" href="#tabs-2-3" data-toggle="tab">
                   <div class="nav-video">
                     <figure class="nav-video-figure">
-                      <img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt="" width="140" height="40"/>
+                      <img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt=""/>
                     </figure>
                   </div>
                 </a>
@@ -137,7 +137,7 @@
                 <a class="nav-link" href="#tabs-2-4" data-toggle="tab">
                   <div class="nav-video">
                     <figure class="nav-video-figure">
-                      <img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt="" width="140" height="40"/>
+                      <img src="https://mitraonetv.com/assets_tv/images/tv/id_tv.png" alt=""/>
                     </figure>
                   </div>
                 </a>
