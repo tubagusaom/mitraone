@@ -135,7 +135,6 @@
       </section>
       
       <!-- <section class="section" data-lightgallery="group"> -->
-        <div class="scroll-wrap">
         <div class="bg-column">
             <div class="row">
               <div class="column_tb">
@@ -196,7 +195,6 @@
               </div>
 
             </div>
-          </div>
           </div>
           <!-- </section> -->
 
