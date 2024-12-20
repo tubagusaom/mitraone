@@ -4260,6 +4260,8 @@ h2 + .tabs-albums {
 .nav-video-figure {
 	position: relative;
 	min-width: 140px;
+	border: 1px solid #d8935a;
+	border-radius: 5px;
 }
 
 .nav-video-figure img {
@@ -4277,7 +4279,7 @@ h2 + .tabs-albums {
 	right: 0;
 	bottom: 0;
 	/* background-color: #4ac4cf; */
-	background-color: #222d4f;
+	/* background-color: #222d4f; */
 	transition: all 0.3s ease-in-out;
 }
 
@@ -4292,6 +4294,10 @@ h2 + .tabs-albums {
 
 	text-align: right;
     width: 860px;
+	color: #4ac4cf;
+}
+.nav-video-title:hover , .nav-video-title:focus {
+	color: #204198!important;
 }
 
 @media (min-width: 992px) {
