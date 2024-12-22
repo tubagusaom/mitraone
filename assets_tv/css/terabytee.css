@@ -120,3 +120,12 @@ body {
     /* place-items: center!important;
     margin: 0 20px 0 20px; */
 }
+
+.video-js .vjs-control-bar {
+	/* background-color: rgba(43, 51, 63, 0.7); */
+	background-color: #222d4f;
+}
+
+@media (min-width: 992px) {
+    
+}

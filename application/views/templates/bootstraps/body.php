@@ -83,11 +83,11 @@
                       width="2000"
                       height="400"
                       controls
-                      poster="<?=base_url()?>assets_tv/images/tv/poster_blue_radar_lampung.png"
+                      poster="<?=base_url()?>assets_tv/images/tv/poster_blue_rctv.png"
                     >
                       <source
                         type="application/x-mpegURL"
-                        src="http://103.140.188.211:1935/radarlampungtv/myStream/playlist.m3u8"
+                        src="https://v10.siar.us/rctv/live/playlist.m3u8"
                       />
                     </video>
                 </div>
@@ -101,11 +101,11 @@
                       width="2000"
                       height="400"
                       controls
-                      poster="<?=base_url()?>assets_tv/images/tv/poster_blue_rctv.png"
+                      poster="<?=base_url()?>assets_tv/images/tv/poster_blue_ugtv.png"
                     >
                       <source
                         type="application/x-mpegURL"
-                        src="https://v10.siar.us/rctv/live/playlist.m3u8"
+                        src="https://cdn.gunadarma.ac.id/streams/ugtv/ingestugtv.m3u8"
                       />
                     </video>
                 </div>
@@ -149,16 +149,15 @@
                     </a>
                   </div>
                 </div>
-
               </div>
 
               <div class="column_tb" role="presentation">
                 <div class="nav nav-tabs">
                   <div class="nav-item" role="presentation">
-                    <a id="myAnchor-2" class="nav-link" href="#tabs-2-2" data-toggle="tab">
+                    <a id="myAnchor-3" class="nav-link" href="#tabs-2-2" data-toggle="tab">
                       <div class="nav-video">
                         <figure class="nav-video-figure">
-                          <img src="<?=base_url()?>assets_tv/images/tv/radar_lampung.png" alt=""/>
+                          <img src="<?=base_url()?>assets_tv/images/tv/rctv.png" alt=""/>
                         </figure>
                       </div>
                     </a>
@@ -169,10 +168,10 @@
               <div class="column_tb" role="presentation">
                 <div class="nav nav-tabs">
                   <div class="nav-item" role="presentation">
-                    <a id="myAnchor-3" class="nav-link" href="#tabs-2-3" data-toggle="tab">
+                    <a id="myAnchor-2" class="nav-link" href="#tabs-2-3" data-toggle="tab">
                       <div class="nav-video">
                         <figure class="nav-video-figure">
-                          <img src="<?=base_url()?>assets_tv/images/tv/rctv.png" alt=""/>
+                          <img src="<?=base_url()?>assets_tv/images/tv/ugtv.png" alt=""/>
                         </figure>
                       </div>
                     </a>
