@@ -1,22 +1,3 @@
-<!-- <section class="section section-tb">
-      
-      <div class="fixedContainer tab-content">
-        <video
-          id="hls-example"
-          class="video-js vjs-default-skin"
-          width="2000"
-          height="400"
-          controls
-          poster="<?=base_url()?>assets_tv/images/tv/poster_video.png"
-        >
-          <source
-            type="application/x-mpegURL"
-            src="https://b1world.beritasatumedia.com/Beritasatu/B1World_1280x720.m3u8?aux=eroz_brebes.m3u8"
-          />
-        </video>
-      </div>
-
-</section> -->
 
 <section class="section section-tb bg-default text-center">
         <div id="ctnHeader" class="container">
@@ -32,6 +13,26 @@
                 $("#vinfo").text(api.engine.engineName + " engine playing " + video.type);
               }); });
             </script> -->
+
+            <div class="tab-column">
+              <div class="row">
+                <div class="column_tab_3">
+                  <a href="javascript:void(0)">
+                    <img style="float:left" src="<?=base_url()?>assets_tv/images/tv/energy_corner.png" alt=""/>
+                  </a>
+                </div>
+                <div class="column_tab_3">
+                  <a href="javascript:void(0)">
+                    <img class="image_center" src="<?=base_url()?>assets_tv/images/tv/mitra_corner.png" alt=""/>
+                  </a>
+                </div>
+                <div class="column_tab_3">
+                  <a href="javascript:void(0)">
+                    <img style="float:right" src="<?=base_url()?>assets_tv/images/tv/umkm_corner.png" alt=""/>
+                  </a>
+                </div>
+              </div>
+            </div>
 
             <div class="tab-content">
               <div class="tab-pane fade show active" id="tabs-2-1">
@@ -135,7 +136,7 @@
       </section>
       
       <!-- <section class="section" data-lightgallery="group"> -->
-        <div class="bg-column">
+        <div class="tab-column">
             <div class="row">
               <div class="column_tb">
                 <div class="nav nav-tabs">
