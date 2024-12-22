@@ -1,4 +1,5 @@
 
+      
       <footer class="section footer-classic bg-default">
         <div class="container">
           <div class="row row-15">
@@ -40,6 +41,16 @@
   <script>
     // var player_1 = videojs("hls-example-1");
     // player_1.play();
+
+    $('.column_tb').each(function(){
+      var keys = $(this).data('key');
+      var names = $(this).data('name');
+      var urls = $(this).data('url');
+      var posters = $(this).data('poster');
+      var logos = $(this).data('logo');
+      
+      $('#texter').before(logos);
+    });
   </script>
 
 

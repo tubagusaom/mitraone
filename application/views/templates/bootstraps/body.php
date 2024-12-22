@@ -77,7 +77,7 @@
               ?>
 
               <div class="tab-pane fade" id="tabs-2-<?=$key+1?>">
-                <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9 ">
+                <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9">
                     <video
                       id="hls-example-<?=$key+1?>"
                       class="video-js vjs-default-skin"
@@ -97,81 +97,7 @@
 
               <?php } ?>
 
-              <!-- <div class="tab-pane fade" id="tabs-2-1">
-                <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9 ">
-                    <video
-                      id="hls-example-1"
-                      class="video-js vjs-default-skin"
-                      width="2000"
-                      height="400"
-                      controls
-                      autoplay
-                      poster="<?=base_url()?>assets_tv/images/tv/poster_blue_idtv.png"
-                    >
-                      <source
-                        type="application/x-mpegURL"
-                        src="https://b1world.beritasatumedia.com/Beritasatu/B1World_1280x720.m3u8?aux=eroz_brebes.m3u8"
-                      />
-                    </video>
-                </div>
-              </div>
-
-              <div class="tab-pane" id="tabs-2-2">
-                <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9 ">
-                    <video
-                      id="hls-example-2"
-                      class="video-js vjs-default-skin"
-                      width="2000"
-                      height="400"
-                      controls
-                      autoplay
-                      poster="<?=base_url()?>assets_tv/images/tv/poster_blue_rctv.png"
-                    >
-                      <source
-                        type="application/x-mpegURL"
-                        src="https://v10.siar.us/rctv/live/playlist.m3u8"
-                      />
-                    </video>
-                </div>
-              </div>
-
-              <div class="tab-pane" id="tabs-2-3">
-                <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9 ">
-                    <video
-                      id="hls-example-3"
-                      class="video-js vjs-default-skin"
-                      width="2000"
-                      height="400"
-                      controls
-                      autoplay
-                      poster="<?=base_url()?>assets_tv/images/tv/poster_blue_ugtv.png"
-                    >
-                      <source
-                        type="application/x-mpegURL"
-                        src="https://cdn.gunadarma.ac.id/streams/ugtv/ingestugtv.m3u8"
-                      />
-                    </video>
-                </div>
-              </div>
-
-              <div class="tab-pane" id="tabs-2-4">
-                <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9 ">
-                    <video
-                      id="hls-example-4"
-                      class="video-js vjs-default-skin"
-                      width="2000"
-                      height="400"
-                      controls
-                      autoplay
-                      poster="<?=base_url()?>assets_tv/images/tv/poster_blue_spacetoon.png"
-                    >
-                      <source
-                        type="application/x-mpegURL"
-                        src="https://streams.spacetoon.com/live/stchannel/smil:livesmil.smil/playlist.m3u8"
-                      />
-                    </video>
-                </div>
-              </div> -->
+              <!-- <div id="texter"></div> -->
 
             </div>
           </div>
@@ -186,7 +112,7 @@
               foreach ($video_tv as $keys => $value_tv) {
             ?>  
             
-              <div class="column_tb" role="presentation">
+              <div class="column_tb" role="presentation" data-key="<?=$keys+1?>" data-name="<?=$value_tv->nama_video?>" data-url="<?=$value_tv->link_video?>" data-poster="<?=$value_tv->poster_video?>" data-logo="<?=$value_tv->logo_video?>">
                 <div class="nav nav-tabs">
                   <div class="nav-item" role="presentation">
                     <a id="myAnchor-<?=$keys+1?>" class="nav-link" href="#tabs-2-<?=$keys+1?>" data-toggle="tab">
