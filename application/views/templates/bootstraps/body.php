@@ -25,6 +25,7 @@
               @media (max-width: 512px) {
                   .column_tab_3 {
                       margin: 13px 0 -4 0 !important;
+                      padding: 0 15px!important;
                   }
               }
 
