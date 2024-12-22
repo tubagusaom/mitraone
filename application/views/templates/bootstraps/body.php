@@ -169,7 +169,7 @@
               <div class="column_tb" role="presentation">
                 <div class="nav nav-tabs">
                   <div class="nav-item" role="presentation">
-                    <a id="myAnchor-2" class="nav-link" href="#tabs-2-3" data-toggle="tab">
+                    <a id="myAnchor-3" class="nav-link" href="#tabs-2-3" data-toggle="tab">
                       <div class="nav-video">
                         <figure class="nav-video-figure">
                           <img src="<?=base_url()?>assets_tv/images/tv/ugtv.png" alt=""/>
