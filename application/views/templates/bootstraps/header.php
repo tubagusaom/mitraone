@@ -159,15 +159,15 @@
     }
 
     .nav-video-figure {
-        min-width: 77px!important;
+        min-width: 66px!important;
         border: 1px solid #c9d8ff!important;
         /* border-radius: 5px 0 5px 0!important; */
         border-radius: 5px!important;
     }
 
     .nav-video-figure img {
-        width: 77px!important;
-        height: 77px!important;
+        width: 66px!important;
+        height: 66px!important;
         border: 1px solid #c9d8ff!important;
         border-radius: 5px!important;
     }
