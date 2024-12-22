@@ -74,7 +74,7 @@
 <style>
 
     body {
-        background-color: #f5f5f5!important;
+        background-color: whitesmoke!important;
     }
 
     .section-tb {
@@ -93,7 +93,7 @@
 
 
     .bg-default {
-        background-color: #f5f5f5!important;
+        background-color: whitesmoke!important;
     }
 
     .tab-column {
