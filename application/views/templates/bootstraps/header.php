@@ -172,7 +172,7 @@
         border-radius: 5px!important;
     }
 
-    .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    .nav-tabs .nav-link.active {
         background-color: #ffeee0!important;
         border-color: #dee2e6 #dee2e6 #fff;
         /* border-radius: 0px 15px 0px 15px!important; */
