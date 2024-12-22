@@ -189,19 +189,25 @@
     .column_tb_3 {
         /* place-items: center!important; */
         width: 33%!important;
-        margin: 23px 0!important;
         /* border: 1px solid #000; */
     }
 
     @media (max-width: 512px) {
         .column_tb_3 {
             margin: 13px 0 -4 0 !important;
+            padding: 0px!important;
+        }
+    }
+
+    @media (min-width: 513px) {
+        .column_tb_3 {
+            margin: 23px 0!important;
             padding: 0 15px!important;
         }
     }
 
     .column_tb_3 img {
-        max-width: 95px!important;
+        max-width: 80px!important;
     }
 
     .image_center {
