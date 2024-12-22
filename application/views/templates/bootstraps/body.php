@@ -71,13 +71,34 @@
                   <iframe id="frame-3" class="frame-video" width="660" height="365" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
               </div>
+              
+              <?php
+                foreach ($video_tv as $key => $value) {
+              ?>
 
-              <div class="tab-pane fade" id="tabs-2-1">
+              <div class="tab-pane fade" id="tabs-2-<?=$key+1?>">
                 <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9 ">
-                  <!-- <iframe width="886" height="668" src="//www.youtube.com/embed/zraegy4MqRA?si=_F7cjsNc1Baa7Dq9" allowfullscreen=""></iframe> -->
-                  <!-- <iframe width="886" height="668" src="https://v10.siar.us/rctv/live/playlist.m3u8" allowfullscreen=""></iframe> -->
-                  <!-- <iframe width="886" height="668" src="https://sindikasi.inews.id/embed/video/YWdlbnQ9ZGVza3RvcCZ1cmw9aHR0cHMlM0ElMkYlMkZlbWJlZC5yY3RpcGx1cy5jb20lMkZsaXZlJTJGcmN0aSUyRmluZXdzaWQmaGVpZ2h0PTEwMCUyNSZ3aWR0aD0xMDAlMjU=" allowfullscreen=""></iframe> -->
+                    <video
+                      id="hls-example-<?=$key+1?>"
+                      class="video-js vjs-default-skin"
+                      width="2000"
+                      height="400"
+                      controls
+                      autoplay
+                      poster="<?=base_url()?>assets_tv/images/tv/<?=$value->poster_video?>"
+                    >
+                      <source
+                        type="application/x-mpegURL"
+                        src="<?=$value->link_video?>"
+                      />
+                    </video>
+                </div>
+              </div>
 
+              <?php } ?>
+
+              <!-- <div class="tab-pane fade" id="tabs-2-1">
+                <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9 ">
                     <video
                       id="hls-example-1"
                       class="video-js vjs-default-skin"
@@ -150,7 +171,7 @@
                       />
                     </video>
                 </div>
-              </div>
+              </div> -->
 
             </div>
           </div>
@@ -160,7 +181,28 @@
       <!-- <section class="section" data-lightgallery="group"> -->
         <div class="tab-column">
             <div class="row">
-              <div class="column_tb">
+
+            <?php
+              foreach ($video_tv as $keys => $value_tv) {
+            ?>  
+            
+              <div class="column_tb" role="presentation">
+                <div class="nav nav-tabs">
+                  <div class="nav-item" role="presentation">
+                    <a id="myAnchor-<?=$keys+1?>" class="nav-link" href="#tabs-2-<?=$keys+1?>" data-toggle="tab">
+                      <div class="nav-video">
+                        <figure class="nav-video-figure">
+                          <img src="<?=base_url()?>assets_tv/images/tv/<?=$value_tv->logo_video?>" alt=""/>
+                        </figure>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <?php } ?>
+
+              <!-- <div class="column_tb" role="presentation">
                 <div class="nav nav-tabs">
                   <div class="nav-item" role="presentation">
                     <a id="myAnchor-1" class="nav-link" href="#tabs-2-1" data-toggle="tab">
@@ -214,7 +256,7 @@
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
             </div>
           </div>

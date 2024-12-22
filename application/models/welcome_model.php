@@ -38,6 +38,13 @@ class Welcome_model extends MY_Model
   //     return $query->result();
   // }
 
+  function video_tv()
+  {
+    $this->db->from('t_video_tv');
+    $query = $this->db->get();
+    return $query->result();
+  }
+
   function provinsi()
   {
     $this->db->from('m_ro_provinsi');

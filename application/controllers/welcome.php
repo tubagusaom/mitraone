@@ -148,7 +148,9 @@
           // $data['kategori'] = $this->welcome_model->kategori();
           // $data['sub_kategori'] = $this->welcome_model->sub_kategori();
 
-          // var_dump($data['menu']); die();
+          $data['video_tv'] = $this->welcome_model->video_tv();
+
+          // var_dump($data['video_tv']); die();
 
           $this->load->view('templates/bootstraps/header', $data);
           $this->load->view('templates/bootstraps/body', $data);
