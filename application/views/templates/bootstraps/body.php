@@ -84,6 +84,7 @@
                       width="2000"
                       height="400"
                       controls
+                      autoplay
                       poster="<?=base_url()?>assets_tv/images/tv/poster_blue_idtv.png"
                     >
                       <source
