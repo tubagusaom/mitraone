@@ -49,14 +49,7 @@
             
 
             <div class="tab-content">
-
-            <style>
-              .frame-video{
-                display: block;
-                margin: 0 auto;
-              }
-            </style>
-
+              
               <div class="tab-pane show active" id="tabs-2-5">
                 <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9">
                   <iframe id="frame-1" class="frame-video" width="660" height="365" src="https://www.youtube.com/embed/xI0N1WUk840?si=I0YrWc9VnTA4iu0e" allowfullscreen=""></iframe>

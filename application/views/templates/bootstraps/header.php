@@ -219,6 +219,33 @@
     /* background-color: rgba(43, 51, 63, 0.7); */
         background-color: #222d4f;
     }
+
+    .frame-video{
+        display: block;
+        margin: 0 auto;
+    }
+    
+    @media (min-width: 768px) {
+        .frame-video {
+            width: 660px!important;
+            height: 365px!important;
+        }
+    }
+    
+    @media (min-width: 513px) and (max-width: 767px) {
+        .frame-video {
+            width: 450px!important;
+            height: 254px!important;
+        }
+    }
+    
+    @media (max-width: 512px) {
+        .frame-video {
+            margin-top: 20px;
+            width: 320px!important;
+            height: 185px!important;
+        }
+    }
 </style>
 
 </head>
