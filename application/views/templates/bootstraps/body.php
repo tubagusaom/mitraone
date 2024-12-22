@@ -18,7 +18,7 @@
               <div class="row">
                 <div class="column_tb_3">
                   <a href="javascript:void(0)">
-                    <img style="float:left" src="<?=base_url()?>assets_tv/images/tv/energy_corner.png" alt=""/>
+                    <img style="float:left!important" src="<?=base_url()?>assets_tv/images/tv/energy_corner.png" alt=""/>
                   </a>
                 </div>
                 <div class="column_tb_3">
@@ -28,7 +28,7 @@
                 </div>
                 <div class="column_tb_3">
                   <a href="javascript:void(0)">
-                    <img style="float:right" src="<?=base_url()?>assets_tv/images/tv/umkm_corner.png" alt=""/>
+                    <img style="float:right!important" src="<?=base_url()?>assets_tv/images/tv/umkm_corner.png" alt=""/>
                   </a>
                 </div>
               </div>
