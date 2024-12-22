@@ -15,7 +15,43 @@
             </script> -->
 
             <style>
-              .column_tab_3 {
+
+              .tab-column {
+                margin: 0 30px 0 30px!important;
+              }
+              @media (max-width: 560px) {
+                .tab-column {
+                  margin-top: -15px!important;
+                }
+              }
+              @media (min-width: 561px) {
+                .tab-column {
+                  padding-top: 10px!important;
+                }
+              }
+              @media (max-width: 900px) {
+                .tab-column {
+                  max-width: 93%!important;
+                }
+              }
+              @media (min-width: 901px) {
+                .tab-column {
+                  max-width: 100%!important;
+                }
+              }
+
+              .column_tb {
+                float: left!important;
+                place-items: center!important;
+                width: 25%!important;
+                padding-bottom: 5px!important;
+                /* background-color: rgba(34, 45, 79, 0.2); */
+                /* height: 300px; */
+                /* border: 1px solid #000; */
+              }
+
+
+              .column_tb_3 {
                   /* place-items: center!important; */
                   width: 33%!important;
                   margin: 23px 0!important;
@@ -23,13 +59,13 @@
               }
 
               @media (max-width: 512px) {
-                  .column_tab_3 {
+                  .column_tb_3 {
                       margin: 13px 0 -4 0 !important;
                       padding: 0 15px!important;
                   }
               }
 
-              .column_tab_3 img {
+              .column_tb_3 img {
                   max-width: 95px!important;
               }
 
@@ -41,17 +77,17 @@
 
             <div class="tab-column">
               <div class="row">
-                <div class="column_tab_3">
+                <div class="column_tb_3">
                   <a href="javascript:void(0)">
                     <img style="float:left" src="<?=base_url()?>assets_tv/images/tv/energy_corner.png" alt=""/>
                   </a>
                 </div>
-                <div class="column_tab_3">
+                <div class="column_tb_3">
                   <a href="javascript:void(0)">
                     <img class="image_center" src="<?=base_url()?>assets_tv/images/tv/mitra_corner.png" alt=""/>
                   </a>
                 </div>
-                <div class="column_tab_3">
+                <div class="column_tb_3">
                   <a href="javascript:void(0)">
                     <img style="float:right" src="<?=base_url()?>assets_tv/images/tv/umkm_corner.png" alt=""/>
                   </a>
