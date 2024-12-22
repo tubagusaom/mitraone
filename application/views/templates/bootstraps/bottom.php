@@ -39,7 +39,7 @@
     player3.pause();
     player4.pause();
     
-    $("#frame-1").attr("src","https://www.youtube.com/embed/xI0N1WUk840?si=I0YrWc9VnTA4iu0e");
+    $("#frame-1").attr("src","https://www.youtube.com/embed/xI0N1WUk840?autoplay=1&mute=1");
     $("#frame-2").attr("src","");
     $("#frame-3").attr("src","");
 
@@ -58,6 +58,15 @@
     $('#tabs-2-6').removeClass("show");
     $('#tabs-2-7').removeClass("active");
     $('#tabs-2-7').removeClass("show");
+    
+    $('#myAnchor-1').removeClass("active");
+    $('#myAnchor-1').removeClass("show");
+    $('#myAnchor-2').removeClass("active");
+    $('#myAnchor-2').removeClass("show");
+    $('#myAnchor-3').removeClass("active");
+    $('#myAnchor-3').removeClass("show");
+    $('#myAnchor-4').removeClass("active");
+    $('#myAnchor-4').removeClass("show");
 });
 $('#corner-2').click(function(){
     player1.pause();
@@ -66,7 +75,7 @@ $('#corner-2').click(function(){
     player4.pause();
     
     $("#frame-1").attr("src","");
-    $("#frame-2").attr("src","https://www.youtube.com/embed/nT6XENs5cA8?si=T_eK7M1rHoi_9YCg");
+    $("#frame-2").attr("src","https://www.youtube.com/embed/nT6XENs5cA8?autoplay=1&mute=1");
     $("#frame-3").attr("src","");
 
     $('#tabs-2-6').addClass("active");
@@ -84,6 +93,15 @@ $('#corner-2').click(function(){
     $('#tabs-2-5').removeClass("show");
     $('#tabs-2-7').removeClass("active");
     $('#tabs-2-7').removeClass("show");
+    
+    $('#myAnchor-1').removeClass("active");
+    $('#myAnchor-1').removeClass("show");
+    $('#myAnchor-2').removeClass("active");
+    $('#myAnchor-2').removeClass("show");
+    $('#myAnchor-3').removeClass("active");
+    $('#myAnchor-3').removeClass("show");
+    $('#myAnchor-4').removeClass("active");
+    $('#myAnchor-4').removeClass("show");
 });
 $('#corner-3').click(function(){
     player1.pause();
@@ -93,7 +111,7 @@ $('#corner-3').click(function(){
     
     $("#frame-1").attr("src","");
     $("#frame-2").attr("src","");
-    $("#frame-3").attr("src","https://www.youtube.com/embed/xT-2XUfwX7E?si=hqVJCYeHG5I2eoh_");
+    $("#frame-3").attr("src","https://www.youtube.com/embed/xT-2XUfwX7E?autoplay=1&mute=1");
 
     $('#tabs-2-7').addClass("active");
     $('#tabs-2-7').addClass("show");
@@ -110,6 +128,15 @@ $('#corner-3').click(function(){
     $('#tabs-2-5').removeClass("show");
     $('#tabs-2-6').removeClass("active");
     $('#tabs-2-6').removeClass("show");
+    
+    $('#myAnchor-1').removeClass("active");
+    $('#myAnchor-1').removeClass("show");
+    $('#myAnchor-2').removeClass("active");
+    $('#myAnchor-2').removeClass("show");
+    $('#myAnchor-3').removeClass("active");
+    $('#myAnchor-3').removeClass("show");
+    $('#myAnchor-4').removeClass("active");
+    $('#myAnchor-4').removeClass("show");
 });
   </script>
 

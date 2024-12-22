@@ -278,7 +278,7 @@
 					<!--RD Navbar Brand-->
 					<div class="rd-navbar-brand">
                     <!--Brand-->
-                        <a class="brand" href="">
+                        <a class="brand" href="javascript:void(0)">
                             <img src="<?= base_url() ?>assets_tv/images/logo_mitraone_tv.png" alt="" width="74" height="13"/>
                             <!-- MitraOne TV 296x52 -->
                         </a>
@@ -287,20 +287,20 @@
                 <div class="rd-navbar-main-element">
 					<div class="rd-navbar-nav-wrap">
                     <ul class="rd-navbar-nav">
-						<li class="rd-nav-item active">
+						<!-- <li class="rd-nav-item active">
                         <a class="rd-nav-link" href="">Home</a>
-					</li>
+					</li> -->
 					<li class="rd-nav-item">
                         <!-- <a class="rd-nav-link" href="about.html">About</a> -->
-                        <a class="rd-nav-link" href="#">About</a>
+                        <a class="rd-nav-link" href="javascript:void(0)">About</a>
                     </li>
                     <li class="rd-nav-item">
                         <!-- <a class="rd-nav-link" href="typography.html">Typography</a> -->
-                        <a class="rd-nav-link" href="#">Typography</a>
+                        <a class="rd-nav-link" href="javascript:void(0)">Typography</a>
                     </li>
                     <li class="rd-nav-item">
                         <!-- <a class="rd-nav-link" href="contacts.html">Contacts</a> -->
-                        <a class="rd-nav-link" href="#">Contacts</a>
+                        <a class="rd-nav-link" href="javascript:void(0)">Contacts</a>
                     </li>
                     </ul>
                 </div>

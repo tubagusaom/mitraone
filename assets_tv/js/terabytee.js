@@ -7,7 +7,7 @@ $('#myAnchor-1').click(function(){
     // var buttonhref = $('#myAnchor-1').attr('href');
     // alert(buttonhref);
     
-    // player1.play();
+    player1.play();
     player2.pause();
     player3.pause();
     player4.pause();
@@ -28,7 +28,7 @@ $('#myAnchor-1').click(function(){
 $('#myAnchor-2').click(function(){
 
     player1.pause();
-    // player2.play();
+    player2.play();
     player3.pause();
     player4.pause();
     
@@ -51,7 +51,7 @@ $('#myAnchor-3').click(function(){
     
     player1.pause();
     player2.pause();
-    // player3.play();
+    player3.play();
     player4.pause();
     
     $("#frame-1").attr("src","");
@@ -74,7 +74,7 @@ $('#myAnchor-4').click(function(){
     player1.pause();
     player2.pause();
     player3.pause();
-    // player4.play();
+    player4.play();
     
     $("#frame-1").attr("src","");
     $("#frame-2").attr("src","");

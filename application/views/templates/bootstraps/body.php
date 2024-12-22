@@ -6,16 +6,20 @@
           <h2>TV STREAMING</h2> -->
 
           <style>
-            .disableslide {
+            /* .disableslide {
               display: none;
             }
             .enableslide {
               display: block;
+            } */
+
+            .pb-tab{
+              padding-bottom: 10px!important;
             }
           </style>
 
 
-          <div class="tab-column">
+          <div class="tab-column pb-tab">
               <div class="row">
                 <div class="column_tb_3">
                   <a id="corner-1" href="javascript:void(0)">
@@ -49,22 +53,22 @@
             
 
             <div class="tab-content">
-              
+
               <div class="tab-pane show active" id="tabs-2-5">
                 <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9">
-                  <iframe id="frame-1" class="frame-video" width="660" height="365" src="https://www.youtube.com/embed/xI0N1WUk840?si=I0YrWc9VnTA4iu0e" allowfullscreen=""></iframe>
+                  <iframe id="frame-1" class="frame-video" width="660" height="365" src="https://www.youtube.com/embed/xI0N1WUk840" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
               </div>
 
               <div class="tab-pane" id="tabs-2-6">
                 <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9">
-                  <iframe id="frame-2" class="frame-video" width="660" height="365" src="https://www.youtube.com/embed/nT6XENs5cA8?si=T_eK7M1rHoi_9YCg" allowfullscreen=""></iframe>
+                  <iframe id="frame-2" class="frame-video" width="660" height="365" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
               </div>
 
               <div class="tab-pane" id="tabs-2-7">
                 <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9">
-                  <iframe id="frame-3" class="frame-video" width="660" height="365" src="https://www.youtube.com/embed/xT-2XUfwX7E?si=hqVJCYeHG5I2eoh_" allowfullscreen=""></iframe>
+                  <iframe id="frame-3" class="frame-video" width="660" height="365" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
               </div>
 
@@ -72,8 +76,7 @@
                 <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9 ">
                   <!-- <iframe width="886" height="668" src="//www.youtube.com/embed/zraegy4MqRA?si=_F7cjsNc1Baa7Dq9" allowfullscreen=""></iframe> -->
                   <!-- <iframe width="886" height="668" src="https://v10.siar.us/rctv/live/playlist.m3u8" allowfullscreen=""></iframe> -->
-
-                    <!-- <iframe width="886" height="668" src="https://sindikasi.inews.id/embed/video/YWdlbnQ9ZGVza3RvcCZ1cmw9aHR0cHMlM0ElMkYlMkZlbWJlZC5yY3RpcGx1cy5jb20lMkZsaXZlJTJGcmN0aSUyRmluZXdzaWQmaGVpZ2h0PTEwMCUyNSZ3aWR0aD0xMDAlMjU=" allowfullscreen=""></iframe> -->
+                  <!-- <iframe width="886" height="668" src="https://sindikasi.inews.id/embed/video/YWdlbnQ9ZGVza3RvcCZ1cmw9aHR0cHMlM0ElMkYlMkZlbWJlZC5yY3RpcGx1cy5jb20lMkZsaXZlJTJGcmN0aSUyRmluZXdzaWQmaGVpZ2h0PTEwMCUyNSZ3aWR0aD0xMDAlMjU=" allowfullscreen=""></iframe> -->
 
                     <video
                       id="hls-example-1"
@@ -81,7 +84,6 @@
                       width="2000"
                       height="400"
                       controls
-                      muted="muted"
                       poster="<?=base_url()?>assets_tv/images/tv/poster_blue_idtv.png"
                     >
                       <source
@@ -100,6 +102,7 @@
                       width="2000"
                       height="400"
                       controls
+                      autoplay
                       poster="<?=base_url()?>assets_tv/images/tv/poster_blue_rctv.png"
                     >
                       <source
@@ -118,6 +121,7 @@
                       width="2000"
                       height="400"
                       controls
+                      autoplay
                       poster="<?=base_url()?>assets_tv/images/tv/poster_blue_ugtv.png"
                     >
                       <source
@@ -136,6 +140,7 @@
                       width="2000"
                       height="400"
                       controls
+                      autoplay
                       poster="<?=base_url()?>assets_tv/images/tv/poster_blue_spacetoon.png"
                     >
                       <source
