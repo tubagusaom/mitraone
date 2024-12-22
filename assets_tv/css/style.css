@@ -701,20 +701,6 @@ html [class*='section-'].section-bottom-0 {
 	}
 }
 
-.section-tb {
-	padding: 20px 0!important;
-}
-@media (min-width: 576px) and (max-width: 1199px) {
-	.section-tb {
-		padding: 30px 0!important;
-	}
-}
-@media (min-width: 1200px) {
-	.section-tb {
-		padding: 100px 0 25px 100px!important;
-	}
-}
-
 .section-single {
 	display: flex;
 	text-align: center;

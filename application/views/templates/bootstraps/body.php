@@ -47,7 +47,7 @@
                       width="2000"
                       height="400"
                       controls
-                      poster="<?=base_url()?>assets_tv/images/tv/poster_video.png"
+                      poster="<?=base_url()?>assets_tv/images/tv/poster_blue_idtv.png"
                     >
                       <source
                         type="application/x-mpegURL"
@@ -83,7 +83,7 @@
                       width="2000"
                       height="400"
                       controls
-                      poster="<?=base_url()?>assets_tv/images/tv/poster_video.png"
+                      poster="<?=base_url()?>assets_tv/images/tv/poster_blue_radar_lampung.png"
                     >
                       <source
                         type="application/x-mpegURL"
@@ -101,7 +101,7 @@
                       width="2000"
                       height="400"
                       controls
-                      poster="<?=base_url()?>assets_tv/images/tv/poster_video.png"
+                      poster="<?=base_url()?>assets_tv/images/tv/poster_blue_rctv.png"
                     >
                       <source
                         type="application/x-mpegURL"
@@ -119,7 +119,7 @@
                       width="2000"
                       height="400"
                       controls
-                      poster="<?=base_url()?>assets_tv/images/tv/poster_video.png"
+                      poster="<?=base_url()?>assets_tv/images/tv/poster_blue_spacetoon.png"
                     >
                       <source
                         type="application/x-mpegURL"
@@ -158,7 +158,7 @@
                     <a id="myAnchor-2" class="nav-link" href="#tabs-2-2" data-toggle="tab">
                       <div class="nav-video">
                         <figure class="nav-video-figure">
-                          <img src="<?=base_url()?>assets_tv/images/tv/radar_lampung.jpg" alt=""/>
+                          <img src="<?=base_url()?>assets_tv/images/tv/radar_lampung.png" alt=""/>
                         </figure>
                       </div>
                     </a>
@@ -238,7 +238,7 @@
       <section class="section section-xl bg-default text-center">
         <div class="container">
           <h6 class="text-gray-600">from MitraOne tv news</h6>
-          <h2>breaking news</h2>
+          <h2 class="text-gray-600">breaking news</h2>
           <div class="row row-125">
             <div class="col-md-6 col-lg-4">
               <article class="post-classic">

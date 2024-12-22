@@ -101,11 +101,11 @@
 					<!--RD Navbar Brand-->
 					<div class="rd-navbar-brand">
                     <!--Brand-->
-                    <a class="brand" href="">
-						<img src="<?= base_url() ?>assets_tv/images/logo_mitraone_tv.png" alt="" width="74" height="13"/>
-						<!-- MitraOne TV 296x52 -->
-                    </a>
-				</div>
+                        <a class="brand" href="">
+                            <img src="<?= base_url() ?>assets_tv/images/logo_mitraone_tv.png" alt="" width="74" height="13"/>
+                            <!-- MitraOne TV 296x52 -->
+                        </a>
+                    </div>
                 </div>
                 <div class="rd-navbar-main-element">
 					<div class="rd-navbar-nav-wrap">
