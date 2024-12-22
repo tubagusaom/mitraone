@@ -14,6 +14,30 @@
               }); });
             </script> -->
 
+            <style>
+              .column_tab_3 {
+                  /* place-items: center!important; */
+                  width: 33%!important;
+                  margin: 23px 0!important;
+                  /* border: 1px solid #000; */
+              }
+
+              @media (max-width: 512px) {
+                  .column_tab_3 {
+                      margin: 13px 0 -4 0 !important;
+                  }
+              }
+
+              .column_tab_3 img {
+                  max-width: 95px!important;
+              }
+
+              .image_center {
+                  display: block!important;
+                  margin: auto!important;
+              }
+            </style>
+
             <div class="tab-column">
               <div class="row">
                 <div class="column_tab_3">
