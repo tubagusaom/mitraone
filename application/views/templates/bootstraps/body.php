@@ -1,8 +1,40 @@
 
-<section class="section section-tb bg-default text-center">
+
+      <section class="section section-tb bg-default text-center">
         <div id="ctnHeader" class="container">
           <!-- <h6 class="text-gray-600">TV streaming from multiple channels</h6>
           <h2>TV STREAMING</h2> -->
+
+          <style>
+            .disableslide {
+              display: none;
+            }
+            .enableslide {
+              display: block;
+            }
+          </style>
+
+
+          <div class="tab-column">
+              <div class="row">
+                <div class="column_tb_3">
+                  <a id="corner-1" href="javascript:void(0)">
+                    <img style="float:left!important" src="<?=base_url()?>assets_tv/images/tv/energy_corner.png" alt=""/>
+                  </a>
+                </div>
+                <div class="column_tb_3">
+                  <a id="corner-2" href="javascript:void(0)">
+                    <img class="image_center" src="<?=base_url()?>assets_tv/images/tv/mitra_corner.png" alt=""/>
+                  </a>
+                </div>
+                <div class="column_tb_3">
+                  <a id="corner-3" href="javascript:void(0)">
+                    <img style="float:right!important" src="<?=base_url()?>assets_tv/images/tv/umkm_corner.png" alt=""/>
+                  </a>
+                </div>
+              </div>
+            </div>
+
           <!--Bootstrap tabs-->
           <div class="tabs-custom tabs-vertical tabs-video" id="tabs-2">
             <!--Tab panes-->
@@ -14,28 +46,36 @@
               }); });
             </script> -->
 
-            <div class="tab-column">
-              <div class="row">
-                <div class="column_tb_3">
-                  <a href="javascript:void(0)">
-                    <img style="float:left!important" src="<?=base_url()?>assets_tv/images/tv/energy_corner.png" alt=""/>
-                  </a>
-                </div>
-                <div class="column_tb_3">
-                  <a href="javascript:void(0)">
-                    <img class="image_center" src="<?=base_url()?>assets_tv/images/tv/mitra_corner.png" alt=""/>
-                  </a>
-                </div>
-                <div class="column_tb_3">
-                  <a href="javascript:void(0)">
-                    <img style="float:right!important" src="<?=base_url()?>assets_tv/images/tv/umkm_corner.png" alt=""/>
-                  </a>
-                </div>
-              </div>
-            </div>
+            
 
             <div class="tab-content">
-              <div class="tab-pane fade show active" id="tabs-2-1">
+
+            <style>
+              .frame-video{
+                display: block;
+                margin: 0 auto;
+              }
+            </style>
+
+              <div class="tab-pane show active" id="tabs-2-5">
+                <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9">
+                  <iframe id="frame-1" class="frame-video" width="660" height="365" src="https://www.youtube.com/embed/xI0N1WUk840?si=I0YrWc9VnTA4iu0e" allowfullscreen=""></iframe>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="tabs-2-6">
+                <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9">
+                  <iframe id="frame-2" class="frame-video" width="660" height="365" src="https://www.youtube.com/embed/nT6XENs5cA8?si=T_eK7M1rHoi_9YCg" allowfullscreen=""></iframe>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="tabs-2-7">
+                <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9">
+                  <iframe id="frame-3" class="frame-video" width="660" height="365" src="https://www.youtube.com/embed/xT-2XUfwX7E?si=hqVJCYeHG5I2eoh_" allowfullscreen=""></iframe>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="tabs-2-1">
                 <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9 ">
                   <!-- <iframe width="886" height="668" src="//www.youtube.com/embed/zraegy4MqRA?si=_F7cjsNc1Baa7Dq9" allowfullscreen=""></iframe> -->
                   <!-- <iframe width="886" height="668" src="https://v10.siar.us/rctv/live/playlist.m3u8" allowfullscreen=""></iframe> -->
@@ -48,30 +88,13 @@
                       width="2000"
                       height="400"
                       controls
+                      muted="muted"
                       poster="<?=base_url()?>assets_tv/images/tv/poster_blue_idtv.png"
                     >
                       <source
                         type="application/x-mpegURL"
                         src="https://b1world.beritasatumedia.com/Beritasatu/B1World_1280x720.m3u8?aux=eroz_brebes.m3u8"
                       />
-
-                      <!-- source
-                        Radar Lampung TV - http://103.140.188.211:1935/radarlampungtv/myStream/playlist.m3u8
-                        Cirebon TV - https://v10.siar.us/rctv/live/playlist.m3u8
-                        Dubai Sports 2 - http://dmitwlvvll.cdn.mangomolo.com/dubaisportshd/smil:dubaisportshd.smil/chunklist_b1600000.m3u8
-                        Dubai Sports 3 - http://dmitwlvvll.cdn.mangomolo.com/dubaisportshd5/smil:dubaisportshd5.smil/chunklist_b1600000.m3u8
-                        Arirang - https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/chunklist_b2256000_sleng.m3u8
-                        Berita Satu World - https://b1world.beritasatumedia.com/Beritasatu/B1World_1280x720.m3u8?aux=eroz_brebes.m3u8
-                        Spacetoon - https://streams.spacetoon.com/live/stchannel/smil:livesmil.smil/playlist.m3u8
-                        UGTV Gunadarma - https://cdn.gunadarma.ac.id/streams/ugtv/ingestugtv.m3u8
-                        xxx - xxx
-                      source -->
-
-                      <!-- <source
-                        src="http://103.140.188.211:1935/radarlampungtv/myStream/playlist.m3u8"
-                        src="https://v10.siar.us/rctv/live/playlist.m3u8"
-                        type="application/x-mpegURL"
-                      /> -->
                     </video>
                 </div>
               </div>
@@ -141,7 +164,7 @@
               <div class="column_tb">
                 <div class="nav nav-tabs">
                   <div class="nav-item" role="presentation">
-                    <a id="myAnchor-1" class="nav-link active" href="#tabs-2-1" data-toggle="tab">
+                    <a id="myAnchor-1" class="nav-link" href="#tabs-2-1" data-toggle="tab">
                       <div class="nav-video">
                         <figure class="nav-video-figure">
                           <img src="<?=base_url()?>assets_tv/images/tv/id_tv.png" alt=""/>
