@@ -76,10 +76,10 @@
                 foreach ($video_tv as $key => $value) {
               ?>
 
-              <div class="tab-pane fade" id="tabs-2-<?=$key+1?>">
+              <div class="tab-pane fade" id="tabs-2-<?=$value->code_video?>">
                 <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9">
                     <video
-                      id="hls-example-<?=$key+1?>"
+                      id="hls-example-<?=$value->code_video?>"
                       class="video-js vjs-default-skin"
                       width="2000"
                       height="400"
@@ -97,7 +97,7 @@
 
               <?php } ?>
 
-              <!-- <div id="texter"></div> -->
+              <div id="texter"></div>
 
             </div>
           </div>
@@ -112,10 +112,10 @@
               foreach ($video_tv as $keys => $value_tv) {
             ?>  
             
-              <div class="column_tb" role="presentation" data-key="<?=$keys+1?>" data-name="<?=$value_tv->nama_video?>" data-url="<?=$value_tv->link_video?>" data-poster="<?=$value_tv->poster_video?>" data-logo="<?=$value_tv->logo_video?>">
+              <div class="column_tb" role="presentation" data-code="<?=$value_tv->code_video?>">
                 <div class="nav nav-tabs">
                   <div class="nav-item" role="presentation">
-                    <a id="myAnchor-<?=$keys+1?>" class="nav-link" href="#tabs-2-<?=$keys+1?>" data-toggle="tab">
+                    <a id="myAnchor-<?=$value_tv->code_video?>" class="nav-link" href="#tabs-2-<?=$value_tv->code_video?>" data-toggle="tab" data-key="<?=$value_tv->code_video?>" data-name="<?=$value_tv->nama_video?>" data-url="<?=$value_tv->link_video?>" data-poster="<?=$value_tv->poster_video?>" data-logo="<?=$value_tv->logo_video?>">
                       <div class="nav-video">
                         <figure class="nav-video-figure">
                           <img src="<?=base_url()?>assets_tv/images/tv/<?=$value_tv->logo_video?>" alt=""/>
