@@ -325,7 +325,6 @@ class Api_model extends MY_Model {
             $this->db->select('
                 a.nama_video AS NameVideo,
                 a.link_video AS LinkVideo,
-                a.poster_video AS PosterVideo,
                 a.logo_video AS LogoVideo
             ');
 
