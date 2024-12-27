@@ -72,7 +72,7 @@ class Api_model extends MY_Model {
 
         $this->db->from('api_keys');
     
-        $this->db->where('key', $key);
+        // $this->db->where('key', $key);
         $query = $this->db->get()->row();
         
         // $query->row();
@@ -303,6 +303,64 @@ class Api_model extends MY_Model {
         $data_arr = $result;
         
         echo json_encode($data_arr);
+    }
+
+
+    function get_video($task_id,$sub_task_id,$status,$page,$perpage,$sku,$data) {
+
+        // var_dump($data); die();
+        
+        if ($data == TRUE) {
+
+            // $id = $data->user_id;
+
+            if ($page == 1 ) {
+                $offset = 0;
+            }else {
+                $offset = (($page-1) * $perpage);
+            }
+    
+            // var_dump($offset); die();
+    
+            $this->db->select('
+                a.nama_video AS NameVideo,
+                a.link_video AS LinkVideo,
+                a.poster_video AS PosterVideo,
+                a.logo_video AS LogoVideo
+            ');
+
+            $this->db->from('t_video_tv a');
+            // $this->db->join('api_product b', 'a.kode_product=b.kode_sku_api');
+
+            // $this->db->where("a.id_member",$id);
+            // $this->db->where("b.is_product_api",'1');
+
+            $this->db->order_by('a.code_video', 'ASC');
+    
+            // $this->db->limit($perpage);
+            // $this->db->offset($offset);
+    
+            $data_sql = $this->db->get();
+            $data_video = $data_sql->result();
+    
+            // $get_result['TaskId'] = $task_id;
+            // $get_result['SubTaskId'] = $sub_task_id;
+            // $get_result['PageNo'] = $page;
+            // $get_result['TotalDataPerPage'] = $perpage;
+    
+            $get_result['VideoDetails'] = $data_video;
+                
+            $result = $get_result;
+            // $result['Data'] = $get_product;
+            $result['Status'] = $this->restapi->response_api('200');
+
+        }else {
+            $result['Status'] = $this->restapi->response_api('400');
+        }
+
+        $data_arr = $result;
+        echo json_encode($data_arr);
+
     }
 
 }

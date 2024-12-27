@@ -28,7 +28,7 @@ class Restapi {
 
 		return ($data);
 		// var_dump(($data)); die();
-	}
+	} 
 
   public function content_type(){
     header('Content-Type: application/json');
