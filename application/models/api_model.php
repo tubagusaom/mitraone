@@ -323,6 +323,7 @@ class Api_model extends MY_Model {
             // var_dump($offset); die();
     
             $this->db->select('
+                a.code_video AS CodeVideo,
                 a.nama_video AS NameVideo,
                 a.link_video AS LinkVideo,
                 a.logo_video AS LogoVideo
