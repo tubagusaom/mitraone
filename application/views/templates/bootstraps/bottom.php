@@ -43,12 +43,12 @@
 owl = $(".owl-carousel");
   owl.owlCarousel({
       loop:true,
+      nav:true,
       autoplay:true,
       // autoplaySpeed:1000,
       autoplayTimeout: 3000,
       autoplaySpeed: 400,
       navSpeed: 400,
-      nav:false,
       dots:false,
       responsive:{
         0:{
