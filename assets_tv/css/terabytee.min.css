@@ -7,12 +7,12 @@ body {
 }
 @media (min-width: 576px) and (max-width: 1199px) {
 	.section-tb {
-		padding: 30px 0!important;
+		padding: 0px!important;
 	}
 }
 @media (min-width: 1200px) {
 	.section-tb {
-	padding: 100px 100px 25px 100px!important;
+	padding: 0px 100px 25px 100px!important;
 	}
 }
 

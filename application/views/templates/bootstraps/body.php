@@ -1,4 +1,87 @@
+<style>
+  .section-banner {
+    color: #000!important;
+  }
 
+  @media (max-width: 499px) {
+    .box-bio {
+      margin-top: 10px;
+    }
+  }
+
+  @media (min-width: 499px) and (max-width: 576px) {
+    .box-bio {
+      width: 275px;
+    }
+  }
+
+  @media (max-width: 374px) {
+    .section-banner {
+      height: 165px;
+    }
+  }
+  @media (min-width: 374px) and (max-width: 499px) {
+    .section-banner {
+      height: 165px;
+    }
+  }
+  @media (min-width: 499px) and (max-width: 576px) {
+    .section-banner {
+      height: 120px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .section-banner {
+      margin-top: 75px;
+    }
+  }
+
+  .slide-tb {
+    border-radius: 7px;
+  }
+</style>
+
+<section class="section section-banner" href="#">
+<!-- <section style="background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(<?=base_url()?>assets_tv/images/banner/banner_tb.png);"> -->
+  <!-- <img src="<?=base_url()?>assets_tv/images/banner/foreground-01-1600x310.png" srcset="<?=base_url()?>assets_tv/images/banner/foreground-01-1600x310.png 1x, <?=base_url()?>assets_tv/images/banner/foreground-01-3200x620.png 2x" alt="" width="1600" height="310"> -->
+  
+        <!-- <div class=""> -->
+        <div class="owl-carousel owl-carousel-bio" data-loop="true" data-items="1" data-sm-items="1" data-md-items="2" data-lg-items="2" data-xl-items="3" data-xxl-items="4" data-autoplay="true" data-dots="false" data-nav="true" data-stage-padding="0" data-margin="0" data-nav-text="[&quot;prev&quot;,&quot;next&quot;]">
+
+          <div class="box-bio">
+            <div class="box-bio-body">
+              <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_tv_m1.png" alt="">
+            </div>
+          </div>
+
+          <div class="box-bio">
+            <div class="box-bio-body">
+              <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_tv_m1.png" alt="">
+            </div>
+          </div>
+          
+          <div class="box-bio">
+            <div class="box-bio-body">
+              <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_tv_m1.png" alt="">
+            </div>
+          </div>
+          
+          <div class="box-bio">
+            <div class="box-bio-body">
+              <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_tv_m1.png" alt="">
+            </div>
+          </div>
+
+          <div class="box-bio">
+            <div class="box-bio-body">
+              <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_tv_m1.png" alt="">
+            </div>
+          </div>
+
+        </div>
+        <!-- </div> -->
+
+</section>
 
       <section class="section section-tb bg-default text-center">
         <div id="ctnHeader" class="container">
@@ -6,13 +89,6 @@
           <h2>TV STREAMING</h2> -->
 
           <style>
-            /* .disableslide {
-              display: none;
-            }
-            .enableslide {
-              display: block;
-            } */
-
             .pb-tab{
               padding-bottom: 10px!important;
             }
@@ -43,14 +119,6 @@
           <div class="tabs-custom tabs-vertical tabs-video" id="tabs-2">
             <!--Tab panes-->
 
-            <!-- <script>
-              flowplayer(function (api) {
-              api.on("load", function (e, api, video) {
-                $("#vinfo").text(api.engine.engineName + " engine playing " + video.type);
-              }); });
-            </script> -->
-
-            
 
             <div class="tab-content">
 
@@ -224,7 +292,9 @@
       <!--    </div>-->
       <!--  </div>-->
       <!--</section>-->
+      
 
+      <!-- breaking news -->
       <section class="section section-xl bg-default text-center">
         <div class="container">
           <h6 class="text-gray-600">from MitraOne tv news</h6>

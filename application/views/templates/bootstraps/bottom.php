@@ -39,6 +39,58 @@
   </body>
 
   <script>
+
+owl = $(".owl-carousel");
+  owl.owlCarousel({
+      loop:true,
+      autoplay:true,
+      // autoplaySpeed:1000,
+      autoplayTimeout: 7000,
+      autoplaySpeed: 400,
+      navSpeed: 400,
+      nav:false,
+      dots:false,
+      responsive:{
+        0:{
+          items:1
+        },
+        600:{
+          items:2
+        },
+        1000:{
+          items:3
+        },
+        1200:{
+          items:3
+        }
+      }
+  });
+
+// var owl = $('.owl-carousel');
+// var smItem = 'sm-items';
+// var mdItem = 'md-items';
+// var lgItem = 'lg-items';
+// var xlItem = 'xl-items';
+// var xxlItem = 'xxl-items';
+
+// owl.owlCarousel({
+//   loop: true,
+//     autoHeight: true,
+//     autoWidth: false,
+//     items: 1,
+//     smItem: 1,
+//     mdItem: 2,
+//     lgItem: 2,
+//     xlItem: 3,
+//     xxlItem: 4,
+//     margin: 0,
+//     nav: true,
+//     fluidSpeed: 100,
+//     autoplay: true,
+//     autoplayTimeout: 7000,
+//     autoplaySpeed: 400,
+//     navSpeed: 400,
+// });
     // var player_1 = videojs("hls-example-1");
     // player_1.play();
 
@@ -239,7 +291,7 @@
         $('#myAnchor-4').removeClass("active");
         $('#myAnchor-4').removeClass("show");
     });
-    
+
     $('#corner-3').click(function(){
         player1.pause();
         player2.pause();
