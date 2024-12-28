@@ -1,44 +1,5 @@
 <style>
-  .section-banner {
-    color: #000!important;
-  }
 
-  @media (max-width: 499px) {
-    .box-bio {
-      margin-top: 10px;
-    }
-  }
-
-  @media (min-width: 499px) and (max-width: 576px) {
-    .box-bio {
-      width: 275px;
-    }
-  }
-
-  @media (max-width: 374px) {
-    .section-banner {
-      height: 165px;
-    }
-  }
-  @media (min-width: 374px) and (max-width: 499px) {
-    .section-banner {
-      height: 165px;
-    }
-  }
-  @media (min-width: 499px) and (max-width: 576px) {
-    .section-banner {
-      height: 120px;
-    }
-  }
-  @media (min-width: 1200px) {
-    .section-banner {
-      margin-top: 75px;
-    }
-  }
-
-  .slide-tb {
-    border-radius: 7px;
-  }
 </style>
 
 <section class="section section-banner" href="#">

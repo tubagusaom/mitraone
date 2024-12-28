@@ -35,14 +35,14 @@
 	<!-- Theme Custom CSS -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets_tv/css/bootstrap.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>assets_tv/css/fonts.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets_tv/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets_tv/css/style.min.css">
 
     <!-- <style>
 		.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
 	</style> -->
 
     <link href="<?php echo base_url() ?>assets_tv/css/video-js.css" rel="stylesheet" />
-    <link href="<?php echo base_url() ?>assets_tv/css/terabytee.min.css" rel="stylesheet" />
+    <link href="<?php echo base_url() ?>assets_tv/css/min.terabytee.css" rel="stylesheet" />
     <!-- <script defer src="<?php echo base_url() ?>assets_tv/js/video.min.js"></script> -->
 
     <!-- <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet" /> -->
