@@ -9760,7 +9760,7 @@ div.jp-creative .jp-playlist-item {
 	background-size: cover;
 	text-align: center;
 	position: relative;
-	z-index: 1090;
+	/* z-index: 1090; */
 }
 
 .section-banner img {
