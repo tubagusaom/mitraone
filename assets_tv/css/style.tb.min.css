@@ -1904,7 +1904,7 @@ html.tablet .ui-to-top {
 	align-items: center;
 	height: 56px;
 	padding: 4px;
-	border-bottom: 1px solid #e5e7e9;
+	/* border-bottom: 1px solid #e5e7e9; */
 }
 
 .rd-navbar-fixed .rd-navbar-nav-wrap {
@@ -2252,7 +2252,7 @@ html.tablet .ui-to-top {
 .rd-navbar-fixed .rd-navbar-nav-wrap {
 	color: #ffffff;
 	background: #1c2748;
-	border: 1px solid #e5e7e9;
+	/* border: 1px solid #e5e7e9; */
 	box-shadow: none;
 }
 
