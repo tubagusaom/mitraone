@@ -368,21 +368,17 @@ class Api extends MY_Controller {
 
 
 	function video(){
-		header('Content-Type: application/json');
+		$this->restapi->content_type_json();
 
 		$rest = $this->config->item('rest_key_name');
 		$get_key = $_GET[$rest];
 
 		$apikey = $this->restapi->auth_api_key($get_key);
-		$task_id = $_GET['TaskId'];
-		$sub_task_id = $_GET['SubTaskId'];
-		$status = $_GET['Status'];
-		$sku = $_GET['KodeSku'];
 
-		$page = $_GET['PageNo'];
-		$perpage = $_GET['TotalDataPerPage'];
+		// var_dump($apikey); die();
 		
-		$ReturnData = $this->api_model->get_video($task_id,$sub_task_id,$status,$page,$perpage,$sku,$apikey);
+		$ReturnData = $this->api_model->get_test($apikey);
+		// $ReturnData = $this->api_model->get_video($apikey);
 	}
 
 }

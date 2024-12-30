@@ -32,7 +32,7 @@
     <script src="<?= base_url() ?>assets_tv/js/script.js"></script>
 
     <script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
-    <script src="<?php echo base_url() ?>assets_tv/js/videojs-contrib-hls.js"></script>
+    <!-- <script src="<?php echo base_url() ?>assets_tv/js/videojs-contrib-hls.js"></script> -->
     <script src="<?php echo base_url() ?>assets_tv/js/video.min.js"></script>
     <!-- <script src="<?php echo base_url() ?>assets_tv/js/terabytee.mins.js"></script> -->
 
@@ -43,7 +43,7 @@
 owl = $(".owl-carousel");
   owl.owlCarousel({
       loop:true,
-      nav:true,
+      nav:false,
       autoplay:true,
       // autoplaySpeed:1000,
       autoplayTimeout: 3000,
@@ -66,31 +66,6 @@ owl = $(".owl-carousel");
       }
   });
 
-// var owl = $('.owl-carousel');
-// var smItem = 'sm-items';
-// var mdItem = 'md-items';
-// var lgItem = 'lg-items';
-// var xlItem = 'xl-items';
-// var xxlItem = 'xxl-items';
-
-// owl.owlCarousel({
-//   loop: true,
-//     autoHeight: true,
-//     autoWidth: false,
-//     items: 1,
-//     smItem: 1,
-//     mdItem: 2,
-//     lgItem: 2,
-//     xlItem: 3,
-//     xxlItem: 4,
-//     margin: 0,
-//     nav: true,
-//     fluidSpeed: 100,
-//     autoplay: true,
-//     autoplayTimeout: 7000,
-//     autoplaySpeed: 400,
-//     navSpeed: 400,
-// });
     // var player_1 = videojs("hls-example-1");
     // player_1.play();
 

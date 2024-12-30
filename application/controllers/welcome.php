@@ -148,7 +148,21 @@
           // $data['kategori'] = $this->welcome_model->kategori();
           // $data['sub_kategori'] = $this->welcome_model->sub_kategori();
 
+          // id_categorie
+          // code_video
+          // nama_video
+          // link_video
+          // desc_video
+          // poster_video
+          // logo_video
+
           $data['video_tv'] = $this->welcome_model->video_tv();
+
+          // $url_host = [];
+          // foreach ($data['video_tv'] as $keys => $value_tv) {
+          //   $external_url = $value_tv->link_video;
+          //   $url_host[$keys] = substr(strrchr($external_url, "."), 1);
+          // }
 
           // var_dump($data['video_tv']); die();
 

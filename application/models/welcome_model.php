@@ -40,7 +40,7 @@ class Welcome_model extends MY_Model
 
   function video_tv()
   {
-    $this->db->from('t_video_tv');
+    $this->db->from('tv_live');
     $query = $this->db->get();
     return $query->result();
   }

@@ -27,10 +27,10 @@ class Restapi {
 		$data = $this->ci->api_model->get_api_key($id);
 
 		return ($data);
-		// var_dump(($data)); die();
+		// var_dump(($id)); die();
 	} 
 
-  public function content_type(){
+  public function content_type_json(){
     header('Content-Type: application/json');
   }
 
@@ -41,7 +41,7 @@ class Restapi {
     $data=array(
         '200' => 'Success',
         '201' => 'Successfully Created.',
-        '400' => 'Invalid key. API key not found in HomeDepo database.',
+        '400' => 'Invalid key. API key not found.',
         '401' => 'Unauthorized.',
         '404' => 'Not Found.',
         '405' => 'NOT ALLOWED.',

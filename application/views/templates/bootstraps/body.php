@@ -1,6 +1,3 @@
-<style>
-
-</style>
 
 <section class="section section-banner" href="#">
 <!-- <section style="background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(<?=base_url()?>assets_tv/images/banner/banner_tb.png);"> -->
@@ -11,31 +8,41 @@
 
           <div class="box-bio">
             <div class="box-bio-body">
-              <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_tv_m1.png" alt="">
+              <a href="#">
+                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_tv_m1.png" alt="">
+              </a>
             </div>
           </div>
 
           <div class="box-bio">
             <div class="box-bio-body">
-              <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_tv_m1.png" alt="">
+              <a href="#">
+                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_tv_m1.png" alt="">
+              </a>
             </div>
           </div>
           
           <div class="box-bio">
             <div class="box-bio-body">
-              <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_tv_m1.png" alt="">
+              <a href="#">
+                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_tv_m1.png" alt="">
+              </a>
             </div>
           </div>
           
           <div class="box-bio">
             <div class="box-bio-body">
-              <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_tv_m1.png" alt="">
+              <a href="#">
+                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_tv_m1.png" alt="">
+              </a>
             </div>
           </div>
 
           <div class="box-bio">
             <div class="box-bio-body">
-              <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_tv_m1.png" alt="">
+              <a href="#">
+                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_tv_m1.png" alt="">
+              </a>
             </div>
           </div>
 
@@ -102,7 +109,14 @@
               </div>
               
               <?php
+                // $url_host = [];
                 foreach ($video_tv as $key => $value) {
+                  // $external_url = $value->link_video;
+                  // $url_host = substr(strrchr($external_url, "."), 1);
+
+                  // echo $url_host;
+
+                  // if($url_host == 'm3u8'){
               ?>
 
               <div class="tab-pane fade" id="tabs-2-<?=$value->code_video?>">
@@ -124,9 +138,22 @@
                 </div>
               </div>
 
-              <?php } ?>
+              <?php
+                // }else {
+              ?>
 
-              <div id="texter"></div>
+                <!-- <div class="tab-pane" id="tabs-2-<?=$value->code_video?>">
+                  <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9">
+                    <iframe id="frame-<?=$value->code_video?>" class="frame-video" width="660" height="365" src="<?=$value->link_video?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                </div> -->
+
+              <?php
+                //  }
+                }
+              ?>
+
+              <!-- <div id="texter"></div> -->
 
             </div>
           </div>
@@ -157,65 +184,45 @@
 
               <?php } ?>
 
-              <!-- <div class="column_tb" role="presentation">
-                <div class="nav nav-tabs">
-                  <div class="nav-item" role="presentation">
-                    <a id="myAnchor-1" class="nav-link" href="#tabs-2-1" data-toggle="tab">
-                      <div class="nav-video">
-                        <figure class="nav-video-figure">
-                          <img src="<?=base_url()?>assets_tv/images/tv/id_tv.png" alt=""/>
-                        </figure>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="column_tb" role="presentation">
-                <div class="nav nav-tabs">
-                  <div class="nav-item" role="presentation">
-                    <a id="myAnchor-2" class="nav-link" href="#tabs-2-2" data-toggle="tab">
-                      <div class="nav-video">
-                        <figure class="nav-video-figure">
-                          <img src="<?=base_url()?>assets_tv/images/tv/rctv.png" alt=""/>
-                        </figure>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="column_tb" role="presentation">
-                <div class="nav nav-tabs">
-                  <div class="nav-item" role="presentation">
-                    <a id="myAnchor-3" class="nav-link" href="#tabs-2-3" data-toggle="tab">
-                      <div class="nav-video">
-                        <figure class="nav-video-figure">
-                          <img src="<?=base_url()?>assets_tv/images/tv/ugtv.png" alt=""/>
-                        </figure>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="column_tb" role="presentation">
-                <div class="nav nav-tabs">
-                  <div class="nav-item" role="presentation">
-                    <a id="myAnchor-4" class="nav-link" href="#tabs-2-4" data-toggle="tab">
-                      <div class="nav-video">
-                        <figure class="nav-video-figure">
-                          <img src="<?=base_url()?>assets_tv/images/tv/spacetoon.png" alt=""/>
-                        </figure>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div> -->
-
             </div>
           </div>
           <!-- </section> -->
+
+          <style>
+            /* #eventsyoutube {
+                pointer-events: none;
+            } */
+          </style>
+
+          <?php
+            // if(fmod($no,2)==1)
+            // {$warna="ghostwhite";}
+            // else
+            // {$warna="whitesmoke";}
+          ?>
+
+          <!-- <div class="tab-column pb-tab">
+              <div class="row">
+                <div class="column_tb_2">
+                  <a id="x-1" href="javascript:void(0)">
+                    <img style="float:left!important" src="<?=base_url()?>assets_tv/images/tv/energy_corner.png" alt=""/>
+                    <iframe style="float:right!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                  </a>
+                </div>
+                <div class="column_tb_2">
+                  <a id="x-2" href="javascript:void(0)">
+                    <img class="image_center" src="<?=base_url()?>assets_tv/images/tv/mitra_corner.png" alt=""/>
+                    <iframe style="float:left!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                  </a>
+                </div>
+                <div class="column_tb_2">
+                  <a id="x-3" href="javascript:void(0)">
+                    <img style="float:right!important" src="<?=base_url()?>assets_tv/images/tv/umkm_corner.png" alt=""/>
+                    <iframe style="float:right!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                  </a>
+                </div>
+              </div>
+            </div> -->
 
       <!--<section class="section" data-lightgallery="group">-->
       <!--  <div class="row no-gutters">-->
