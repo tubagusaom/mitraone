@@ -368,14 +368,15 @@ class Api extends MY_Controller {
 
 
 	function video(){
-		$this->restapi->content_type_json();
+		// $this->restapi->content_type_json();
 
 		$rest = $this->config->item('rest_key_name');
 		$get_key = $_GET[$rest];
+		// $get_keyp = $_POST[$rest];
 
 		$apikey = $this->restapi->auth_api_key($get_key);
 
-		// var_dump($apikey); die();
+		var_dump($get_key); die();
 		
 		$ReturnData = $this->api_model->get_test($apikey);
 		// $ReturnData = $this->api_model->get_video($apikey);

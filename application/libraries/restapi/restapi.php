@@ -23,6 +23,7 @@ class Restapi {
   function auth_api_key($id) {
 
 		// $id_member = $this->auth->get_user_data()->id_member;
+    // $dataid = $_POST[$id];
 
 		$data = $this->ci->api_model->get_api_key($id);
 

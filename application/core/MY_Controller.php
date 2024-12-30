@@ -61,7 +61,7 @@ class MY_Controller extends CI_Controller {
         } else {
             $this->aplikasi = $this->db->get('r_konfigurasi_aplikasi')->row();
             $this->load->helper('cookie');
-             $check_visitor = get_cookie("home-depo");
+             $check_visitor = get_cookie("terabytee");
              $ip = $this->input->ip_address();
 
              // $locationx = file_get_contents('http://freegeoip.net/json/'.$_SERVER['REMOTE_ADDR']);
@@ -74,7 +74,7 @@ class MY_Controller extends CI_Controller {
                     "waktu" => date('H:i:s'),
                     "tanggal" => date('Y-m-d'),
                 );
-                setcookie('home-depo',$ip,time()+86500,'/');
+                setcookie('terabytee',$ip,time()+86500,'/');
                 $this->db->insert('t_counter',$db);
              }
              $pengunjungHariIni = count($this->db->where('tanggal',date('Y-m-d'))->get('t_counter')->result());
