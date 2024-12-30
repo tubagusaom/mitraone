@@ -366,20 +366,60 @@ class Api extends MY_Controller {
 		// var_dump($request_method); die();
 	}
 
+	function videox(){
+
+		// $url = base_url('restapi/get-video');
+		// $data = array('key1' => 'value1', 'key2' => 'value2');
+
+		// // use key 'http' even if you send the request to https://...
+		// $options = array(
+		// 	'http' => array(
+		// 		'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+		// 		'method'  => 'POST',
+		// 		'content' => http_build_query($data)
+		// 	)
+		// );
+		// $context  = stream_context_create($options);
+		// $result = file_get_contents($url, false, $context);
+		// if ($result === FALSE) { /* Handle error */ }
+
+		// var_dump($result);
+
+		$request = curl_init();
+
+		curl_setopt($request, CURLOPT_URL, base_url('restapi/get-video'));
+		curl_setopt($request, CURLOPT_POST, 1);
+		curl_setopt($request, CURLOPT_POSTFIELDS,
+				"var1=value1&var2=value2");
+
+		// catch the response
+		curl_setopt($request, CURLOPT_RETURNTRANSFER, true);
+
+		$response = curl_exec($request);
+
+		curl_close ($request);
+	}
+
 
 	function video(){
 		// $this->restapi->content_type_json();
 
+		// $this->input->server('REQUEST_METHOD') == 'POST';
+
+		// $_SERVER['REQUEST_METHOD'] == 'POST';
+
 		$rest = $this->config->item('rest_key_name');
 		$get_key = $_GET[$rest];
-		// $get_keyp = $_POST[$rest];
+		// $get_key = $_POST[$rest];
 
 		$apikey = $this->restapi->auth_api_key($get_key);
 
-		var_dump($get_key); die();
+		// var_dump($apikey); die();
 		
-		$ReturnData = $this->api_model->get_test($apikey);
+		$ReturnData = $this->api_model->get_video($apikey);
 		// $ReturnData = $this->api_model->get_video($apikey);
+
+		// var_dump($apikey); die();
 	}
 
 }
