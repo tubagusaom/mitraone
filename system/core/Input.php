@@ -188,6 +188,15 @@ class CI_Input {
 		return $this->_fetch_from_array($_POST, $index, $xss_clean);
 	}
 
+	function terabytee_input($index = NULL, $xss_clean = FALSE){
+		$data = array(
+			'index' => $index,
+			'xss_clean' => $xss_clean
+		);
+
+		return $data;
+	}
+
 
 	// --------------------------------------------------------------------
 

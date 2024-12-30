@@ -26,6 +26,12 @@
         $this->load->model('repositori_model');
       }
 
+      function terabytee(){
+        $data = $this->input->post('api-key',true);
+
+        var_dump(($data)); die();
+      }
+
       // public function tutorial($id=false) {
       //     $data['class_active'] = 'tutorial';
       //     $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();

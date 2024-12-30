@@ -64,15 +64,20 @@ class Api_model extends MY_Model {
 
 
     function get_api_key($key) {
-        // $this->db->where('user_id', $id);
+        $this->db->where('key', $key);
         // $this->db->limit(1);
-        $this->db->select('*');
+        $this->db->select('
+            key as APIKEY,
+            sess_id as SESSION,
+            level as APILEVEL,
+            is_api as ISAPI
+        ');
 
         // return $this->db->get('api_keys')->row();
 
         $this->db->from('api_keys');
     
-        $this->db->where('key', $key);
+        // $this->db->where('key', $key);
         $query = $this->db->get()->row();
         
         // $query->row();
@@ -311,25 +316,26 @@ class Api_model extends MY_Model {
         
         if ($data == TRUE) {
 
-            // $id = $data->user_id;
+            // $id = $data->APIKEY;
+            // var_dump($id); die();
+    
+            // $this->db->select('
+            //     a.code_video AS CodeVideo,
+            //     a.nama_video AS NameVideo,
+            //     a.link_video AS LinkVideo,
+            //     a.logo_video AS LogoVideo
+            // ');
 
-            if ($page == 1 ) {
-                $offset = 0;
-            }else {
-                $offset = (($page-1) * $perpage);
-            }
-    
-            // var_dump($offset); die();
-    
             $this->db->select('
-                a.code_video AS CodeVideo,
-                a.nama_video AS NameVideo,
-                a.link_video AS LinkVideo,
-                a.logo_video AS LogoVideo
+                a.nama_video AS title,
+                b.description AS category,
+                a.link_video AS link,
+                a.poster_video AS thumbnail,
+                a.desc_video AS description
             ');
 
-            $this->db->from('t_video_tv a');
-            // $this->db->join('api_product b', 'a.kode_product=b.kode_sku_api');
+            $this->db->from('tv_video a');
+            $this->db->join('tv_categories b', 'a.id_categorie=b.id');
 
             // $this->db->where("a.id_member",$id);
             // $this->db->where("b.is_product_api",'1');
@@ -345,15 +351,14 @@ class Api_model extends MY_Model {
             // $get_result['xxx'] = '';
 
             // var_dump($data_video); die();
-    
-            $get_result['VideoDetails'] = $data_video;
+            $result['status'] = $this->restapi->response_api('200');
+            $get_result['data'] = $data_video;
                 
             $result = $get_result;
             // $result['Data'] = $get_product;
-            $result['Status'] = $this->restapi->response_api('200');
 
         }else {
-            $result['Status'] = $this->restapi->response_api('400');
+            $result['status'] = $this->restapi->response_api('400');
         }
 
         $data_arr = $result;

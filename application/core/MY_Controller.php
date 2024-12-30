@@ -327,6 +327,10 @@ class MY_Controller extends CI_Controller {
         }
     }
 
+    function test_mycontroller() {
+        echo json_encode('test mycontroller');
+    }
+
 
 
 }

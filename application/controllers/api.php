@@ -7,9 +7,8 @@ class Api extends MY_Controller {
 		parent::__construct();
 
 		$this->load->library('restapi');
-
 		$this->load->model('api_model');
-  	}
+	}
 
 
 		function index() {
@@ -402,23 +401,52 @@ class Api extends MY_Controller {
 
 
 	function video(){
-		// $this->restapi->content_type_json();
+		$this->restapi->content_type_json();
+		
+		// $_SERVER['REQUEST_METHOD'] = 'POST';
+
+		// $data = "ffsdgsdg";
 
 		// $this->input->server('REQUEST_METHOD') == 'POST';
+		// $xxx = $this->CI_Input->valid_base64($data);
+		// $xxx['data'] = $_POST['api-key'];
+		// $xxx['KEY'] = $this->input->post('api-key',true);
+		// $xxx['content'] = 'xxx';
+
+		// $rest = $this->config->item('rest_key_name');
+		// $apikey = $this->restapi->auth_api_key($rest);
+
+		// $title = $this->input->post('M1TV-API-KEY',true);
+		// $content  = 'xxx';
+
+		// $xxx = array(
+		// 	'apikey' => $title,
+		// 	'content' => $content
+		// );
+
+		$xxx = $_POST['M1TV-API-KEY'];
 
 		// $_SERVER['REQUEST_METHOD'] == 'POST';
 
-		$rest = $this->config->item('rest_key_name');
-		$get_key = $_GET[$rest];
-		// $get_key = $_POST[$rest];
+		// $rest = $this->config->item('rest_key_name');
+		$rest = $this->input->post('M1TV-CLIENT-KEY',true);
 
-		$apikey = $this->restapi->auth_api_key($get_key);
+		if ($rest == TRUE) {
+			$apikey = $this->restapi->auth_api_key($rest);
+		}
+		// else{
+		// 	$apikey = '';
+		// }
+		
 
-		// var_dump($apikey); die();
+		// echo $xxx['xxx'];
 		
 		$ReturnData = $this->api_model->get_video($apikey);
-		// $ReturnData = $this->api_model->get_video($apikey);
 
+		// echo $_POST['M1TV-API-KEY'];
+		// print_r($rest);
+		// var_dump($_POST);
+		// var_dump(($apikey)); die();
 		// var_dump($apikey); die();
 	}
 
