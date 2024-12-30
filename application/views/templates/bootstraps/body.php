@@ -8,40 +8,40 @@
 
           <div class="box-bio">
             <div class="box-bio-body">
-              <a href="#">
-                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_tv_m1.png" alt="">
+              <a href="https://youtu.be/DOR2ABmKXvs?si=y2S-r58j9t3bkUK2" target="_blank">
+                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_umkm.png" alt="">
               </a>
             </div>
           </div>
 
           <div class="box-bio">
             <div class="box-bio-body">
-              <a href="#">
-                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_tv_m1.png" alt="">
+            <a href="https://youtu.be/9Vy3Id48cKY?si=Gpj8uBgMsh8D2sLi" target="_blank">
+                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_energi.png" alt="">
               </a>
             </div>
           </div>
           
           <div class="box-bio">
             <div class="box-bio-body">
-              <a href="#">
-                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_tv_m1.png" alt="">
+            <a href="https://youtu.be/DOR2ABmKXvs?si=y2S-r58j9t3bkUK2" target="_blank">
+                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_umkm.png" alt="">
               </a>
             </div>
           </div>
           
           <div class="box-bio">
             <div class="box-bio-body">
-              <a href="#">
-                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_tv_m1.png" alt="">
+              <a href="https://youtu.be/9Vy3Id48cKY?si=Gpj8uBgMsh8D2sLi" target="_blank">
+                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_energi.png" alt="">
               </a>
             </div>
           </div>
 
           <div class="box-bio">
             <div class="box-bio-body">
-              <a href="#">
-                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_tv_m1.png" alt="">
+            <a href="https://youtu.be/DOR2ABmKXvs?si=y2S-r58j9t3bkUK2" target="_blank">
+                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_umkm.png" alt="">
               </a>
             </div>
           </div>
