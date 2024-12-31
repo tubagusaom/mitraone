@@ -38,13 +38,6 @@ class Welcome_model extends MY_Model
   //     return $query->result();
   // }
 
-  function video_tv()
-  {
-    $this->db->from('tv_live');
-    $query = $this->db->get();
-    return $query->result();
-  }
-
   function provinsi()
   {
     $this->db->from('m_ro_provinsi');
@@ -274,6 +267,28 @@ class Welcome_model extends MY_Model
     $this->db->join('t_repositori b', 'a.id=b.id_product', 'left');
     $this->db->join(kode_tbl() . 'members c', 'a.id_member=c.id', 'left');
     $query = $this->db->get(kode_tbl() . 'product a');
+    return $query->result();
+  }
+
+  function live_tv()
+  {
+    $this->db->from('tv_live');
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  function banner()
+  {
+    $this->db->select('id,image_slide,title,link,target');
+    $this->db->from('tv_banner');
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  function video_tv()
+  {
+    $this->db->from('tv_video');
+    $query = $this->db->get();
     return $query->result();
   }
 

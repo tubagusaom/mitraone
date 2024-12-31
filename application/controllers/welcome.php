@@ -162,7 +162,9 @@
           // poster_video
           // logo_video
 
-          $data['live_tv'] = $this->welcome_model->video_tv();
+          $data['banner'] = $this->welcome_model->banner();
+          $data['live_tv'] = $this->welcome_model->live_tv();
+          $data['video_tv'] = $this->welcome_model->video_tv();
 
           // $url_host = [];
           // foreach ($data['video_tv'] as $keys => $value_tv) {

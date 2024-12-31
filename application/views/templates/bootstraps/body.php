@@ -5,46 +5,20 @@
   
         <!-- <div class=""> -->
         <div class="owl-carousel owl-carousel-bio" data-loop="true" data-items="1" data-sm-items="1" data-md-items="2" data-lg-items="2" data-xl-items="3" data-xxl-items="4" data-autoplay="true" data-dots="false" data-nav="true" data-stage-padding="0" data-margin="0" data-nav-text="[&quot;prev&quot;,&quot;next&quot;]">
-
-          <div class="box-bio">
-            <div class="box-bio-body">
-              <a href="https://youtu.be/DOR2ABmKXvs?si=y2S-r58j9t3bkUK2" target="_blank">
-                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_umkm.png" alt="">
-              </a>
-            </div>
-          </div>
-
-          <div class="box-bio">
-            <div class="box-bio-body">
-            <a href="https://youtu.be/9Vy3Id48cKY?si=Gpj8uBgMsh8D2sLi" target="_blank">
-                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_energi.png" alt="">
-              </a>
-            </div>
-          </div>
           
+          <?php
+            foreach ($banner as $keyb => $vbanner) {
+          ?>
+
           <div class="box-bio">
             <div class="box-bio-body">
-            <a href="https://youtu.be/DOR2ABmKXvs?si=y2S-r58j9t3bkUK2" target="_blank">
-                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_umkm.png" alt="">
-              </a>
-            </div>
-          </div>
-          
-          <div class="box-bio">
-            <div class="box-bio-body">
-              <a href="https://youtu.be/9Vy3Id48cKY?si=Gpj8uBgMsh8D2sLi" target="_blank">
-                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_energi.png" alt="">
+              <a href="<?=$vbanner->link?>" target="<?=$vbanner->target?>">
+                <img class="slide-tb" src="<?=$vbanner->image_slide?>" alt="<?=$vbanner->title?>">
               </a>
             </div>
           </div>
 
-          <div class="box-bio">
-            <div class="box-bio-body">
-            <a href="https://youtu.be/DOR2ABmKXvs?si=y2S-r58j9t3bkUK2" target="_blank">
-                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/slide_umkm.png" alt="">
-              </a>
-            </div>
-          </div>
+          <?php } ?>
 
         </div>
         <!-- </div> -->
@@ -61,7 +35,6 @@
               padding-bottom: 10px!important;
             }
           </style>
-
 
           <div class="tab-column pb-tab">
               <div class="row">
@@ -160,6 +133,12 @@
         </div>
       </section>
       
+      <div class="container">
+        <div class="text-center" style="padding: 20px 0px 10px 0px;">
+          <h6 class="text-gray-600">Live TV</h6>
+        </div>
+      </div>
+      
       <!-- <section class="section" data-lightgallery="group"> -->
         <div class="tab-column">
             <div class="row">
@@ -192,6 +171,28 @@
             /* #eventsyoutube {
                 pointer-events: none;
             } */
+
+            .img_poster {
+              width: 160px;
+              height: 90px;
+              border-radius: 5px;
+              object-fit: cover;
+            }
+
+            @media (min-width: 513px) and (max-width: 767px) {
+            /* @media (min-width: 513px) { */
+              .img_poster {
+                width: 200px;
+                height: 125px;
+              }
+            }
+
+            @media (min-width: 768px) {
+              .img_poster {
+                width: 310px;
+                height: 176px;
+              }
+            }
           </style>
 
           <?php
@@ -201,28 +202,40 @@
             // {$warna="whitesmoke";}
           ?>
 
-          <!-- <div class="tab-column pb-tab">
+          <div class="container">
+            <div class="text-center" style="padding: 20px 0px 10px 0px;">
+              <h6 class="text-gray-600">Latest Video</h6>
+            </div>
+          </div>
+
+          <div class="tab-column pb-tab">
               <div class="row">
                 <div class="column_tb_2">
                   <a id="x-1" href="javascript:void(0)">
-                    <img style="float:left!important" src="<?=base_url()?>assets_tv/images/tv/energy_corner.png" alt=""/>
-                    <iframe style="float:right!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                    <img class="img_poster" style="float:right!important" src="https://img.youtube.com/vi/xI0N1WUk840/hqdefault.jpg" alt=""/>
+                    <!-- <iframe style="float:right!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe> -->
                   </a>
                 </div>
                 <div class="column_tb_2">
                   <a id="x-2" href="javascript:void(0)">
-                    <img class="image_center" src="<?=base_url()?>assets_tv/images/tv/mitra_corner.png" alt=""/>
-                    <iframe style="float:left!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                    <img class="img_poster" style="float:left!important" src="https://img.youtube.com/vi/nT6XENs5cA8/hqdefault.jpg" alt=""/>
+                    <!-- <iframe style="float:left!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe> -->
                   </a>
                 </div>
                 <div class="column_tb_2">
                   <a id="x-3" href="javascript:void(0)">
-                    <img style="float:right!important" src="<?=base_url()?>assets_tv/images/tv/umkm_corner.png" alt=""/>
-                    <iframe style="float:right!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                  <img class="img_poster" style="float:right!important" src="https://img.youtube.com/vi/xT-2XUfwX7E/hqdefault.jpg" alt=""/>
+                    <!-- <iframe style="float:right!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe> -->
+                  </a>
+                </div>
+                <div class="column_tb_2">
+                  <a id="x-4" href="javascript:void(0)">
+                  <img class="img_poster" style="float:left!important" src="https://img.youtube.com/vi/DOR2ABmKXvs/hqdefault.jpg" alt=""/>
+                    <!-- <iframe style="float:left!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe> -->
                   </a>
                 </div>
               </div>
-            </div> -->
+            </div>
 
       <!--<section class="section" data-lightgallery="group">-->
       <!--  <div class="row no-gutters">-->
