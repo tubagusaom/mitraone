@@ -195,45 +195,54 @@
             }
           </style>
 
-          <?php
-            // if(fmod($no,2)==1)
-            // {$warna="ghostwhite";}
-            // else
-            // {$warna="whitesmoke";}
-          ?>
-
           <div class="container">
             <div class="text-center" style="padding: 20px 0px 10px 0px;">
               <h6 class="text-gray-600">Latest Video</h6>
             </div>
           </div>
 
-          <div class="tab-column pb-tab">
+          
+
+          <div class="tab-column" style="padding-bottom: 80px;">
               <div class="row">
+              
+              <?php
+                $no=1;
+                foreach ($video_tv as $keys => $value_video) {
+                  if(fmod($no,2)==1)
+                  {$float="right";}
+                  else
+                  {$float="left";}
+              ?>
+
                 <div class="column_tb_2">
                   <a id="x-1" href="javascript:void(0)">
-                    <img class="img_poster" style="float:right!important" src="https://img.youtube.com/vi/xI0N1WUk840/hqdefault.jpg" alt=""/>
+                  <!-- <a id="myAnchor-<?=$value_video->code_video?>" class="nav-link" href="#tabs-2-<?=$value_video->code_video?>" data-toggle="tab" data-key="<?=$value_video->code_video?>" data-name="<?=$value_video->nama_video?>" data-url="<?=$value_video->link_video?>" data-poster="<?=$value_video->poster_video?>" data-logo="<?=$value_video->logo_video?>"> -->
+                    <img class="img_poster" style="float:<?=$float?>!important" src="<?=$value_video->poster_video?>" alt=""/>
                     <!-- <iframe style="float:right!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe> -->
                   </a>
                 </div>
-                <div class="column_tb_2">
+
+                <?php $no++;} ?>
+                
+                <!-- <div class="column_tb_2">
                   <a id="x-2" href="javascript:void(0)">
                     <img class="img_poster" style="float:left!important" src="https://img.youtube.com/vi/nT6XENs5cA8/hqdefault.jpg" alt=""/>
-                    <!-- <iframe style="float:left!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe> -->
+                    <iframe style="float:left!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
                   </a>
                 </div>
                 <div class="column_tb_2">
                   <a id="x-3" href="javascript:void(0)">
                   <img class="img_poster" style="float:right!important" src="https://img.youtube.com/vi/xT-2XUfwX7E/hqdefault.jpg" alt=""/>
-                    <!-- <iframe style="float:right!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe> -->
+                    <iframe style="float:right!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
                   </a>
                 </div>
                 <div class="column_tb_2">
                   <a id="x-4" href="javascript:void(0)">
                   <img class="img_poster" style="float:left!important" src="https://img.youtube.com/vi/DOR2ABmKXvs/hqdefault.jpg" alt=""/>
-                    <!-- <iframe style="float:left!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe> -->
+                    <iframe style="float:left!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
                   </a>
-                </div>
+                </div> -->
               </div>
             </div>
 
