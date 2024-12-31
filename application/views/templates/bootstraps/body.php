@@ -172,27 +172,7 @@
                 pointer-events: none;
             } */
 
-            .img_poster {
-              width: 160px;
-              height: 90px;
-              border-radius: 5px;
-              object-fit: cover;
-            }
-
-            @media (min-width: 513px) and (max-width: 767px) {
-            /* @media (min-width: 513px) { */
-              .img_poster {
-                width: 200px;
-                height: 125px;
-              }
-            }
-
-            @media (min-width: 768px) {
-              .img_poster {
-                width: 310px;
-                height: 176px;
-              }
-            }
+            
           </style>
 
           <div class="container">
