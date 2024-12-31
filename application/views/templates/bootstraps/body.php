@@ -276,7 +276,7 @@
       
 
       <!-- breaking news -->
-      <section class="section section-xl bg-default text-center">
+      <!-- <section class="section section-xl bg-default text-center">
         <div class="container">
           <h6 class="text-gray-600">from MitraOne tv news</h6>
           <h2 class="text-gray-600">breaking news</h2>
@@ -310,4 +310,4 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
