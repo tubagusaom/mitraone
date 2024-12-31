@@ -66,12 +66,14 @@ class Api_model extends MY_Model {
     function get_api_key($key) {
         $this->db->where('key', $key);
         // $this->db->limit(1);
-        $this->db->select('
-            key as APIKEY,
-            sess_id as SESSION,
-            level as APILEVEL,
-            is_api as ISAPI
-        ');
+        // $this->db->select('
+        //     key as APIKEY,
+        //     sess_id as SESSION,
+        //     level as APILEVEL,
+        //     is_api as ISAPI
+        // ');
+
+        $this->db->select('key,sess_id,level,is_api');
 
         // return $this->db->get('api_keys')->row();
 
@@ -341,6 +343,170 @@ class Api_model extends MY_Model {
             // $this->db->where("b.is_product_api",'1');
 
             $this->db->order_by('a.code_video', 'ASC');
+    
+            // $this->db->limit($perpage);
+            // $this->db->offset($offset);
+    
+            $data_sql = $this->db->get();
+            $data_video = $data_sql->result();
+
+            // $get_result['xxx'] = '';
+
+            // var_dump($data_video); die();
+            $result['status'] = $this->restapi->response_api('200');
+            $get_result['data'] = $data_video;
+                
+            $result = $get_result;
+            // $result['Data'] = $get_product;
+
+        }else {
+            $result['status'] = $this->restapi->response_api('400');
+        }
+
+        $data_arr = $result;
+        echo json_encode($data_arr);
+
+    }
+
+
+    function get_banner($data) {
+
+        // var_dump($data); die();
+        
+        if ($data == TRUE) {
+
+            $this->db->select('
+                a.id,
+                a.image_slide AS image_url,
+                a.title AS alt_text,
+                a.link
+            ');
+
+            $this->db->from('tv_banner a');
+
+            $this->db->order_by('a.no_urut', 'ASC');
+    
+            $data_sql = $this->db->get();
+            $data_video = $data_sql->result();
+
+            // var_dump($data_video); die();
+            $result['status'] = $this->restapi->response_api('200');
+            $get_result['data'] = $data_video;
+                
+            $result = $get_result;
+            // $result['Data'] = $get_product;
+
+        }else {
+            $result['status'] = $this->restapi->response_api('400');
+        }
+
+        $data_arr = $result;
+        echo json_encode($data_arr);
+
+    }
+
+    function get_program($data) {
+
+        // var_dump($data); die();
+        
+        if ($data == TRUE) {
+
+            $this->db->select('
+                a.description AS id,
+                a.logo_img AS image_url,
+                a.categories AS alt_text
+            ');
+
+            $this->db->from('tv_categories a');
+
+            $this->db->order_by('a.id', 'ASC');
+    
+            $data_sql = $this->db->get();
+            $data_video = $data_sql->result();
+
+            // var_dump($data_video); die();
+            $result['status'] = $this->restapi->response_api('200');
+            $get_result['data'] = $data_video;
+                
+            $result = $get_result;
+            // $result['Data'] = $get_product;
+
+        }else {
+            $result['status'] = $this->restapi->response_api('400');
+        }
+
+        $data_arr = $result;
+        echo json_encode($data_arr);
+
+    }
+
+    function get_highlight($data) {
+
+        // var_dump($data); die();
+        
+        if ($data == TRUE) {
+
+            $this->db->select('
+                a.link_embed AS src,
+                a.nama_video AS title,
+                a.frame_border AS frameBorder,
+                a.allow_arr AS allow,
+                a.allow_full_screen AS allowFullScreen
+            ');
+
+            $this->db->from('tv_video a');
+            $this->db->where("a.id",'1');
+
+            $this->db->order_by('a.id', 'ASC');
+    
+            $data_sql = $this->db->get();
+            $data_video = $data_sql->row();
+            
+            $result['status'] = $this->restapi->response_api('200');
+            $get_result['data'] = $data_video;
+                
+            $result = $get_result;
+
+        }else {
+            $result['status'] = $this->restapi->response_api('400');
+        }
+
+        $data_arr = $result;
+        echo json_encode($data_arr);
+
+    }
+
+    function get_latest($data) {
+
+        // var_dump($data); die();
+        
+        if ($data == TRUE) {
+
+            // $id = $data->APIKEY;
+            // var_dump($id); die();
+    
+            // $this->db->select('
+            //     a.code_video AS CodeVideo,
+            //     a.nama_video AS NameVideo,
+            //     a.link_video AS LinkVideo,
+            //     a.logo_video AS LogoVideo
+            // ');
+
+            $this->db->select('
+                a.nama_video AS title,
+                b.description AS category,
+                a.link_video AS link,
+                a.poster_video AS thumbnail,
+                a.desc_video AS description
+            ');
+
+            $this->db->from('tv_video a');
+            $this->db->join('tv_categories b', 'a.id_categorie=b.id');
+
+            // $this->db->where("a.id_member",$id);
+            // $this->db->where("b.is_product_api",'1');
+
+            $this->db->order_by('a.id', 'DESC');
     
             // $this->db->limit($perpage);
             // $this->db->offset($offset);

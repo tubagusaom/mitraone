@@ -367,86 +367,84 @@ class Api extends MY_Controller {
 
 	function videox(){
 
-		// $url = base_url('restapi/get-video');
-		// $data = array('key1' => 'value1', 'key2' => 'value2');
+		// $host  = $_SERVER['HTTP_HOST'];
+		// $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+		// $extra = 'restapi/get-video';
+		// header("location:http://$host$uri/$extra");
 
-		// // use key 'http' even if you send the request to https://...
-		// $options = array(
-		// 	'http' => array(
-		// 		'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-		// 		'method'  => 'POST',
-		// 		'content' => http_build_query($data)
-		// 	)
-		// );
-		// $context  = stream_context_create($options);
-		// $result = file_get_contents($url, false, $context);
-		// if ($result === FALSE) { /* Handle error */ }
+		// if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+		// 	echo "get";
+		// }elseif ($_SERVER['REQUEST_METHOD'] == 'POST') {
+		// 	echo "post";
+		// }else{
+		// 	echo "null";
+		// }
 
-		// var_dump($result);
-
-		$request = curl_init();
-
-		curl_setopt($request, CURLOPT_URL, base_url('restapi/get-video'));
-		curl_setopt($request, CURLOPT_POST, 1);
-		curl_setopt($request, CURLOPT_POSTFIELDS,
-				"var1=value1&var2=value2");
-
-		// catch the response
-		curl_setopt($request, CURLOPT_RETURNTRANSFER, true);
-
-		$response = curl_exec($request);
-
-		curl_close ($request);
+		// var_dump($host.$uri.'/'.$extra); die();
 	}
-
 
 	function video(){
 		$this->restapi->content_type_json();
 		
-		// $_SERVER['REQUEST_METHOD'] = 'POST';
-
-		// $data = "ffsdgsdg";
-
-		// $this->input->server('REQUEST_METHOD') == 'POST';
-		// $xxx = $this->CI_Input->valid_base64($data);
-		// $xxx['data'] = $_POST['api-key'];
-		// $xxx['KEY'] = $this->input->post('api-key',true);
-		// $xxx['content'] = 'xxx';
-
-		// $rest = $this->config->item('rest_key_name');
-		// $apikey = $this->restapi->auth_api_key($rest);
-
-		// $title = $this->input->post('M1TV-API-KEY',true);
-		// $content  = 'xxx';
-
-		// $xxx = array(
-		// 	'apikey' => $title,
-		// 	'content' => $content
-		// );
-
-		$xxx = $_POST['M1TV-API-KEY'];
-
-		// $_SERVER['REQUEST_METHOD'] == 'POST';
-
-		// $rest = $this->config->item('rest_key_name');
 		$rest = $this->input->post('M1TV-CLIENT-KEY',true);
 
 		if ($rest == TRUE) {
 			$apikey = $this->restapi->auth_api_key($rest);
 		}
-		// else{
-		// 	$apikey = '';
-		// }
-		
-
-		// echo $xxx['xxx'];
 		
 		$ReturnData = $this->api_model->get_video($apikey);
+		// var_dump($apikey); die();
+	}
 
-		// echo $_POST['M1TV-API-KEY'];
-		// print_r($rest);
-		// var_dump($_POST);
-		// var_dump(($apikey)); die();
+	function banner(){
+		$this->restapi->content_type_json();
+		
+		$rest = $this->input->post('M1TV-CLIENT-KEY',true);
+
+		if ($rest == TRUE) {
+			$apikey = $this->restapi->auth_api_key($rest);
+		}
+		
+		$ReturnData = $this->api_model->get_banner($apikey);
+		// var_dump($apikey); die();
+	}
+
+	function program(){
+		$this->restapi->content_type_json();
+		
+		$rest = $this->input->post('M1TV-CLIENT-KEY',true);
+
+		if ($rest == TRUE) {
+			$apikey = $this->restapi->auth_api_key($rest);
+		}
+		
+		$ReturnData = $this->api_model->get_program($apikey);
+		// var_dump($apikey); die();
+	}
+
+	function highlight(){
+		$this->restapi->content_type_json();
+		
+		$rest = $this->input->post('M1TV-CLIENT-KEY',true);
+
+		if ($rest == TRUE) {
+			$apikey = $this->restapi->auth_api_key($rest);
+		}
+		
+		$ReturnData = $this->api_model->get_highlight($apikey);
+		// var_dump($apikey); die();
+	}
+
+	function latest(){
+		$this->restapi->content_type_json();
+		
+		$rest = $this->input->post('M1TV-CLIENT-KEY',true);
+
+		if ($rest == TRUE) {
+			$apikey = $this->restapi->auth_api_key($rest);
+		}
+		
+		$ReturnData = $this->api_model->get_latest($apikey);
 		// var_dump($apikey); die();
 	}
 

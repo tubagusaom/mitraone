@@ -47,8 +47,12 @@ $route['restapi/get_stok_product'] = "api/stok_produk_arr";
 $route['restapi/get_stok_product_active'] = "api/stok_produk_aktif";
 $route['restapi/post_update_status_product'] = "api/update_status_product";
 
-
 $route['restapi/get-video'] = "api/video";
+
+$route['restapi/get-banner'] = "api/banner";
+$route['restapi/get-program'] = "api/program";
+$route['restapi/get-highlight'] = "api/highlight";
+$route['restapi/get-latest'] = "api/latest";
 
 
 
