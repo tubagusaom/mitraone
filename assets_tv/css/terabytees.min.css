@@ -234,3 +234,25 @@ body {
 		padding: 0 15px!important;
 	}
 }
+
+.brand .img_logo {
+	width: 180px;
+	padding: 10px;
+}
+@media (max-width: 512px) {
+	.rd-navbar-brand {
+		display: block!important;
+		margin-left: auto!important;
+		margin-right: auto!important;
+		width: 50%!important;
+	}
+}
+
+@media (min-width: 513px) and (max-width: 1199px) {
+	.rd-navbar-brand , .brand {
+		display: block!important;
+		margin-left: auto!important;
+		margin-right: auto!important;
+		width: 50%!important;
+	}
+}

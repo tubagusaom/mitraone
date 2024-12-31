@@ -35,14 +35,14 @@
 	<!-- Theme Custom CSS -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets_tv/css/bootstrap.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>assets_tv/css/fonts.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets_tv/css/style.tb.min.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets_tv/css/style.terabytees.css">
 
     <!-- <style>
 		.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
 	</style> -->
 
     <link href="<?php echo base_url() ?>assets_tv/css/video-js.css" rel="stylesheet" />
-    <link href="<?php echo base_url() ?>assets_tv/css/min.terabytee.css" rel="stylesheet" />
+    <link href="<?php echo base_url() ?>assets_tv/css/terabytees.min.css" rel="stylesheet" />
     <!-- <script defer src="<?php echo base_url() ?>assets_tv/js/video.min.js"></script> -->
 
     <!-- <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet" /> -->
@@ -104,11 +104,12 @@
                 <div class="rd-navbar-panel">
 					<!--RD Navbar Toggle-->
 					<button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                    
 					<!--RD Navbar Brand-->
 					<div class="rd-navbar-brand">
                     <!--Brand-->
                         <a class="brand" href="javascript:void(0)">
-                            <img src="<?= base_url() ?>assets_tv/images/logo_mitraone_tv.png" alt="" width="74" height="13"/>
+                            <img class="img_logo" src="<?= base_url() ?>assets_tv/images/logo_mitraone_font_1.png" alt="" width="174" height="13"/>
                             <!-- MitraOne TV 296x52 -->
                         </a>
                     </div>
@@ -125,11 +126,11 @@
                     </li>
                     <li class="rd-nav-item">
                         <!-- <a class="rd-nav-link" href="typography.html">Typography</a> -->
-                        <a class="rd-nav-link" href="javascript:void(0)">Typography</a>
+                        <a class="rd-nav-link" href="javascript:void(0)">Promo</a>
                     </li>
                     <li class="rd-nav-item">
                         <!-- <a class="rd-nav-link" href="contacts.html">Contacts</a> -->
-                        <a class="rd-nav-link" href="javascript:void(0)">Contacts</a>
+                        <a class="rd-nav-link" href="javascript:void(0)">VOD</a>
                     </li>
                     </ul>
                 </div>

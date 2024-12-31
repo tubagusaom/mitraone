@@ -110,7 +110,7 @@
               
               <?php
                 // $url_host = [];
-                foreach ($video_tv as $key => $value) {
+                foreach ($live_tv as $key => $value) {
                   // $external_url = $value->link_video;
                   // $url_host = substr(strrchr($external_url, "."), 1);
 
@@ -165,7 +165,7 @@
             <div class="row">
 
             <?php
-              foreach ($video_tv as $keys => $value_tv) {
+              foreach ($live_tv as $keys => $value_tv) {
             ?>  
             
               <div class="column_tb" role="presentation" data-code="<?=$value_tv->code_video?>">
