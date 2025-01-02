@@ -48,6 +48,8 @@
     <!-- <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet" /> -->
 
     <style>
+        .terabytee { /* my name is terabytee */ }
+
         .li-svg {
             width: 25px;
             margin-left: 15px;
@@ -69,13 +71,17 @@
             height: 24px;
             margin: 0;
         }
-    </style>
 
-<style>
-    .terabytee {
-        /* my name is terabytee */
-    }
-</style>
+        @media (prefers-color-scheme: dark) {
+            #dark_logo { display: block!important; }
+            #light_logo { display: none!important; }
+        }
+
+        @media (prefers-color-scheme: light) {
+            #dark_logo { display: none!important; }
+            #light_logo { display: block!important; }
+        }
+    </style>
 
 </head>
 
@@ -105,11 +111,14 @@
 					<!--RD Navbar Toggle-->
 					<button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                     
+                    
+
 					<!--RD Navbar Brand-->
 					<div class="rd-navbar-brand">
                     <!--Brand-->
                         <a class="brand" href="javascript:void(0)">
-                            <img class="img_logo" src="<?= base_url() ?>assets_tv/images/logo_mitraone_font_1.png" alt="" width="174" height="13"/>
+                            <img id="dark_logo" class="img_logo" src="<?= base_url() ?>assets_tv/images/logo_mitraone_white_1.png" alt="" width="174" height="13"/>
+                            <img id="light_logo" class="img_logo" src="<?= base_url() ?>assets_tv/images/logo_mitraone_font_1.png" alt="" width="174" height="13"/>
                             <!-- MitraOne TV 296x52 -->
                         </a>
                     </div>
