@@ -148,6 +148,7 @@ body {
 .frame-video{
 	display: block;
 	margin: 0 auto;
+	border-radius: 8px!important;
 }
 
 @media (min-width: 768px) {
