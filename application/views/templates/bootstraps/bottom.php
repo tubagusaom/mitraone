@@ -69,6 +69,11 @@ owl = $(".owl-carousel");
     // var player_1 = videojs("hls-example-1");
     // player_1.play();
 
+    
+    $('.x-video').click(function(){
+      alert('coming soon');
+    });
+
     $('.nav-link').click(function(){
         var myId = $(this).attr('id');
         var keys = $(this).data('key');
