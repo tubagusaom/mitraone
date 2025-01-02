@@ -1,6 +1,6 @@
 
       
-      <footer class="section footer-classic bg-default">
+      <footer class="section footer-classic bg-terabytee">
         <div class="container">
           <div class="row row-15">
             <div class="col-sm-12">

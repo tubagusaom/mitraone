@@ -17,6 +17,10 @@ body {
 }
 
 
+.bg-terabytee {
+	background-color: #ddd!important;
+}
+
 .bg-default {
 	background-color: whitesmoke!important;
 }
