@@ -63,6 +63,7 @@ $route['restapi/get-random'] = "api/random";
 $route['restapi/get-energy-corner'] = "api/energy_corner";
 $route['restapi/get-umkm-corner'] = "api/umkm_corner";
 $route['restapi/get-mitra-corner'] = "api/mitra_corner";
+$route['restapi/get-search'] = "api/search";
 
 
 

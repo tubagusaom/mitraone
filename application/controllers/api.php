@@ -500,4 +500,18 @@ class Api extends MY_Controller {
 		// var_dump($apikey); die();
 	}
 
+	function search(){
+		$this->restapi->content_type_json();
+		
+		$rest = $this->input->post('M1TV-CLIENT-KEY',true);
+		$keyword = $this->input->post('keyword',true);
+
+		if ($rest == TRUE) {
+			$apikey = $this->restapi->auth_api_key($rest);
+		}
+		
+		$ReturnData = $this->api_model->get_search($apikey,$keyword);
+		// var_dump($apikey); die();
+	}
+
 }

@@ -666,7 +666,7 @@ class Api_model extends MY_Model {
             // $this->db->join('tv_categories b', 'a.id_categorie=b.id');
 
             // $this->db->where("a.id_member",$id);
-            $this->db->where('a.id >', '3');
+            // $this->db->where('a.id >', '3');
 
             $this->db->order_by('a.id', 'DESC');
 
@@ -696,6 +696,61 @@ class Api_model extends MY_Model {
         echo json_encode($data_arr);
 
     }
+
+    function get_search($data,$keyword) {
+
+        // var_dump($keyword); die();
+        
+        if ($data == TRUE) {
+
+            $this->db->select("
+                a.nama_video AS title,
+                CASE
+                    WHEN a.id_categorie = 0 THEN 'null'
+                    WHEN a.id_categorie = 1 THEN 'energy-corner'
+                    WHEN a.id_categorie = 4 THEN 'mitra-corner'
+                    WHEN a.id_categorie = 5 THEN 'umkm-corner'
+                    END AS category,
+                a.link_video AS link,
+                a.poster_video AS thumbnail,
+                a.desc_video AS description
+            ", FALSE);
+
+            $this->db->from('tv_video a');
+            // $this->db->join('tv_categories b', 'a.id_categorie=b.id');
+
+            // $this->db->where("a.id_member",$id);
+            $this->db->like('a.nama_video', $keyword);
+
+            $this->db->order_by('a.id', 'DESC');
+
+            // $this->db->limit(8);
+    
+            // $this->db->limit($perpage);
+            // $this->db->offset($offset);
+    
+            $data_sql = $this->db->get();
+            $data_video = $data_sql->result();
+
+            // $arr_video[] = $data_video;
+
+            // var_dump($arr_video); die();
+            $result['status'] = $this->restapi->response_api('200');
+            $get_result['data'] = $data_video;
+                
+            $result = $get_result;
+            // $result['Data'] = $get_product;
+
+        }else {
+            $result['status'] = $this->restapi->response_api('400');
+        }
+
+        $data_arr = $result;
+        echo json_encode($data_arr);
+
+    }
+
+    // $this->db->like('skema', $keyword);
 
 
 
