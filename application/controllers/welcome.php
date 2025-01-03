@@ -184,6 +184,12 @@
         }
       }
 
+      function privacy_policy(){
+        $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();
+
+        $this->load->view('templates/bootstraps/privacy_policy', $data);
+      }
+
       function admin() {
         $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();
 
