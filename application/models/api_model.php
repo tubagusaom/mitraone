@@ -488,11 +488,10 @@ class Api_model extends MY_Model {
             $this->db->select("
                 a.nama_video AS title,
                 CASE
-                    WHEN a.id_categorie = 0 THEN 'null'
                     WHEN a.id_categorie = 1 THEN 'energy-corner'
                     WHEN a.id_categorie = 4 THEN 'mitra-corner'
                     WHEN a.id_categorie = 5 THEN 'umkm-corner'
-                    END AS category,
+                    ELSE  'null' END AS category,
                 a.link_video AS link,
                 a.poster_video AS thumbnail,
                 a.desc_video AS description
@@ -652,11 +651,10 @@ class Api_model extends MY_Model {
             $this->db->select("
                 a.nama_video AS title,
                 CASE
-                    WHEN a.id_categorie = 0 THEN 'null'
                     WHEN a.id_categorie = 1 THEN 'energy-corner'
                     WHEN a.id_categorie = 4 THEN 'mitra-corner'
                     WHEN a.id_categorie = 5 THEN 'umkm-corner'
-                    END AS category,
+                    ELSE  'null' END AS category,
                 a.link_video AS link,
                 a.poster_video AS thumbnail,
                 a.desc_video AS description
@@ -697,7 +695,7 @@ class Api_model extends MY_Model {
 
     }
 
-    function get_search($data,$keyword=false) {
+    function get_search($data,$keyword) {
 
         // var_dump($keyword); die();
         
@@ -706,11 +704,10 @@ class Api_model extends MY_Model {
             $this->db->select("
                 a.nama_video AS title,
                 CASE
-                    WHEN a.id_categorie = 0 THEN 'null'
                     WHEN a.id_categorie = 1 THEN 'energy-corner'
                     WHEN a.id_categorie = 4 THEN 'mitra-corner'
                     WHEN a.id_categorie = 5 THEN 'umkm-corner'
-                    END AS category,
+                    ELSE  'null' END AS category,
                 a.link_video AS link,
                 a.poster_video AS thumbnail,
                 a.desc_video AS description

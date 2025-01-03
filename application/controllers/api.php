@@ -504,13 +504,13 @@ class Api extends MY_Controller {
 		$this->restapi->content_type_json();
 		
 		$rest = $this->input->post('M1TV-CLIENT-KEY',true);
-		$keyword = $this->input->post('keyword',true);
+		$keyw = $this->input->post('keyword',true);
 
 		if ($rest == TRUE) {
 			$apikey = $this->restapi->auth_api_key($rest);
 		}
 		
-		$ReturnData = $this->api_model->get_search($apikey,$keyword);
+		$ReturnData = $this->api_model->get_search($apikey,$keyw);
 		// var_dump($apikey); die();
 	}
 
