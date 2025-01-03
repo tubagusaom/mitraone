@@ -290,7 +290,7 @@ class Welcome_model extends MY_Model
     $this->db->from('tv_video');
     $this->db->order_by('id', 'DESC');
     
-    $this->db->limit(8);
+    $this->db->limit(10);
     $this->db->where('id >', '3');
 
     $query = $this->db->get();
