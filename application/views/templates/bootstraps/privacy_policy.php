@@ -26,8 +26,8 @@
 
 <body>
     <strong>Privacy Policy</strong>
-    <p>This privacy policy applies to the app <strong style="color:#204198;">Mitra One TV</strong> for mobile devices that was created
-        by <strong style="color:#204198;">Mitra One TV Developer</strong> as a Free service. This service is intended for use "AS IS".</p>
+    <p>This privacy policy applies to the app <strong style="color:#204198;">MitraOne TV</strong> for mobile devices that was created
+        by <strong style="color:#204198;">MitraOne TV Developer</strong> as a Free service. This service is intended for use "AS IS".</p>
     <br><strong>Information Collection and Use</strong>
     <p>The Application collects information when you download and use it. This information may include information such
         as </p>
