@@ -697,7 +697,7 @@ class Api_model extends MY_Model {
 
     }
 
-    function get_search($data,$keyword) {
+    function get_search($data,$keyword=false) {
 
         // var_dump($keyword); die();
         
