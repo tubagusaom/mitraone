@@ -493,6 +493,7 @@ class Api_model extends MY_Model {
             // ');
 
             $this->db->select('
+                a.id,
                 a.nama_video AS title,
                 a.link_video AS link,
                 a.poster_video AS thumbnail,
@@ -503,11 +504,11 @@ class Api_model extends MY_Model {
             // $this->db->join('tv_categories b', 'a.id_categorie=b.id');
 
             // $this->db->where("a.id_member",$id);
-            // $this->db->where("b.is_product_api",'1');
+            $this->db->where('a.id >', '3');
 
             $this->db->order_by('a.id', 'DESC');
 
-            $this->db->limit(8);
+            // $this->db->limit(8);
     
             // $this->db->limit($perpage);
             // $this->db->offset($offset);
@@ -515,9 +516,9 @@ class Api_model extends MY_Model {
             $data_sql = $this->db->get();
             $data_video = $data_sql->result();
 
-            // $get_result['xxx'] = '';
+            // $arr_video[] = $data_video;
 
-            // var_dump($data_video); die();
+            // var_dump($arr_video); die();
             $result['status'] = $this->restapi->response_api('200');
             $get_result['data'] = $data_video;
                 
