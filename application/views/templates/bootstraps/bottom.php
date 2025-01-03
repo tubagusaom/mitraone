@@ -69,22 +69,31 @@ owl = $(".owl-carousel");
     // var player_1 = videojs("hls-example-1");
     // player_1.play();
 
+    var player1 = videojs("hls-example-1");
+    var player2 = videojs("hls-example-2");
+    var player3 = videojs("hls-example-3");
+    var player4 = videojs("hls-example-4");
+
     $('.nav-link').click(function(){
         var myId = $(this).attr('id');
         var keys = $(this).data('key');
 
         $(window).scrollTop($('#tabs-2').offset().top-300);
         
-        // alert(keys);
+        // alert(myId);
 
         $("#frame-1").attr("src","");
         $("#frame-2").attr("src","");
         $("#frame-3").attr("src","");
 
-        $("#frame-21").attr("src","");
-        $("#frame-22").attr("src","");
-        $("#frame-23").attr("src","");
-        $("#frame-24").attr("src","");
+        $('.v-video').each(function() {
+          var cVideos = $(this).data('cvideo');
+
+          $("#frame-" + cVideos).attr("src","");
+
+          $('#tabs-2-' + cVideos).removeClass("active");
+          $('#tabs-2-' + cVideos).removeClass("show");
+        });
           
         // myId.addClass("active");
         // myId.addClass("show");
@@ -112,95 +121,6 @@ owl = $(".owl-carousel");
         });
 
       });
-    
-
-      // $('#corner-1').click(function(){
-
-      //   $("#frame-1").attr("src","https://www.youtube.com/embed/xI0N1WUk840?autoplay=1&mute=1");
-      //   $("#frame-2").attr("src","");
-      //   $("#frame-3").attr("src","");
-
-      //   $('.column_tb').each(function() {
-      //     var codex1 = $(this).data('code');
-      //     videojs("hls-example-" + codex1).pause();
-
-      //     $('#myAnchor-'+codex1).removeClass("active");
-      //     $('#myAnchor-'+codex1).removeClass("show");
-
-      //     $('#tabs-2-'+codex1).removeClass("active");
-      //     $('#tabs-2-'+codex1).removeClass("show");
-      //   });
-
-      //   $('#tabs-2-5').addClass("active");
-      //   $('#tabs-2-5').addClass("show");
-
-      //   $('#tabs-2-6').removeClass("active");
-      //   $('#tabs-2-6').removeClass("show");
-      //   $('#tabs-2-7').removeClass("active");
-      //   $('#tabs-2-7').removeClass("show"); 
-
-      // });
-
-      // $('#corner-2').click(function(){
-
-      //   $("#frame-1").attr("src","");
-      //   $("#frame-2").attr("src","https://www.youtube.com/embed/nT6XENs5cA8?autoplay=1&mute=1");
-      //   $("#frame-3").attr("src","");
-
-      //   $('.column_tb').each(function() {
-      //     var codex2 = $(this).data('code');
-      //     videojs("hls-example-" + codex2).pause();
-
-      //     $('#myAnchor-'+codex2).removeClass("active");
-      //     $('#myAnchor-'+codex2).removeClass("show");
-
-      //     $('#tabs-2-'+codex2).removeClass("active");
-      //     $('#tabs-2-'+codex2).removeClass("show");
-      //   });
-
-      //   $('#tabs-2-6').addClass("active");
-      //   $('#tabs-2-6').addClass("show");
-
-        
-      //   $('#tabs-2-5').removeClass("active");
-      //   $('#tabs-2-5').removeClass("show");
-      //   $('#tabs-2-7').removeClass("active");
-      //   $('#tabs-2-7').removeClass("show"); 
-
-      // });
-
-      // $('#corner-3').click(function(){
-
-      //   $("#frame-1").attr("src","");
-      //   $("#frame-2").attr("src","");
-      //   $("#frame-3").attr("src","https://www.youtube.com/embed/xT-2XUfwX7E?autoplay=1&mute=1");
-
-      //   $('.column_tb').each(function() {
-      //     var codex3 = $(this).data('code');
-      //     videojs("hls-example-" + codex3).pause();
-
-      //     $('#myAnchor-'+codex3).removeClass("active");
-      //     $('#myAnchor-'+codex3).removeClass("show");
-
-      //     $('#tabs-2-'+codex3).removeClass("active");
-      //     $('#tabs-2-'+codex3).removeClass("show");
-      //   });
-
-      //   $('#tabs-2-7').addClass("active");
-      //   $('#tabs-2-7').addClass("show");
-        
-      //   $('#tabs-2-5').removeClass("active");
-      //   $('#tabs-2-5').removeClass("show");
-      //   $('#tabs-2-6').removeClass("active");
-      //   $('#tabs-2-6').removeClass("show"); 
-
-      // });
-
-
-    var player1 = videojs("hls-example-1");
-    var player2 = videojs("hls-example-2");
-    var player3 = videojs("hls-example-3");
-    var player4 = videojs("hls-example-4");
 
     $('#corner-1').click(function(){
         player1.pause();
@@ -214,10 +134,19 @@ owl = $(".owl-carousel");
         $("#frame-2").attr("src","");
         $("#frame-3").attr("src","");
 
-        $("#frame-21").attr("src","");
-        $("#frame-22").attr("src","");
-        $("#frame-23").attr("src","");
-        $("#frame-24").attr("src","");
+        $('.v-video').each(function() {
+          var codeVideos1 = $(this).data('cvideo');
+
+          $("#frame-" + codeVideos1).attr("src","");
+
+          $('#tabs-2-' + codeVideos1).removeClass("active");
+          $('#tabs-2-' + codeVideos1).removeClass("show");
+        });
+
+        // $("#frame-21").attr("src","");
+        // $("#frame-22").attr("src","");
+        // $("#frame-23").attr("src","");
+        // $("#frame-24").attr("src","");
 
         $('#tabs-2-5').addClass("active");
         $('#tabs-2-5').addClass("show");
@@ -235,14 +164,14 @@ owl = $(".owl-carousel");
         $('#tabs-2-7').removeClass("active");
         $('#tabs-2-7').removeClass("show");
         
-        $('#tabs-2-21').removeClass("active");
-        $('#tabs-2-21').removeClass("show");
-        $('#tabs-2-22').removeClass("active");
-        $('#tabs-2-22').removeClass("show");
-        $('#tabs-2-23').removeClass("active");
-        $('#tabs-2-23').removeClass("show");
-        $('#tabs-2-24').removeClass("active");
-        $('#tabs-2-24').removeClass("show");
+        // $('#tabs-2-21').removeClass("active");
+        // $('#tabs-2-21').removeClass("show");
+        // $('#tabs-2-22').removeClass("active");
+        // $('#tabs-2-22').removeClass("show");
+        // $('#tabs-2-23').removeClass("active");
+        // $('#tabs-2-23').removeClass("show");
+        // $('#tabs-2-24').removeClass("active");
+        // $('#tabs-2-24').removeClass("show");
         
         $('#myAnchor-1').removeClass("active");
         $('#myAnchor-1').removeClass("show");
@@ -266,10 +195,14 @@ owl = $(".owl-carousel");
         $("#frame-2").attr("src","https://www.youtube.com/embed/nT6XENs5cA8?autoplay=1&mute=1");
         $("#frame-3").attr("src","");
 
-        $("#frame-21").attr("src","");
-        $("#frame-22").attr("src","");
-        $("#frame-23").attr("src","");
-        $("#frame-24").attr("src","");
+        $('.v-video').each(function() {
+          var codeVideos2 = $(this).data('cvideo');
+
+          $("#frame-" + codeVideos2).attr("src","");
+
+          $('#tabs-2-' + codeVideos2).removeClass("active");
+          $('#tabs-2-' + codeVideos2).removeClass("show");
+        });
 
         $('#tabs-2-6').addClass("active");
         $('#tabs-2-6').addClass("show");
@@ -286,15 +219,6 @@ owl = $(".owl-carousel");
         $('#tabs-2-5').removeClass("show");
         $('#tabs-2-7').removeClass("active");
         $('#tabs-2-7').removeClass("show");
-        
-        $('#tabs-2-21').removeClass("active");
-        $('#tabs-2-21').removeClass("show");
-        $('#tabs-2-22').removeClass("active");
-        $('#tabs-2-22').removeClass("show");
-        $('#tabs-2-23').removeClass("active");
-        $('#tabs-2-23').removeClass("show");
-        $('#tabs-2-24').removeClass("active");
-        $('#tabs-2-24').removeClass("show");
         
         $('#myAnchor-1').removeClass("active");
         $('#myAnchor-1').removeClass("show");
@@ -318,10 +242,14 @@ owl = $(".owl-carousel");
         $("#frame-2").attr("src","");
         $("#frame-3").attr("src","https://www.youtube.com/embed/xT-2XUfwX7E?autoplay=1&mute=1");
 
-        $("#frame-21").attr("src","");
-        $("#frame-22").attr("src","");
-        $("#frame-23").attr("src","");
-        $("#frame-24").attr("src","");
+        $('.v-video').each(function() {
+          var codeVideos3 = $(this).data('cvideo');
+
+          $("#frame-" + codeVideos3).attr("src","");
+
+          $('#tabs-2-' + codeVideos3).removeClass("active");
+          $('#tabs-2-' + codeVideos3).removeClass("show");
+        });
 
         $('#tabs-2-7').addClass("active");
         $('#tabs-2-7').addClass("show");
@@ -339,15 +267,6 @@ owl = $(".owl-carousel");
         $('#tabs-2-6').removeClass("active");
         $('#tabs-2-6').removeClass("show");
         
-        $('#tabs-2-21').removeClass("active");
-        $('#tabs-2-21').removeClass("show");
-        $('#tabs-2-22').removeClass("active");
-        $('#tabs-2-22').removeClass("show");
-        $('#tabs-2-23').removeClass("active");
-        $('#tabs-2-23').removeClass("show");
-        $('#tabs-2-24').removeClass("active");
-        $('#tabs-2-24').removeClass("show");
-        
         $('#myAnchor-1').removeClass("active");
         $('#myAnchor-1').removeClass("show");
         $('#myAnchor-2').removeClass("active");
@@ -358,222 +277,280 @@ owl = $(".owl-carousel");
         $('#myAnchor-4').removeClass("show");
     });
 
+    $('.click-video').click(function(){
 
+      player1.pause();
+      player2.pause();
+      player3.pause();
+      player4.pause();
 
+      var keys = $(this).data('key');
+      var keys = $(this).data('key');
+      var names = $(this).data('name');
+      var urls = $(this).data('url');
+      var embeds = $(this).data('embed');
+      var posters = $(this).data('poster');
+      
+      // alert(embeds);
 
-    $('#x-21').click(function(){
-
-      // alert('coming soon');
-        player1.pause();
-        player2.pause();
-        player3.pause();
-        player4.pause();
-
-      $(window).scrollTop($('#tabs-2').offset().top-300);
-
-      $("#frame-21").attr("src","https://www.youtube.com/embed/xI0N1WUk840?si=Ijk0jv-SG1n_6MSE?autoplay=1&mute=1");
-
-      $("#frame-1").attr("src","");
-      $("#frame-2").attr("src","");
-      $("#frame-3").attr("src","");
-
-      $("#frame-22").attr("src","");
-      $("#frame-23").attr("src","");
-      $("#frame-24").attr("src","");
-
-      $('#tabs-2-21').addClass("active");
-      $('#tabs-2-21').addClass("show");
-
-      $('#tabs-2-22').removeClass("active");
-      $('#tabs-2-22').removeClass("show");
-      $('#tabs-2-23').removeClass("active");
-      $('#tabs-2-23').removeClass("show");
-      $('#tabs-2-24').removeClass("active");
-      $('#tabs-2-24').removeClass("show");
-
-      $('#tabs-2-1').removeClass("active");
-      $('#tabs-2-1').removeClass("show");
-      $('#tabs-2-2').removeClass("active");
-      $('#tabs-2-2').removeClass("show");
-      $('#tabs-2-3').removeClass("active");
-      $('#tabs-2-3').removeClass("show");
-      $('#tabs-2-4').removeClass("active");
-      $('#tabs-2-4').removeClass("show");
-      $('#tabs-2-5').removeClass("active");
-      $('#tabs-2-5').removeClass("show");
-      $('#tabs-2-6').removeClass("active");
-      $('#tabs-2-6').removeClass("show");
-      $('#tabs-2-7').removeClass("active");
-      $('#tabs-2-7').removeClass("show");
-        
-      $('#myAnchor-1').removeClass("active");
-      $('#myAnchor-1').removeClass("show");
-      $('#myAnchor-2').removeClass("active");
-      $('#myAnchor-2').removeClass("show");
-      $('#myAnchor-3').removeClass("active");
-      $('#myAnchor-3').removeClass("show");
-      $('#myAnchor-4').removeClass("active");
-      $('#myAnchor-4').removeClass("show");
-    });
-
-    $('#x-22').click(function(){
-        player1.pause();
-        player2.pause();
-        player3.pause();
-        player4.pause();
-
-      $(window).scrollTop($('#tabs-2').offset().top-300);
-
-      $("#frame-22").attr("src","https://www.youtube.com/embed/nT6XENs5cA8?si=qqb78IG2z5xnFXJz?autoplay=1&mute=1");
+      $('#frame-' + keys).attr("src",embeds + "?autoplay=1&mute=0");
 
       $("#frame-1").attr("src","");
       $("#frame-2").attr("src","");
       $("#frame-3").attr("src","");
 
-      $("#frame-21").attr("src","");
-      $("#frame-23").attr("src","");
-      $("#frame-24").attr("src","");
+      $('#tabs-2-' + keys).addClass("active");
+      $('#tabs-2-' + keys).addClass("show");
 
-      $('#tabs-2-22').addClass("active");
-      $('#tabs-2-22').addClass("show");
+      $('.tv-video').each(function() {
+        var codes = $(this).data('codev');
 
-      $('#tabs-2-21').removeClass("active");
-      $('#tabs-2-21').removeClass("show");
-      $('#tabs-2-23').removeClass("active");
-      $('#tabs-2-23').removeClass("show");
-      $('#tabs-2-24').removeClass("active");
-      $('#tabs-2-24').removeClass("show");
+        // alert(codes);
 
-      $('#tabs-2-1').removeClass("active");
-      $('#tabs-2-1').removeClass("show");
-      $('#tabs-2-2').removeClass("active");
-      $('#tabs-2-2').removeClass("show");
-      $('#tabs-2-3').removeClass("active");
-      $('#tabs-2-3').removeClass("show");
-      $('#tabs-2-4').removeClass("active");
-      $('#tabs-2-4').removeClass("show");
-      $('#tabs-2-5').removeClass("active");
-      $('#tabs-2-5').removeClass("show");
-      $('#tabs-2-6').removeClass("active");
-      $('#tabs-2-6').removeClass("show");
-      $('#tabs-2-7').removeClass("active");
-      $('#tabs-2-7').removeClass("show");
-        
-      $('#myAnchor-1').removeClass("active");
-      $('#myAnchor-1').removeClass("show");
-      $('#myAnchor-2').removeClass("active");
-      $('#myAnchor-2').removeClass("show");
-      $('#myAnchor-3').removeClass("active");
-      $('#myAnchor-3').removeClass("show");
-      $('#myAnchor-4').removeClass("active");
-      $('#myAnchor-4').removeClass("show");
-    });
+        const arrays = [keys];
+        if (!(arrays.includes(codes))) {
+          // alert("#frame-"+codes);
+          $("#frame-"+codes).attr("src","");
 
-    $('#x-23').click(function(){
-        player1.pause();
-        player2.pause();
-        player3.pause();
-        player4.pause();
+          $('#tabs-2-' + codes).removeClass("active");
+          $('#tabs-2-' + codes).removeClass("show");
+
+          $('#tabs-2-1').removeClass("active");
+          $('#tabs-2-1').removeClass("show");
+          $('#tabs-2-2').removeClass("active");
+          $('#tabs-2-2').removeClass("show");
+          $('#tabs-2-3').removeClass("active");
+          $('#tabs-2-3').removeClass("show");
+          $('#tabs-2-4').removeClass("active");
+          $('#tabs-2-4').removeClass("show");
+          $('#tabs-2-5').removeClass("active");
+          $('#tabs-2-5').removeClass("show");
+          $('#tabs-2-6').removeClass("active");
+          $('#tabs-2-6').removeClass("show");
+          $('#tabs-2-7').removeClass("active");
+          $('#tabs-2-7').removeClass("show");
+        };
+
+      });
 
       $(window).scrollTop($('#tabs-2').offset().top-300);
 
-      $("#frame-23").attr("src","https://www.youtube.com/embed/xT-2XUfwX7E?si=vO8I5Jkqh8Xvx8W5?autoplay=1&mute=1");
-
-      $("#frame-1").attr("src","");
-      $("#frame-2").attr("src","");
-      $("#frame-3").attr("src","");
-
-      $("#frame-21").attr("src","");
-      $("#frame-22").attr("src","");
-      $("#frame-24").attr("src","");
-
-      $('#tabs-2-23').addClass("active");
-      $('#tabs-2-23').addClass("show");
-
-      $('#tabs-2-21').removeClass("active");
-      $('#tabs-2-21').removeClass("show");
-      $('#tabs-2-22').removeClass("active");
-      $('#tabs-2-22').removeClass("show");
-      $('#tabs-2-24').removeClass("active");
-      $('#tabs-2-24').removeClass("show");
-
-      $('#tabs-2-1').removeClass("active");
-      $('#tabs-2-1').removeClass("show");
-      $('#tabs-2-2').removeClass("active");
-      $('#tabs-2-2').removeClass("show");
-      $('#tabs-2-3').removeClass("active");
-      $('#tabs-2-3').removeClass("show");
-      $('#tabs-2-4').removeClass("active");
-      $('#tabs-2-4').removeClass("show");
-      $('#tabs-2-5').removeClass("active");
-      $('#tabs-2-5').removeClass("show");
-      $('#tabs-2-6').removeClass("active");
-      $('#tabs-2-6').removeClass("show");
-      $('#tabs-2-7').removeClass("active");
-      $('#tabs-2-7').removeClass("show");
-        
-      $('#myAnchor-1').removeClass("active");
-      $('#myAnchor-1').removeClass("show");
-      $('#myAnchor-2').removeClass("active");
-      $('#myAnchor-2').removeClass("show");
-      $('#myAnchor-3').removeClass("active");
-      $('#myAnchor-3').removeClass("show");
-      $('#myAnchor-4').removeClass("active");
-      $('#myAnchor-4').removeClass("show");
     });
 
-    $('#x-24').click(function(){
-        player1.pause();
-        player2.pause();
-        player3.pause();
-        player4.pause();
+    // batas tv video
+    // $('#x-21').click(function(){
 
-      $(window).scrollTop($('#tabs-2').offset().top-300);
+    //   // alert('coming soon');
+    //     player1.pause();
+    //     player2.pause();
+    //     player3.pause();
+    //     player4.pause();
 
-      $("#frame-24").attr("src","https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?autoplay=1&mute=1");
+    //   $(window).scrollTop($('#tabs-2').offset().top-300);
 
-      $("#frame-1").attr("src","");
-      $("#frame-2").attr("src","");
-      $("#frame-3").attr("src","");
+    //   $("#frame-21").attr("src","https://www.youtube.com/embed/xI0N1WUk840?si=Ijk0jv-SG1n_6MSE?autoplay=1&mute=1");
 
-      $("#frame-21").attr("src","");
-      $("#frame-22").attr("src","");
-      $("#frame-23").attr("src","");
+    //   $("#frame-1").attr("src","");
+    //   $("#frame-2").attr("src","");
+    //   $("#frame-3").attr("src","");
 
-      $('#tabs-2-24').addClass("active");
-      $('#tabs-2-24').addClass("show");
+    //   $("#frame-22").attr("src","");
+    //   $("#frame-23").attr("src","");
+    //   $("#frame-24").attr("src","");
 
-      $('#tabs-2-21').removeClass("active");
-      $('#tabs-2-21').removeClass("show");
-      $('#tabs-2-22').removeClass("active");
-      $('#tabs-2-22').removeClass("show");
-      $('#tabs-2-23').removeClass("active");
-      $('#tabs-2-23').removeClass("show");
+    //   $('#tabs-2-21').addClass("active");
+    //   $('#tabs-2-21').addClass("show");
 
-      $('#tabs-2-1').removeClass("active");
-      $('#tabs-2-1').removeClass("show");
-      $('#tabs-2-2').removeClass("active");
-      $('#tabs-2-2').removeClass("show");
-      $('#tabs-2-3').removeClass("active");
-      $('#tabs-2-3').removeClass("show");
-      $('#tabs-2-4').removeClass("active");
-      $('#tabs-2-4').removeClass("show");
-      $('#tabs-2-5').removeClass("active");
-      $('#tabs-2-5').removeClass("show");
-      $('#tabs-2-6').removeClass("active");
-      $('#tabs-2-6').removeClass("show");
-      $('#tabs-2-7').removeClass("active");
-      $('#tabs-2-7').removeClass("show");
+    //   $('#tabs-2-22').removeClass("active");
+    //   $('#tabs-2-22').removeClass("show");
+    //   $('#tabs-2-23').removeClass("active");
+    //   $('#tabs-2-23').removeClass("show");
+    //   $('#tabs-2-24').removeClass("active");
+    //   $('#tabs-2-24').removeClass("show");
+
+    //   $('#tabs-2-1').removeClass("active");
+    //   $('#tabs-2-1').removeClass("show");
+    //   $('#tabs-2-2').removeClass("active");
+    //   $('#tabs-2-2').removeClass("show");
+    //   $('#tabs-2-3').removeClass("active");
+    //   $('#tabs-2-3').removeClass("show");
+    //   $('#tabs-2-4').removeClass("active");
+    //   $('#tabs-2-4').removeClass("show");
+    //   $('#tabs-2-5').removeClass("active");
+    //   $('#tabs-2-5').removeClass("show");
+    //   $('#tabs-2-6').removeClass("active");
+    //   $('#tabs-2-6').removeClass("show");
+    //   $('#tabs-2-7').removeClass("active");
+    //   $('#tabs-2-7').removeClass("show");
         
-      $('#myAnchor-1').removeClass("active");
-      $('#myAnchor-1').removeClass("show");
-      $('#myAnchor-2').removeClass("active");
-      $('#myAnchor-2').removeClass("show");
-      $('#myAnchor-3').removeClass("active");
-      $('#myAnchor-3').removeClass("show");
-      $('#myAnchor-4').removeClass("active");
-      $('#myAnchor-4').removeClass("show");
-    });
+    //   $('#myAnchor-1').removeClass("active");
+    //   $('#myAnchor-1').removeClass("show");
+    //   $('#myAnchor-2').removeClass("active");
+    //   $('#myAnchor-2').removeClass("show");
+    //   $('#myAnchor-3').removeClass("active");
+    //   $('#myAnchor-3').removeClass("show");
+    //   $('#myAnchor-4').removeClass("active");
+    //   $('#myAnchor-4').removeClass("show");
+    // });
+
+    // $('#x-22').click(function(){
+    //     player1.pause();
+    //     player2.pause();
+    //     player3.pause();
+    //     player4.pause();
+
+    //   $(window).scrollTop($('#tabs-2').offset().top-300);
+
+    //   $("#frame-22").attr("src","https://www.youtube.com/embed/nT6XENs5cA8?si=qqb78IG2z5xnFXJz?autoplay=1&mute=1");
+
+    //   $("#frame-1").attr("src","");
+    //   $("#frame-2").attr("src","");
+    //   $("#frame-3").attr("src","");
+
+    //   $("#frame-21").attr("src","");
+    //   $("#frame-23").attr("src","");
+    //   $("#frame-24").attr("src","");
+
+    //   $('#tabs-2-22').addClass("active");
+    //   $('#tabs-2-22').addClass("show");
+
+    //   $('#tabs-2-21').removeClass("active");
+    //   $('#tabs-2-21').removeClass("show");
+    //   $('#tabs-2-23').removeClass("active");
+    //   $('#tabs-2-23').removeClass("show");
+    //   $('#tabs-2-24').removeClass("active");
+    //   $('#tabs-2-24').removeClass("show");
+
+    //   $('#tabs-2-1').removeClass("active");
+    //   $('#tabs-2-1').removeClass("show");
+    //   $('#tabs-2-2').removeClass("active");
+    //   $('#tabs-2-2').removeClass("show");
+    //   $('#tabs-2-3').removeClass("active");
+    //   $('#tabs-2-3').removeClass("show");
+    //   $('#tabs-2-4').removeClass("active");
+    //   $('#tabs-2-4').removeClass("show");
+    //   $('#tabs-2-5').removeClass("active");
+    //   $('#tabs-2-5').removeClass("show");
+    //   $('#tabs-2-6').removeClass("active");
+    //   $('#tabs-2-6').removeClass("show");
+    //   $('#tabs-2-7').removeClass("active");
+    //   $('#tabs-2-7').removeClass("show");
+        
+    //   $('#myAnchor-1').removeClass("active");
+    //   $('#myAnchor-1').removeClass("show");
+    //   $('#myAnchor-2').removeClass("active");
+    //   $('#myAnchor-2').removeClass("show");
+    //   $('#myAnchor-3').removeClass("active");
+    //   $('#myAnchor-3').removeClass("show");
+    //   $('#myAnchor-4').removeClass("active");
+    //   $('#myAnchor-4').removeClass("show");
+    // });
+
+    // $('#x-23').click(function(){
+    //     player1.pause();
+    //     player2.pause();
+    //     player3.pause();
+    //     player4.pause();
+
+    //   $(window).scrollTop($('#tabs-2').offset().top-300);
+
+    //   $("#frame-23").attr("src","https://www.youtube.com/embed/xT-2XUfwX7E?si=vO8I5Jkqh8Xvx8W5?autoplay=1&mute=1");
+
+    //   $("#frame-1").attr("src","");
+    //   $("#frame-2").attr("src","");
+    //   $("#frame-3").attr("src","");
+
+    //   $("#frame-21").attr("src","");
+    //   $("#frame-22").attr("src","");
+    //   $("#frame-24").attr("src","");
+
+    //   $('#tabs-2-23').addClass("active");
+    //   $('#tabs-2-23').addClass("show");
+
+    //   $('#tabs-2-21').removeClass("active");
+    //   $('#tabs-2-21').removeClass("show");
+    //   $('#tabs-2-22').removeClass("active");
+    //   $('#tabs-2-22').removeClass("show");
+    //   $('#tabs-2-24').removeClass("active");
+    //   $('#tabs-2-24').removeClass("show");
+
+    //   $('#tabs-2-1').removeClass("active");
+    //   $('#tabs-2-1').removeClass("show");
+    //   $('#tabs-2-2').removeClass("active");
+    //   $('#tabs-2-2').removeClass("show");
+    //   $('#tabs-2-3').removeClass("active");
+    //   $('#tabs-2-3').removeClass("show");
+    //   $('#tabs-2-4').removeClass("active");
+    //   $('#tabs-2-4').removeClass("show");
+    //   $('#tabs-2-5').removeClass("active");
+    //   $('#tabs-2-5').removeClass("show");
+    //   $('#tabs-2-6').removeClass("active");
+    //   $('#tabs-2-6').removeClass("show");
+    //   $('#tabs-2-7').removeClass("active");
+    //   $('#tabs-2-7').removeClass("show");
+        
+    //   $('#myAnchor-1').removeClass("active");
+    //   $('#myAnchor-1').removeClass("show");
+    //   $('#myAnchor-2').removeClass("active");
+    //   $('#myAnchor-2').removeClass("show");
+    //   $('#myAnchor-3').removeClass("active");
+    //   $('#myAnchor-3').removeClass("show");
+    //   $('#myAnchor-4').removeClass("active");
+    //   $('#myAnchor-4').removeClass("show");
+    // });
+
+    // $('#x-24').click(function(){
+    //     player1.pause();
+    //     player2.pause();
+    //     player3.pause();
+    //     player4.pause();
+
+    //   $(window).scrollTop($('#tabs-2').offset().top-300);
+
+    //   $("#frame-24").attr("src","https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?autoplay=1&mute=1");
+
+    //   $("#frame-1").attr("src","");
+    //   $("#frame-2").attr("src","");
+    //   $("#frame-3").attr("src","");
+
+    //   $("#frame-21").attr("src","");
+    //   $("#frame-22").attr("src","");
+    //   $("#frame-23").attr("src","");
+
+    //   $('#tabs-2-24').addClass("active");
+    //   $('#tabs-2-24').addClass("show");
+
+    //   $('#tabs-2-21').removeClass("active");
+    //   $('#tabs-2-21').removeClass("show");
+    //   $('#tabs-2-22').removeClass("active");
+    //   $('#tabs-2-22').removeClass("show");
+    //   $('#tabs-2-23').removeClass("active");
+    //   $('#tabs-2-23').removeClass("show");
+
+    //   $('#tabs-2-1').removeClass("active");
+    //   $('#tabs-2-1').removeClass("show");
+    //   $('#tabs-2-2').removeClass("active");
+    //   $('#tabs-2-2').removeClass("show");
+    //   $('#tabs-2-3').removeClass("active");
+    //   $('#tabs-2-3').removeClass("show");
+    //   $('#tabs-2-4').removeClass("active");
+    //   $('#tabs-2-4').removeClass("show");
+    //   $('#tabs-2-5').removeClass("active");
+    //   $('#tabs-2-5').removeClass("show");
+    //   $('#tabs-2-6').removeClass("active");
+    //   $('#tabs-2-6').removeClass("show");
+    //   $('#tabs-2-7').removeClass("active");
+    //   $('#tabs-2-7').removeClass("show");
+        
+    //   $('#myAnchor-1').removeClass("active");
+    //   $('#myAnchor-1').removeClass("show");
+    //   $('#myAnchor-2').removeClass("active");
+    //   $('#myAnchor-2').removeClass("show");
+    //   $('#myAnchor-3').removeClass("active");
+    //   $('#myAnchor-3').removeClass("show");
+    //   $('#myAnchor-4').removeClass("active");
+    //   $('#myAnchor-4').removeClass("show");
+    // });
 
   </script>
 

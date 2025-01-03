@@ -494,14 +494,13 @@ class Api_model extends MY_Model {
 
             $this->db->select('
                 a.nama_video AS title,
-                b.description AS category,
                 a.link_video AS link,
                 a.poster_video AS thumbnail,
                 a.desc_video AS description
             ');
 
             $this->db->from('tv_video a');
-            $this->db->join('tv_categories b', 'a.id_categorie=b.id');
+            // $this->db->join('tv_categories b', 'a.id_categorie=b.id');
 
             // $this->db->where("a.id_member",$id);
             // $this->db->where("b.is_product_api",'1');

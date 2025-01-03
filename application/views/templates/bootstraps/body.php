@@ -81,26 +81,6 @@
                 </div>
               </div>
 
-
-
-              <div class="tab-pane" id="tabs-2-21">
-                <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9">
-                  <iframe id="frame-21" class="frame-video" width="660" height="365" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-              </div>
-
-              <div class="tab-pane" id="tabs-2-22">
-                <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9">
-                  <iframe id="frame-22" class="frame-video" width="660" height="365" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-              </div>
-
-              <div class="tab-pane" id="tabs-2-23">
-                <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9">
-                  <iframe id="frame-23" class="frame-video" width="660" height="365" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-              </div>
-
               <div class="tab-pane" id="tabs-2-24">
                 <div id="vid-bg" class="entry-video hls-embed-responsive embed-responsive-16by9">
                   <iframe id="frame-24" class="frame-video" width="660" height="365" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -152,6 +132,20 @@
                 }
               ?>
 
+              
+
+              <?php
+                foreach ($video_tv as $keys => $img_video) {
+              ?>
+
+              <div class="tab-pane v-video" id="tabs-2-<?=$img_video->code_video?>" data-cvideo="<?=$img_video->code_video?>">
+                <div id="vid-bg" class=" entry-video hls-embed-responsive embed-responsive-16by9">
+                  <iframe id="frame-<?=$img_video->code_video?>" class="frame-video" width="660" height="365" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              </div>
+
+              <?php } ?>
+
               <!-- <div id="texter"></div> -->
 
             </div>
@@ -195,21 +189,11 @@
           </div>
           <!-- </section> -->
 
-          <style>
-            /* #eventsyoutube {
-                pointer-events: none;
-            } */
-
-            
-          </style>
-
           <div class="container">
             <div class="text-center" style="padding: 20px 0px 10px 0px;">
               <h6 class="text-gray-600">Latest Video</h6>
             </div>
           </div>
-
-          
 
           <div class="tab-column" style="padding-bottom: 80px;">
               <div class="row">
@@ -224,11 +208,13 @@
               ?>
 
                 <div class="column_tb_2" role="presentation">
-                  <a id="x-<?=$value_video->code_video?>" class="x-video" href="#tabs-2-<?=$value_video->code_video?>" data-toggle="tab">
+                  <div class="tv-video" data-codev="<?=$value_video->code_video?>">
+                  <a id="x-<?=$value_video->code_video?>" class="click-video" href="#tabs-2-<?=$value_video->code_video?>" data-toggle="tab" data-key="<?=$value_video->code_video?>" data-name="<?=$value_video->nama_video?>" data-url="<?=$value_video->link_video?>" data-embed="<?=$value_video->link_embed?>" data-poster="<?=$value_video->poster_video?>" data-logo="<?=$value_video->logo_video?>">
                   <!-- <a id="myAnchor-<?=$value_video->code_video?>" class="nav-link" href="#tabs-2-<?=$value_video->code_video?>" data-toggle="tab" data-key="<?=$value_video->code_video?>" data-name="<?=$value_video->nama_video?>" data-url="<?=$value_video->link_video?>" data-poster="<?=$value_video->poster_video?>" data-logo="<?=$value_video->logo_video?>"> -->
                     <img class="img_poster" style="float:<?=$float?>!important" src="<?=$value_video->poster_video?>" alt=""/>
                     <!-- <iframe style="float:right!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe> -->
                   </a>
+                  </div>
                 </div>
 
                 <?php $no++;} ?>
