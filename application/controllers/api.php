@@ -448,4 +448,56 @@ class Api extends MY_Controller {
 		// var_dump($apikey); die();
 	}
 
+	function energy_corner(){
+		$this->restapi->content_type_json();
+		
+		$rest = $this->input->post('M1TV-CLIENT-KEY',true);
+
+		if ($rest == TRUE) {
+			$apikey = $this->restapi->auth_api_key($rest);
+		}
+		
+		$ReturnData = $this->api_model->get_energy_corner($apikey);
+		// var_dump($apikey); die();
+	}
+
+	function mitra_corner(){
+		$this->restapi->content_type_json();
+		
+		$rest = $this->input->post('M1TV-CLIENT-KEY',true);
+
+		if ($rest == TRUE) {
+			$apikey = $this->restapi->auth_api_key($rest);
+		}
+		
+		$ReturnData = $this->api_model->get_mitra_corner($apikey);
+		// var_dump($apikey); die();
+	}
+
+	function umkm_corner(){
+		$this->restapi->content_type_json();
+		
+		$rest = $this->input->post('M1TV-CLIENT-KEY',true);
+
+		if ($rest == TRUE) {
+			$apikey = $this->restapi->auth_api_key($rest);
+		}
+		
+		$ReturnData = $this->api_model->get_umkm_corner($apikey);
+		// var_dump($apikey); die();
+	}
+
+	function random(){
+		$this->restapi->content_type_json();
+		
+		$rest = $this->input->post('M1TV-CLIENT-KEY',true);
+
+		if ($rest == TRUE) {
+			$apikey = $this->restapi->auth_api_key($rest);
+		}
+		
+		$ReturnData = $this->api_model->get_random($apikey);
+		// var_dump($apikey); die();
+	}
+
 }
