@@ -486,7 +486,6 @@ class Api_model extends MY_Model {
             // var_dump($id); die();
 
             $this->db->select("
-                a.id,
                 a.nama_video AS title,
                 CASE
                     WHEN a.id_categorie = 0 THEN 'null'
@@ -503,7 +502,7 @@ class Api_model extends MY_Model {
             // $this->db->join('tv_categories b', 'a.id_categorie=b.id');
 
             // $this->db->where("a.id_member",$id);
-            // $this->db->where('a.id >', '3');
+            $this->db->where('a.id >', '3');
 
             $this->db->order_by('a.id', 'DESC');
 
@@ -650,13 +649,18 @@ class Api_model extends MY_Model {
         
         if ($data == TRUE) {
 
-            $this->db->select('
-                a.id,
+            $this->db->select("
                 a.nama_video AS title,
+                CASE
+                    WHEN a.id_categorie = 0 THEN 'null'
+                    WHEN a.id_categorie = 1 THEN 'energy-corner'
+                    WHEN a.id_categorie = 4 THEN 'mitra-corner'
+                    WHEN a.id_categorie = 5 THEN 'umkm-corner'
+                    END AS category,
                 a.link_video AS link,
                 a.poster_video AS thumbnail,
                 a.desc_video AS description
-            ');
+            ", FALSE);
 
             $this->db->from('tv_video a');
             // $this->db->join('tv_categories b', 'a.id_categorie=b.id');
