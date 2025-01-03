@@ -17,6 +17,21 @@ body {
 }
 
 
+.pb-tab{
+	padding-bottom: 10px!important;
+}
+@media (max-width: 560px) {
+	.pb-tab {
+		margin-top: -45px !important;
+	}
+}
+@media (min-width: 992px) {
+	.pb-tab {
+		padding: 10px 155px 0px 155px !important;
+		margin-bottom: -15px !important;
+	}
+}
+
 .bg-terabytee {
 	background-color: #ddd!important;
 }
@@ -30,7 +45,7 @@ body {
 }
 @media (max-width: 560px) {
 	.tab-column {
-		margin-top: -45px!important;
+		margin-top: -10px!important;
 	}
 }
 @media (min-width: 561px) {
@@ -46,6 +61,12 @@ body {
 @media (min-width: 901px) {
 	.tab-column {
 		max-width: 100%!important;
+	}
+}
+
+@media (min-width: 992px) {
+	.tab-column {
+		padding: 10px 185px 0px 185px !important;
 	}
 }
 
