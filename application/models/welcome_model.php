@@ -288,6 +288,13 @@ class Welcome_model extends MY_Model
   function video_tv()
   {
     $this->db->from('tv_video');
+    $this->db->order_by('id', 'DESC');
+    
+    $this->db->limit(6);
+    // $this->db->offset(4);
+    // $this->db->limit(10, 4);
+    // $this->db->limit(10, 20);
+
     $query = $this->db->get();
     return $query->result();
   }

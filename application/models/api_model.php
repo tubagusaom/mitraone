@@ -506,6 +506,8 @@ class Api_model extends MY_Model {
             // $this->db->where("b.is_product_api",'1');
 
             $this->db->order_by('a.id', 'DESC');
+
+            $this->db->limit(8);
     
             // $this->db->limit($perpage);
             // $this->db->offset($offset);
