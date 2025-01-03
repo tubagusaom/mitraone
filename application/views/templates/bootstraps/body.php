@@ -221,7 +221,7 @@
                   {$float="left";}
               ?>
 
-                <div class="column_tb_2">
+                <div class="column_tb_2" role="presentation">
                   <a id="x-<?=$value_video->code_video?>" class="x-video" href="#tabs-2-<?=$value_video->code_video?>" data-toggle="tab">
                   <!-- <a id="myAnchor-<?=$value_video->code_video?>" class="nav-link" href="#tabs-2-<?=$value_video->code_video?>" data-toggle="tab" data-key="<?=$value_video->code_video?>" data-name="<?=$value_video->nama_video?>" data-url="<?=$value_video->link_video?>" data-poster="<?=$value_video->poster_video?>" data-logo="<?=$value_video->logo_video?>"> -->
                     <img class="img_poster" style="float:<?=$float?>!important" src="<?=$value_video->poster_video?>" alt=""/>
