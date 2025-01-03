@@ -34,7 +34,7 @@
     <script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
     <!-- <script src="<?php echo base_url() ?>assets_tv/js/videojs-contrib-hls.js"></script> -->
     <script src="<?php echo base_url() ?>assets_tv/js/video.min.js"></script>
-    <script src="<?php echo base_url() ?>assets_tv/js/tera..01.min.js"></script>
+    <script src="<?php echo base_url() ?>assets_tv/js/tera.01.min.js"></script>
 
   </body>
 
