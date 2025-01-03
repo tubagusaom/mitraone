@@ -31,9 +31,7 @@
           <h2>TV STREAMING</h2> -->
 
           <style>
-            .pb-tab{
-              padding-bottom: 10px!important;
-            }
+            
           </style>
 
           <div class="tab-column pb-tab">
