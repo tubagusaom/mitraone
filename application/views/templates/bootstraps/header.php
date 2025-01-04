@@ -116,7 +116,7 @@
 					<!--RD Navbar Brand-->
 					<div class="rd-navbar-brand">
                     <!--Brand-->
-                        <a class="brand" href="javascript:void(0)">
+                        <a class="brand" href="<?=base_url()?>">
                             <img id="dark_logo" class="img_logo" src="<?= base_url() ?>assets_tv/images/logo_mitraone_white_1.png" alt="" width="174" height="13"/>
                             <img id="light_logo" class="img_logo" src="<?= base_url() ?>assets_tv/images/logo_mitraone_font_1.png" alt="" width="174" height="13"/>
                             <!-- MitraOne TV 296x52 -->
@@ -126,21 +126,24 @@
                 <div class="rd-navbar-main-element">
 					<div class="rd-navbar-nav-wrap">
                     <ul class="rd-navbar-nav">
-						<!-- <li class="rd-nav-item active">
-                        <a class="rd-nav-link" href="">Home</a>
-					</li> -->
-					<li class="rd-nav-item">
-                        <!-- <a class="rd-nav-link" href="about.html">About</a> -->
-                        <a class="rd-nav-link" href="javascript:void(0)">About</a>
-                    </li>
-                    <li class="rd-nav-item">
-                        <!-- <a class="rd-nav-link" href="typography.html">Typography</a> -->
-                        <a class="rd-nav-link" href="javascript:void(0)">Promo</a>
-                    </li>
-                    <li class="rd-nav-item">
-                        <!-- <a class="rd-nav-link" href="contacts.html">Contacts</a> -->
-                        <a class="rd-nav-link" href="javascript:void(0)">VOD</a>
-                    </li>
+                        <li class="rd-nav-item active">
+                            <a class="rd-nav-link" href="<?=base_url()?>"><i class="icon fa-home"></i> Home</a>
+                        </li>
+                        <!-- <li class="rd-nav-item">
+                            <a class="rd-nav-link" href="about.html">About</a>
+                            <a class="rd-nav-link" href="javascript:void(0)">About</a>
+                        </li>
+                        <li class="rd-nav-item">
+                            <a class="rd-nav-link" href="typography.html">Typography</a>
+                            <a class="rd-nav-link" href="javascript:void(0)">Promo</a>
+                        </li> -->
+                        <li class="rd-nav-item">
+                            <!-- <a class="rd-nav-link" href="contacts.html">Contacts</a> -->
+                            <a class="rd-nav-link" href="javascript:void(0)"><i class="icon fa-play-circle"></i> VOD</a>
+                        </li>
+                        <li class="rd-nav-item">
+                            <a class="rd-nav-link" href="javascript:void(0)"><i class="icon fa-android"></i> App</a>
+                        </li>
                     </ul>
                 </div>
                 </div>
