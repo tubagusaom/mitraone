@@ -747,8 +747,6 @@ class Api_model extends MY_Model {
 
     }
 
-    // $this->db->like('skema', $keyword);
-
 
 
 }

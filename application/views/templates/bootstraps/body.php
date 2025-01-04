@@ -193,26 +193,62 @@
             </div>
           </div>
 
-          <div class="tab-column" style="padding-bottom: 80px;">
+          <div class="tab-column" style="padding-bottom: 80px!important;">
               <div class="row">
+
+              <style>
+
+                
+
+                
+              </style>
               
               <?php
                 $no=1;
-                foreach ($video_tv as $keys => $value_video) {
-                  if(fmod($no,2)==1)
-                  {$float="right";}
-                  else
-                  {$float="left";}
+                foreach ($video_tv as $keys => $value_videos) {
+                  if(fmod($no,2)==1) { $float="right"; }
+                  else { $float="left"; }
               ?>
 
                 <div class="column_tb_2" role="presentation">
-                  <div class="tv-video" data-codev="<?=$value_video->code_video?>">
-                  <a id="x-<?=$value_video->code_video?>" class="click-video" href="#tabs-2-<?=$value_video->code_video?>" data-toggle="tab" data-key="<?=$value_video->code_video?>" data-name="<?=$value_video->nama_video?>" data-url="<?=$value_video->link_video?>" data-embed="<?=$value_video->link_embed?>" data-poster="<?=$value_video->poster_video?>" data-logo="<?=$value_video->logo_video?>">
-                  <!-- <a id="myAnchor-<?=$value_video->code_video?>" class="nav-link" href="#tabs-2-<?=$value_video->code_video?>" data-toggle="tab" data-key="<?=$value_video->code_video?>" data-name="<?=$value_video->nama_video?>" data-url="<?=$value_video->link_video?>" data-poster="<?=$value_video->poster_video?>" data-logo="<?=$value_video->logo_video?>"> -->
-                    <img class="img_poster" style="float:<?=$float?>!important" src="<?=$value_video->poster_video?>" alt=""/>
-                    <!-- <iframe style="float:right!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe> -->
-                  </a>
+                  <div class="tv-video" style="float:<?=$float?>!important;" data-codev="<?=$value_videos->code_video?>">
+                    <a id="x-<?=$value_videos->code_video?>" class="click-video" href="javascript:void(0)" data-toggle="tab" data-key="<?=$value_videos->code_video?>" data-name="<?=$value_videos->nama_video?>" data-url="<?=$value_videos->link_video?>" data-embed="<?=$value_videos->link_embed?>" data-poster="<?=$value_videos->poster_video?>" data-logo="<?=$value_videos->logo_video?>">
+                      <img class="img_poster" src="<?=$value_videos->poster_video?>" alt="<?=$value_videos->nama_video?>" title="<?=$value_videos->nama_video?>"/>
+                    </a>
+
+                    <div class="bottom-desc <?=$class_l?>" style="" title="<?=$value_videos->nama_video?>">
+                      <?php
+                        $text_videos = $value_videos->nama_video;
+                        $segmen_text = explode(" ", $text_videos);
+                        $count_seg = count($segmen_text);
+
+                        $data_text = "";
+                        for($i=0; $i <= 4; $i++){
+                          $data_text .= $segmen_text[$i]." ";
+                        }
+                      ?>
+
+                      <div class="" style="float:left!important;width:90%;">
+                        <a id="x-<?=$value_videos->code_video?>" class="click-video" href="javascript:void(0)" style="color:#222d4f!important" data-toggle="tab" data-key="<?=$value_videos->code_video?>" data-name="<?=$value_videos->nama_video?>" data-url="<?=$value_videos->link_video?>" data-embed="<?=$value_videos->link_embed?>" data-poster="<?=$value_videos->poster_video?>" data-logo="<?=$value_videos->logo_video?>">
+                        <?php
+                          if($count_seg <= 5){
+                            echo ($data_text);
+                          }else{
+                            echo ($data_text)."...";
+                          }
+                        ?>
+                        </a>
+                      </div>
+
+                      <div class="" style="float:right!important;width:10%;text-align:right;"> 
+                        <a class="icon fa-share-square-o" href="<?=$value_videos->link_embed?>" target="_blank" style="color:#f47f1f;" title="share"></a>
+                      </div>
+                    </div>
+
+                    
                   </div>
+
+                  
                 </div>
 
                 <?php $no++;} ?>
