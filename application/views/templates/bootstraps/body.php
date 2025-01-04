@@ -241,7 +241,9 @@
                       </div>
 
                       <div class="" style="float:right!important;width:8%;text-align:right;"> 
-                        <a class="icon fa-share-square-o" href="<?=$value_videos->link_embed?>" target="_blank" style="color:#f47f1f;" title="share"></a>
+                        <!-- <a class="copy_text icon fa-share-square-o" data-toggle="tooltip" href="<?=$value_videos->link_embed?>" target="_blank" style="color:#f47f1f;" title="share"></a> -->
+                        <a class="copy_text icon fa-share-square-o" data-action="copy" data-url="<?=$value_videos->link_embed?>" href="javascript:void(0)" style="color:#f47f1f;" title="share"></a>
+                        
                       </div>
                     </div>
 
@@ -252,6 +254,7 @@
                 </div>
 
                 <?php $no++;} ?>
+                <input type="text" style="position: absolute; left: -1000px; top: -1000px" value="" id="share-url">
                 
                 <!-- <div class="column_tb_2">
                   <a id="x-2" href="javascript:void(0)">

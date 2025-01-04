@@ -40,6 +40,40 @@
 
   <script>
 
+// $(".copy_text").click(function(){
+  
+//       // var textcopy = buttonx.attr("href");
+//       var textcopy = $(this).attr('href');
+//       textcopy.select();
+//       $(document).execCommand("copy");
+//       alert("Copied the text ");
+// });
+
+$(document).on('click', '[data-action=copy]', function (){
+    /* Create input */
+    // $('[data-action=copy]').after('<input class="hidden" value="'+$(this).attr("data-url")+'" id="share-url">');
+
+    var dataUrl = $(this).data('url');
+    var copyText = $("#share-url").attr("value", dataUrl);
+
+    /* Get the text field */
+    // var copyText = document.getElementById("share-url");
+
+    /* Select the text field */
+    copyText.select();
+
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+
+    /* Alert the copied text */
+    alert("link copied to clipboard");
+    // alert(dataUrl);
+});
+
+// $('.copy_text').each(function() {
+
+// });
+
     owl = $(".owl-carousel");
       owl.owlCarousel({
         loop:true,
