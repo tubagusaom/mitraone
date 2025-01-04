@@ -35,7 +35,7 @@
 	<!-- Theme Custom CSS -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets_tv/css/bootstrap.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>assets_tv/css/fonts.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets_tv/css/style.v03.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets_tv/css/style.v04.css">
 
     <!-- <style>
 		.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}

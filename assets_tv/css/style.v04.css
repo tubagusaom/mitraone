@@ -1238,8 +1238,8 @@ html:not(.lt-ie10) .not-animated {
 	/* background-color: #204198; */
 	border-radius: 50%;
 	border-left-color: #204198;
-	border-bottom-color: transparent;
-	animation: cssload-spin .222s infinite linear;
+	border-bottom-color: green;
+	animation: cssload-spin .333s infinite linear;
 }
 
 @keyframes cssload-spin {
