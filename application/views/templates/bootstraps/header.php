@@ -142,7 +142,7 @@
                             <a class="rd-nav-link" href="javascript:void(0)"><i class="icon fa-play-circle"></i> VOD</a>
                         </li>
                         <li class="rd-nav-item">
-                            <a class="rd-nav-link" href="javascript:void(0)"><i class="icon fa-android"></i> App</a>
+                            <a class="rd-nav-link" href="https://play.google.com/store/apps/" target="_blank"><i class="icon fa-android"></i> App</a>
                         </li>
                     </ul>
                 </div>
