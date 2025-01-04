@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>
-		<?= $aplikasi->nama_unit ?> - Embed Video
+		<?= $aplikasi->nama_unit ?> - Video Player 
 	</title>
 
     <meta name="keywords" content="TV , TV ONLINE , roadcast. Embed Video" />
-	<meta name="description" content="Play Video Player">
+	<meta name="description" content="Play Emebd Video">
 	<meta name="author" content="terabytee.my.id">
 
 	<!-- Favicon -->
