@@ -1235,8 +1235,9 @@ html:not(.lt-ie10) .not-animated {
 	height: 66px;
 	margin: 0 auto;
 	border: 5px solid #f47f1f;
+	/* background-color: #204198; */
 	border-radius: 50%;
-	border-left-color: transparent;
+	border-left-color: #204198;
 	border-bottom-color: transparent;
 	animation: cssload-spin .222s infinite linear;
 }
