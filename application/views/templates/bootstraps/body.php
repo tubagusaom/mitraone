@@ -228,7 +228,7 @@
                         }
                       ?>
 
-                      <div class="" style="float:left!important;width:100%;">
+                      <div class="" style="float:left!important;width:90%;">
                         <a id="x-<?=$value_videos->code_video?>" class="click-video" href="javascript:void(0)" style="color:#222d4f!important" data-toggle="tab" data-key="<?=$value_videos->code_video?>" data-name="<?=$value_videos->nama_video?>" data-url="<?=$value_videos->link_video?>" data-embed="<?=$value_videos->link_embed?>" data-poster="<?=$value_videos->poster_video?>" data-logo="<?=$value_videos->logo_video?>">
                         <?php
                           if($count_seg <= 5){
@@ -240,9 +240,9 @@
                         </a>
                       </div>
 
-                      <!-- <div class="" style="float:right!important;width:5%;text-align:right;"> 
+                      <div class="" style="float:right!important;width:8%;text-align:right;"> 
                         <a class="icon fa-share-square-o" href="<?=$value_videos->link_embed?>" target="_blank" style="color:#f47f1f;" title="share"></a>
-                      </div> -->
+                      </div>
                     </div>
 
                     
