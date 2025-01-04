@@ -9,7 +9,7 @@
 	</title>
 
     <meta name="keywords" content="TV , TV ONLINE , roadcast. Embed Video" />
-	<meta name="description" content="Mitra One TV - Embed Video">
+	<meta name="description" content="Play Video Player">
 	<meta name="author" content="terabytee.my.id">
 
 	<!-- Favicon -->
