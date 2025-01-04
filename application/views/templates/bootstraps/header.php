@@ -127,7 +127,7 @@
 					<div class="rd-navbar-nav-wrap">
                     <ul class="rd-navbar-nav">
                         <li class="rd-nav-item active">
-                            <a class="rd-nav-link" href="<?=base_url()?>"><i class="icon fa-home"></i> Home</a>
+                            <a class="rd-nav-link" href="<?=base_url()?>"><i class="icon fa-home"></i> HOME</a>
                         </li>
                         <!-- <li class="rd-nav-item">
                             <a class="rd-nav-link" href="about.html">About</a>
@@ -142,7 +142,7 @@
                             <a class="rd-nav-link" href="javascript:void(0)"><i class="icon fa-play-circle"></i> VOD</a>
                         </li>
                         <li class="rd-nav-item">
-                            <a class="rd-nav-link" href="https://play.google.com/store/apps/" target="_blank"><i class="icon fa-android"></i> App</a>
+                            <a class="rd-nav-link" href="https://play.google.com/store/apps/" target="_blank"><i class="icon fa-android"></i> APP</a>
                         </li>
                     </ul>
                 </div>
