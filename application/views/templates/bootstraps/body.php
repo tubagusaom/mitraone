@@ -239,10 +239,18 @@
                         ?>
                         </a>
                       </div>
+                      
+                      <?php
+                        $text_link = $value_videos->link_embed;
+                        $segmen_link = explode("/", $text_link);
+                        
+                        $link_embed = base_url('embed/'.$segmen_link[4]);
+
+                        // print_r($segmen_link[4]);
+                      ?>
 
                       <div class="" style="float:right!important;width:8%;text-align:right;"> 
-                        <!-- <a class="copy_text icon fa-share-square-o" data-toggle="tooltip" href="<?=$value_videos->link_embed?>" target="_blank" style="color:#f47f1f;" title="share"></a> -->
-                        <a class="copy_text icon fa-share-square-o" data-action="copy" data-url="<?=$value_videos->link_embed?>" href="javascript:void(0)" style="color:#f47f1f;" title="share"></a>
+                        <a class="copy_text icon fa-share-square-o" data-action="copy" data-url="<?=$link_embed?>" href="javascript:void(0)" style="color:#f47f1f;" title="share"></a>
                         
                       </div>
                     </div>

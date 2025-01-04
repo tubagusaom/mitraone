@@ -51,6 +51,7 @@ $route['restapi/post_update_status_product'] = "api/update_status_product";
 
 
 $route['privacy-policy'] = "welcome/privacy_policy";
+$route['embed/(:any)'] = "welcome/embed_video/$1";
 
 $route['restapi/get-video'] = "api/video";
 

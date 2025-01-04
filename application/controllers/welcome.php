@@ -32,64 +32,6 @@
         var_dump(($data)); die();
       }
 
-      // public function tutorial($id=false) {
-      //     $data['class_active'] = 'tutorial';
-      //     $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();
-      //
-      //     $this->load->view('templates/bootstraps/header',$data);
-      //     if($id==1){
-      //         $view = 'alamat_website';
-      //     }elseif($id==2){
-      //         $view = 'pendaftaran';
-      //     }else{
-      //         $view = 'tutorial';
-      //     }
-      //     $this->load->view('tutorial/'.$view,$data);
-      //     $this->load->view('templates/bootstraps/bottom');
-      // }
-
-      // public function kontak($id=false) {
-      //     $data['marquee'] = $this->artikel_model->marquee();
-      //     $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();
-      //     $data['class_active'] = 'kontak';
-      //     $this->load->view('templates/bootstraps/header',$data);
-      //     $this->load->view('tutorial/kontak',$data);
-      //     $this->load->view('templates/bootstraps/bottom');
-      // }
-
-      // public function faq($id=false) {
-      //     $data['marquee'] = $this->artikel_model->marquee();
-      //     $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();
-      //     $data['class_active'] = 'faq';
-      //     $data['faq'] = $this->welcome_model->get_data_faq();
-      //     $this->load->view('templates/bootstraps/header',$data);
-      //     $this->load->view('tutorial/faq',$data);
-      //     $this->load->view('templates/bootstraps/bottom');
-      // }
-
-      // public function link_terkait($id=false) {
-      //     $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();
-      //     $data['marquee'] = $this->artikel_model->marquee();
-      //
-      //     $data['faq'] = $this->welcome_model->get_data_faq();
-      //     $data['class_active'] = 'link_terkait';
-      //     $this->load->view('templates/bootstraps/header',$data);
-      //     $this->load->view('tutorial/link_terkait',$data);
-      //     $this->load->view('templates/bootstraps/bottom');
-      // }
-
-      function update_counter($slug)
-      {
-        // return current article views
-        $this->db->where('article_slug', urldecode($slug));
-        $this->db->select('article_views');
-        $count = $this->db->get('articles')->row();
-        // then increase by one
-        $this->db->where('article_slug', urldecode($slug));
-        $this->db->set('article_views', ($count->article_views + 1));
-        $this->db->update('articles');
-      }
-
       public function index()
       {
 
@@ -188,6 +130,74 @@
         $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();
 
         $this->load->view('templates/bootstraps/privacy_policy', $data);
+      }
+
+      function embed_video($id){
+        $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();
+
+        
+        $data['id_embed'] = $id;
+        // var_dump($data['link_embed']); die();
+
+        $this->load->view('templates/bootstraps/embed_video', $data);
+      }
+
+      // public function tutorial($id=false) {
+      //     $data['class_active'] = 'tutorial';
+      //     $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();
+      //
+      //     $this->load->view('templates/bootstraps/header',$data);
+      //     if($id==1){
+      //         $view = 'alamat_website';
+      //     }elseif($id==2){
+      //         $view = 'pendaftaran';
+      //     }else{
+      //         $view = 'tutorial';
+      //     }
+      //     $this->load->view('tutorial/'.$view,$data);
+      //     $this->load->view('templates/bootstraps/bottom');
+      // }
+
+      // public function kontak($id=false) {
+      //     $data['marquee'] = $this->artikel_model->marquee();
+      //     $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();
+      //     $data['class_active'] = 'kontak';
+      //     $this->load->view('templates/bootstraps/header',$data);
+      //     $this->load->view('tutorial/kontak',$data);
+      //     $this->load->view('templates/bootstraps/bottom');
+      // }
+
+      // public function faq($id=false) {
+      //     $data['marquee'] = $this->artikel_model->marquee();
+      //     $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();
+      //     $data['class_active'] = 'faq';
+      //     $data['faq'] = $this->welcome_model->get_data_faq();
+      //     $this->load->view('templates/bootstraps/header',$data);
+      //     $this->load->view('tutorial/faq',$data);
+      //     $this->load->view('templates/bootstraps/bottom');
+      // }
+
+      // public function link_terkait($id=false) {
+      //     $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();
+      //     $data['marquee'] = $this->artikel_model->marquee();
+      //
+      //     $data['faq'] = $this->welcome_model->get_data_faq();
+      //     $data['class_active'] = 'link_terkait';
+      //     $this->load->view('templates/bootstraps/header',$data);
+      //     $this->load->view('tutorial/link_terkait',$data);
+      //     $this->load->view('templates/bootstraps/bottom');
+      // }
+
+      function update_counter($slug)
+      {
+        // return current article views
+        $this->db->where('article_slug', urldecode($slug));
+        $this->db->select('article_views');
+        $count = $this->db->get('articles')->row();
+        // then increase by one
+        $this->db->where('article_slug', urldecode($slug));
+        $this->db->set('article_views', ($count->article_views + 1));
+        $this->db->update('articles');
       }
 
       function admin() {
@@ -904,7 +914,7 @@
         $this->email->message($pesan);
 
         if ($this->email->send()) {
-          return 'ok';
+          return 'ok';  
         } else {
           return 'nok';
         }
