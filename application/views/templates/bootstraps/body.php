@@ -194,103 +194,317 @@
           </div>
           <!-- </section> -->
 
-          <div class="container">
-            <div class="text-center" style="padding: 20px 0px 10px 0px;">
-              <h6 class="text-gray-600">Latest Video</h6>
+          <section id="latest-video">
+            <div class="container">
+              <div class="text-center" style="padding: 20px 0px 10px 0px;">
+                <h6 class="text-gray-600">Latest Video</h6>
+              </div>
             </div>
-          </div>
 
-          <div class="tab-column" style="padding-bottom: 80px!important;">
-              <div class="row">
+            <div class="tab-column" style="padding-bottom: 80px!important;">
+                <div class="row">
 
-              <style>
-
+                <style>
+                  
+                </style>
                 
+                <?php
+                  $no=1;
+                  foreach ($video_tv as $keys => $value_videos) {
+                    if(fmod($no,2)==1) { $float="right"; }
+                    else { $float="left"; }
+                ?>
 
-                
-              </style>
-              
-              <?php
-                $no=1;
-                foreach ($video_tv as $keys => $value_videos) {
-                  if(fmod($no,2)==1) { $float="right"; }
-                  else { $float="left"; }
-              ?>
+                  <div class="column_tb_2" role="presentation">
+                    <div class="tv-video" style="float:<?=$float?>!important;" data-codev="<?=$value_videos->code_video?>">
+                      <a id="x-<?=$value_videos->code_video?>" class="click-video" href="javascript:void(0)" data-toggle="tab" data-key="<?=$value_videos->code_video?>" data-name="<?=$value_videos->nama_video?>" data-url="<?=$value_videos->link_video?>" data-embed="<?=$value_videos->link_embed?>" data-poster="<?=$value_videos->poster_video?>" data-logo="<?=$value_videos->logo_video?>">
+                        <img class="img_poster" src="<?=$value_videos->poster_video?>" alt="<?=$value_videos->nama_video?>" title="<?=$value_videos->nama_video?>"/>
+                      </a>
 
-                <div class="column_tb_2" role="presentation">
-                  <div class="tv-video" style="float:<?=$float?>!important;" data-codev="<?=$value_videos->code_video?>">
-                    <a id="x-<?=$value_videos->code_video?>" class="click-video" href="javascript:void(0)" data-toggle="tab" data-key="<?=$value_videos->code_video?>" data-name="<?=$value_videos->nama_video?>" data-url="<?=$value_videos->link_video?>" data-embed="<?=$value_videos->link_embed?>" data-poster="<?=$value_videos->poster_video?>" data-logo="<?=$value_videos->logo_video?>">
-                      <img class="img_poster" src="<?=$value_videos->poster_video?>" alt="<?=$value_videos->nama_video?>" title="<?=$value_videos->nama_video?>"/>
-                    </a>
-
-                    <div class="bottom-desc <?=$class_l?>" style="" title="<?=$value_videos->nama_video?>">
-                      <?php
-                        $text_videos = $value_videos->nama_video;
-                        $segmen_text = explode(" ", $text_videos);
-                        $count_seg = count($segmen_text);
-
-                        $data_text = "";
-                        for($i=0; $i <= 4; $i++){
-                          $data_text .= $segmen_text[$i]." ";
-                        }
-                      ?>
-
-                      <div class="" style="float:left!important;width:90%;">
-                        <a id="x-<?=$value_videos->code_video?>" class="click-video" href="javascript:void(0)" style="color:#222d4f!important" data-toggle="tab" data-key="<?=$value_videos->code_video?>" data-name="<?=$value_videos->nama_video?>" data-url="<?=$value_videos->link_video?>" data-embed="<?=$value_videos->link_embed?>" data-poster="<?=$value_videos->poster_video?>" data-logo="<?=$value_videos->logo_video?>">
+                      <div class="bottom-desc <?=$class_l?>" style="" title="<?=$value_videos->nama_video?>">
                         <?php
-                          if($count_seg <= 5){
-                            echo ($data_text);
-                          }else{
-                            echo ($data_text)."...";
+                          $text_videos = $value_videos->nama_video;
+                          $segmen_text = explode(" ", $text_videos);
+                          $count_seg = count($segmen_text);
+
+                          $data_text = "";
+                          for($i=0; $i <= 4; $i++){
+                            $data_text .= $segmen_text[$i]." ";
                           }
                         ?>
-                        </a>
+
+                        <div class="" style="float:left!important;width:90%;">
+                          <a id="x-<?=$value_videos->code_video?>" class="click-video" href="javascript:void(0)" style="color:#222d4f!important" data-toggle="tab" data-key="<?=$value_videos->code_video?>" data-name="<?=$value_videos->nama_video?>" data-url="<?=$value_videos->link_video?>" data-embed="<?=$value_videos->link_embed?>" data-poster="<?=$value_videos->poster_video?>" data-logo="<?=$value_videos->logo_video?>">
+                          <?php
+                            if($count_seg <= 5){
+                              echo ($data_text);
+                            }else{
+                              echo ($data_text)."...";
+                            }
+                          ?>
+                          </a>
+                        </div>
+                        
+                        <?php
+                          $text_link = $value_videos->link_embed;
+                          $segmen_link = explode("/", $text_link);
+                          
+                          $link_embed = base_url('embed/'.$segmen_link[4]);
+
+                          // print_r($segmen_link[4]);
+                        ?>
+
+                        <div class="" style="float:right!important;width:8%;text-align:right;"> 
+                          <a class="copy_text icon fa-share-square-o" data-action="copy" data-url="<?=$link_embed?>" href="javascript:void(0)" style="color:#f47f1f;" title="share"></a>
+                          
+                        </div>
                       </div>
                       
-                      <?php
-                        $text_link = $value_videos->link_embed;
-                        $segmen_link = explode("/", $text_link);
-                        
-                        $link_embed = base_url('embed/'.$segmen_link[4]);
+                    </div>
+                  </div>
 
-                        // print_r($segmen_link[4]);
-                      ?>
+                  <?php $no++;} ?>
+                  <input type="text" style="position: absolute; left: -1000px; top: -1000px" value="" id="share-url">
+                </section>
 
-                      <div class="" style="float:right!important;width:8%;text-align:right;"> 
-                        <a class="copy_text icon fa-share-square-o" data-action="copy" data-url="<?=$link_embed?>" href="javascript:void(0)" style="color:#f47f1f;" title="share"></a>
+                <section id="energy-video">
+
+                <?php
+                  $total_energy = count($video_energy);
+
+                  if($total_energy != 0) {
+                    $avlb_1 = "";
+                  }else {
+                    $avlb_1 = "no Available";
+                  }
+                ?>
+
+                  <div class="container">
+                    <div class="text-center" style="padding: 20px 0px 10px 0px;">
+                      <h6 class="text-gray-600">Video related to Energy Corner <?=$avlb_1?></h6>
+                    </div>
+                  </div>
+
+                  <div class="tab-column" style="padding-bottom: 80px!important;">
+                    <div class="row">
+                  
+                    <?php
+                      $no1=1;
+                      foreach ($video_energy as $keys1 => $value_1) {
+                        if(fmod($no1,2)==1) { $float1="right"; }
+                        else { $float1="left"; }
+                    ?>
+
+                    <div class="column_tb_2" role="presentation">
+                      <div class="tv-video" style="float:<?=$float1?>!important;" data-codev="<?=$value_1->code_video?>">
+                        <a id="x-<?=$value_1->code_video?>" class="click-video" href="javascript:void(0)" data-toggle="tab" data-key="<?=$value_1->code_video?>" data-name="<?=$value_1->nama_video?>" data-url="<?=$value_1->link_video?>" data-embed="<?=$value_1->link_embed?>" data-poster="<?=$value_1->poster_video?>" data-logo="<?=$value_1->logo_video?>">
+                          <img class="img_poster" src="<?=$value_1->poster_video?>" alt="<?=$value_1->nama_video?>" title="<?=$value_1->nama_video?>"/>
+                        </a>
+
+                        <div class="bottom-desc" title="<?=$value_1->nama_video?>">
+                          <?php
+                            $text_videos1 = $value_1->nama_video;
+                            $segmen_text1 = explode(" ", $text_videos1);
+                            $count_seg1 = count($segmen_text1);
+
+                            $data_text1 = "";
+                            for($j=0; $j <= 4; $j++){
+                              $data_text1 .= $segmen_text1[$j]." ";
+                            }
+                          ?>
+
+                          <div style="float:left!important;width:90%;">
+                            <a id="x-<?=$value_1->code_video?>" class="click-video" href="javascript:void(0)" style="color:#222d4f!important" data-toggle="tab" data-key="<?=$value_1->code_video?>" data-name="<?=$value_1->nama_video?>" data-url="<?=$value_1->link_video?>" data-embed="<?=$value_1->link_embed?>" data-poster="<?=$value_1->poster_video?>" data-logo="<?=$value_1->logo_video?>">
+                            <?php
+                              if($count_seg1 <= 5){
+                                echo ($data_text1);
+                              }else{
+                                echo ($data_text1)."...";
+                              }
+                            ?>
+                            </a>
+                          </div>
+                          
+                          <?php
+                            $text_link1 = $value_1->link_embed;
+                            $segmen_link1 = explode("/", $text_link1);
+                            $link_embed1 = base_url('embed/'.$segmen_link1[4]);
+
+                            // print_r($segmen_link[4]);
+                          ?>
+
+                          <div style="float:right!important;width:8%;text-align:right;"> 
+                            <a class="copy_text icon fa-share-square-o" data-action="copy" data-url="<?=$link_embed1?>" href="javascript:void(0)" style="color:#f47f1f;" title="share"></a>
+                          </div>
+                        </div>
                         
                       </div>
                     </div>
 
-                    
-                  </div>
+                    <?php $no1++;} ?>
+                  <input type="text" style="position: absolute; left: -1000px; top: -1000px" value="" id="share-url">
 
-                  
-                </div>
-
-                <?php $no++;} ?>
-                <input type="text" style="position: absolute; left: -1000px; top: -1000px" value="" id="share-url">
-                
-                <!-- <div class="column_tb_2">
-                  <a id="x-2" href="javascript:void(0)">
-                    <img class="img_poster" style="float:left!important" src="https://img.youtube.com/vi/nT6XENs5cA8/hqdefault.jpg" alt=""/>
-                    <iframe style="float:left!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-                  </a>
-                </div>
-                <div class="column_tb_2">
-                  <a id="x-3" href="javascript:void(0)">
-                  <img class="img_poster" style="float:right!important" src="https://img.youtube.com/vi/xT-2XUfwX7E/hqdefault.jpg" alt=""/>
-                    <iframe style="float:right!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-                  </a>
-                </div>
-                <div class="column_tb_2">
-                  <a id="x-4" href="javascript:void(0)">
-                  <img class="img_poster" style="float:left!important" src="https://img.youtube.com/vi/DOR2ABmKXvs/hqdefault.jpg" alt=""/>
-                    <iframe style="float:left!important" id="eventsyoutube" class="ifr_center" width="160" height="85" src="https://www.youtube.com/embed/DOR2ABmKXvs?si=tegO4AycW0j55QB_?rel=0&amp;controls=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-                  </a>
-                </div> -->
               </div>
             </div>
+          </section>
+
+          <section id="mitra-video">
+
+            <?php
+              $total_mitra = count($video_mitra);
+
+              if($total_mitra != 0) {
+                $avlb_2 = "";
+              }else {
+                $avlb_2 = "no Available";
+              }
+            ?>
+
+            <div class="container">
+              <div class="text-center" style="padding: 20px 0px 10px 0px;">
+                <h6 class="text-gray-600">Video related to Mitra Corner <?=$avlb_2?></h6>
+              </div>
+            </div>
+
+            <div class="tab-column" style="padding-bottom: 80px!important;">
+              <div class="row">
+            
+              <?php
+                $no2=1;
+                foreach ($video_mitra as $keys2 => $value_2) {
+                  if(fmod($no2,2)==1) { $float1="right"; }
+                  else { $float2="left"; }
+              ?>
+
+              <div class="column_tb_2" role="presentation">
+                <div class="tv-video" style="float:<?=$float2?>!important;" data-codev="<?=$value_2->code_video?>">
+                  <a id="x-<?=$value_2->code_video?>" class="click-video" href="javascript:void(0)" data-toggle="tab" data-key="<?=$value_2->code_video?>" data-name="<?=$value_2->nama_video?>" data-url="<?=$value_2->link_video?>" data-embed="<?=$value_2->link_embed?>" data-poster="<?=$value_2->poster_video?>" data-logo="<?=$value_2->logo_video?>">
+                    <img class="img_poster" src="<?=$value_2->poster_video?>" alt="<?=$value_2->nama_video?>" title="<?=$value_2->nama_video?>"/>
+                  </a>
+
+                  <div class="bottom-desc" title="<?=$value_2->nama_video?>">
+                    <?php
+                      $text_videos2 = $value_2->nama_video;
+                      $segmen_text2 = explode(" ", $text_videos2);
+                      $count_seg2 = count($segmen_text2);
+
+                      $data_text2 = "";
+                      for($k=0; $k <= 4; $k++){
+                        $data_text2 .= $segmen_text2[$k]." ";
+                      }
+                    ?>
+
+                    <div style="float:left!important;width:90%;">
+                      <a id="x-<?=$value_2->code_video?>" class="click-video" href="javascript:void(0)" style="color:#222d4f!important" data-toggle="tab" data-key="<?=$value_2->code_video?>" data-name="<?=$value_2->nama_video?>" data-url="<?=$value_2->link_video?>" data-embed="<?=$value_2->link_embed?>" data-poster="<?=$value_2->poster_video?>" data-logo="<?=$value_2->logo_video?>">
+                      <?php
+                        if($count_seg2 <= 5){
+                          echo ($data_text2);
+                        }else{
+                          echo ($data_text2)."...";
+                        }
+                      ?>
+                      </a>
+                    </div>
+                    
+                    <?php
+                      $text_link2 = $value_2->link_embed;
+                      $segmen_link2 = explode("/", $text_link2);
+                      $link_embed2 = base_url('embed/'.$segmen_link2[4]);
+                    ?>
+
+                    <div style="float:right!important;width:8%;text-align:right;"> 
+                      <a class="copy_text icon fa-share-square-o" data-action="copy" data-url="<?=$link_embed2?>" href="javascript:void(0)" style="color:#f47f1f;" title="share"></a>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+              <?php $no2++;} ?>
+              <input type="text" style="position: absolute; left: -1000px; top: -1000px" value="" id="share-url">
+
+              </div>
+            </div>
+          </section>
+
+          <section id="umkm-video">
+
+            <?php
+              $total_umkm = count($video_umkm);
+
+              if($total_umkm != 0) {
+                $avlb_3 = "";
+              }else {
+                $avlb_3 = "no Available";
+              }
+            ?>
+
+            <div class="container">
+              <div class="text-center" style="padding: 20px 0px 10px 0px;">
+                <h6 class="text-gray-600">Video related to UMKM Corner <?=$avlb_3?></h6>
+              </div>
+            </div>
+
+            <div class="tab-column" style="padding-bottom: 80px!important;">
+              <div class="row">
+            
+              <?php
+                $no2=1;
+                foreach ($video_umkm as $keys3 => $value_3) {
+                  if(fmod($no3,2)==1) { $float3="right"; }
+                  else { $float3="left"; }
+              ?>
+
+              <div class="column_tb_2" role="presentation">
+                <div class="tv-video" style="float:<?=$float3?>!important;" data-codev="<?=$value_3->code_video?>">
+                  <a id="x-<?=$value_3->code_video?>" class="click-video" href="javascript:void(0)" data-toggle="tab" data-key="<?=$value_3->code_video?>" data-name="<?=$value_3->nama_video?>" data-url="<?=$value_3->link_video?>" data-embed="<?=$value_3->link_embed?>" data-poster="<?=$value_3->poster_video?>" data-logo="<?=$value_3->logo_video?>">
+                    <img class="img_poster" src="<?=$value_3->poster_video?>" alt="<?=$value_3->nama_video?>" title="<?=$value_3->nama_video?>"/>
+                  </a>
+
+                  <div class="bottom-desc" title="<?=$value_3->nama_video?>">
+                    <?php
+                      $text_videos3 = $value_3->nama_video;
+                      $segmen_text3 = explode(" ", $text_videos3);
+                      $count_seg3 = count($segmen_text3);
+
+                      $data_text3 = "";
+                      for($l=0; $l <= 4; $l++){
+                        $data_text3 .= $segmen_text3[$l]." ";
+                      }
+                    ?>
+
+                    <div style="float:left!important;width:90%;">
+                      <a id="x-<?=$value_3->code_video?>" class="click-video" href="javascript:void(0)" style="color:#222d4f!important" data-toggle="tab" data-key="<?=$value_3->code_video?>" data-name="<?=$value_3->nama_video?>" data-url="<?=$value_3->link_video?>" data-embed="<?=$value_3->link_embed?>" data-poster="<?=$value_3->poster_video?>" data-logo="<?=$value_3->logo_video?>">
+                      <?php
+                        if($count_seg3 <= 5){
+                          echo ($data_text3);
+                        }else{
+                          echo ($data_text3)."...";
+                        }
+                      ?>
+                      </a>
+                    </div>
+                    
+                    <?php
+                      $text_link3 = $value_3->link_embed;
+                      $segmen_link3 = explode("/", $text_link3);
+                      $link_embed3 = base_url('embed/'.$segmen_link3[4]);
+                    ?>
+
+                    <div style="float:right!important;width:8%;text-align:right;"> 
+                      <a class="copy_text icon fa-share-square-o" data-action="copy" data-url="<?=$link_embed3?>" href="javascript:void(0)" style="color:#f47f1f;" title="share"></a>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+              <?php $no3++;} ?>
+              <input type="text" style="position: absolute; left: -1000px; top: -1000px" value="" id="share-url">
+
+              </div>
+            </div>
+          </section>
 
       <!--<section class="section" data-lightgallery="group">-->
       <!--  <div class="row no-gutters">-->

@@ -90,6 +90,10 @@ $(document).on('click', '[data-action=copy]', function (){
     var player3 = videojs("hls-example-3");
     var player4 = videojs("hls-example-4");
 
+    $("#energy-video").attr("style", "display:none");
+    $("#mitra-video").attr("style", "display:none");
+    $("#umkm-video").attr("style", "display:none");
+
     $('.nav-link').click(function(){
         var myId = $(this).attr('id');
         var keys = $(this).data('key');
@@ -159,6 +163,11 @@ $(document).on('click', '[data-action=copy]', function (){
           $('#tabs-2-' + codeVideos1).removeClass("show");
         });
 
+        $("#latest-video").attr("style", "display:none");
+        $("#energy-video").attr("style", "display:block");
+        $("#mitra-video").attr("style", "display:none");
+        $("#umkm-video").attr("style", "display:none");
+
         $('#tabs-2-5').addClass("active");
         $('#tabs-2-5').addClass("show");
 
@@ -206,6 +215,11 @@ $(document).on('click', '[data-action=copy]', function (){
           $('#tabs-2-' + codeVideos2).removeClass("show");
         });
 
+        $("#latest-video").attr("style", "display:none");
+        $("#energy-video").attr("style", "display:none");
+        $("#mitra-video").attr("style", "display:block");
+        $("#umkm-video").attr("style", "display:none");
+
         $('#tabs-2-6').addClass("active");
         $('#tabs-2-6').addClass("show");
 
@@ -252,6 +266,11 @@ $(document).on('click', '[data-action=copy]', function (){
           $('#tabs-2-' + codeVideos3).removeClass("active");
           $('#tabs-2-' + codeVideos3).removeClass("show");
         });
+
+        $("#latest-video").attr("style", "display:none");
+        $("#energy-video").attr("style", "display:none");
+        $("#mitra-video").attr("style", "display:none");
+        $("#umkm-video").attr("style", "display:block");
 
         $('#tabs-2-7').addClass("active");
         $('#tabs-2-7').addClass("show");

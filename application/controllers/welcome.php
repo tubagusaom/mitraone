@@ -108,13 +108,17 @@
           $data['live_tv'] = $this->welcome_model->live_tv();
           $data['video_tv'] = $this->welcome_model->video_tv();
 
+          $data['video_energy'] = $this->welcome_model->video_energy();
+          $data['video_mitra'] = $this->welcome_model->video_mitra();
+          $data['video_umkm'] = $this->welcome_model->video_umkm();
+
           // $url_host = [];
           // foreach ($data['video_tv'] as $keys => $value_tv) {
           //   $external_url = $value_tv->link_video;
           //   $url_host[$keys] = substr(strrchr($external_url, "."), 1);
           // }
 
-          // var_dump($data['video_tv']); die();
+          // var_dump(count($data['video_energy'])); die();
 
           $this->load->view('templates/bootstraps/header', $data);
           $this->load->view('templates/bootstraps/body', $data);

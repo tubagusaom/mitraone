@@ -270,6 +270,9 @@ class Welcome_model extends MY_Model
     return $query->result();
   }
 
+
+
+
   function live_tv()
   {
     $this->db->from('tv_live');
@@ -293,6 +296,51 @@ class Welcome_model extends MY_Model
     $this->db->limit(10);
     $this->db->where('id >', '3');
 
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  function video_energy()
+  {
+    // var_dump($id_buyer); die();
+
+    $this->db->from('tv_video' . ' a');
+    // $this->db->join(kode_tbl().'product b','a.id_product=b.id');
+    $this->db->join('tv_categories b', 'a.id_categorie=b.id');
+
+
+    $this->db->where('a.id_categorie', 1);
+    $this->db->where('a.id >', '3');
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  function video_mitra()
+  {
+    // var_dump($id_buyer); die();
+
+    $this->db->from('tv_video' . ' a');
+    // $this->db->join(kode_tbl().'product b','a.id_product=b.id');
+    $this->db->join('tv_categories b', 'a.id_categorie=b.id');
+
+
+    $this->db->where('a.id_categorie', 4);
+    $this->db->where('a.id >', '3');
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  function video_umkm()
+  {
+    // var_dump($id_buyer); die();
+
+    $this->db->from('tv_video' . ' a');
+    // $this->db->join(kode_tbl().'product b','a.id_product=b.id');
+    $this->db->join('tv_categories b', 'a.id_categorie=b.id');
+
+
+    $this->db->where('a.id_categorie', 5);
+    $this->db->where('a.id >', '3');
     $query = $this->db->get();
     return $query->result();
   }
