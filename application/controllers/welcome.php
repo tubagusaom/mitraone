@@ -130,6 +130,26 @@
         }
       }
 
+      public function vod() {
+
+        if (!$this->auth->is_logged_in()) {
+
+          $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();
+
+          $data['video_tv'] = $this->welcome_model->video_random();
+
+          // var_dump(count($data['video_energy'])); die();
+
+          $this->load->view('templates/bootstraps/header', $data);
+          $this->load->view('templates/bootstraps/vod', $data);
+          $this->load->view('templates/bootstraps/footer', $data);
+
+          // $this->load->view('templates/bootstraps/test', $data);
+        } else {
+          redirect(base_url() . 'home');
+        }
+      }
+
       function privacy_policy(){
         $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();
 
