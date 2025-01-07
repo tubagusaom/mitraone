@@ -249,7 +249,7 @@
                           $text_link = $value_videos->link_embed;
                           $segmen_link = explode("/", $text_link);
                           
-                          $link_embed = base_url('embed/'.$segmen_link[4]);
+                          $link_embed = base_url('watch/'.$segmen_link[4]);
 
                           // print_r($segmen_link[4]);
                         ?>

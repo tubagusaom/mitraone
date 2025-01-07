@@ -156,14 +156,14 @@
         $this->load->view('templates/bootstraps/privacy_policy', $data);
       }
 
-      function embed_video($id){
+      function watch_video($id){
         $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();
 
         
         $data['id_embed'] = $id;
         // var_dump($data['link_embed']); die();
 
-        $this->load->view('templates/bootstraps/embed_video', $data);
+        $this->load->view('templates/bootstraps/watch_video', $data);
       }
 
       // public function tutorial($id=false) {

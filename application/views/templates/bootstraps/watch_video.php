@@ -39,6 +39,8 @@
             height: 97%;
             padding: 8px;
             border-radius: 15px;
+            /* width: 100%;
+            height: 100%; */
         }
     </style>
 </head>

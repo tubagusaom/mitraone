@@ -52,7 +52,7 @@ $route['restapi/post_update_status_product'] = "api/update_status_product";
 $route['vod'] = "welcome/vod";
 
 $route['privacy-policy'] = "welcome/privacy_policy";
-$route['embed/(:any)'] = "welcome/embed_video/$1";
+$route['watch/(:any)'] = "welcome/watch_video/$1";
 
 $route['restapi/get-video'] = "api/video";
 
