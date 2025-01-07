@@ -116,7 +116,11 @@ $(document).on('click', '[data-action=copy]', function (){
         });
           
         // myId.addClass("active");
-        // myId.addClass("show");
+        // myId.addClass("show");$("#latest-video").attr("style", "display:none");
+        $("#latest-video").attr("style", "display:block");
+        $("#energy-video").attr("style", "display:none");
+        $("#mitra-video").attr("style", "display:none");
+        $("#umkm-video").attr("style", "display:none");
 
         $('.column_tb').each(function() {
           var codex     = $(this).data('code');
