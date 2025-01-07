@@ -23,8 +23,6 @@ $route['gambar/(:any)'] = "welcome/$1";
 
 $route['tamansari-garden'] = "tamansari_garden";
 
-$route['admin'] = "welcome/admin";
-
 $route['daftar-merchant'] = "welcome/daftar_merchant";
 $route['daftar-buyer'] = "welcome/daftar";
 $route['produk-lainnya'] = "welcome/tampil_lainnya";
@@ -48,7 +46,7 @@ $route['restapi/get_stok_product_active'] = "api/stok_produk_aktif";
 $route['restapi/post_update_status_product'] = "api/update_status_product";
 
 
-
+$route['admin'] = "welcome/admin";
 $route['vod'] = "welcome/vod";
 
 $route['privacy-policy'] = "welcome/privacy_policy";

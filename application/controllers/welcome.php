@@ -150,6 +150,15 @@
         }
       }
 
+      function admin() {
+        $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();
+
+        $this->load->view('templates/login/header', $data);
+        $this->load->view('templates/login/body', $data);
+        $this->load->view('templates/login/footer', $data);
+
+      }
+
       function privacy_policy(){
         $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();
 
@@ -222,15 +231,6 @@
         $this->db->where('article_slug', urldecode($slug));
         $this->db->set('article_views', ($count->article_views + 1));
         $this->db->update('articles');
-      }
-
-      function admin() {
-        $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();
-
-        $this->load->view('templates/login/header', $data);
-        $this->load->view('templates/login/body', $data);
-        $this->load->view('templates/login/footer', $data);
-
       }
 
       function tampil_lainnya($id=0,$offset=0){
