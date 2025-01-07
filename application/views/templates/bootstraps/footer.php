@@ -28,6 +28,21 @@
 
 <script>
 
+    $(document).on('click', '[data-action=copy]', function (){
+
+    var dataUrl = $(this).data('url');
+    var copyText = $("#share-url").attr("value", dataUrl);
+
+    /* Select the text field */
+    copyText.select();
+
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+
+    alert("link copied to clipboard");
+    // alert(myoutput);
+    });
+
     $('.click-video').click(function(){
 
         var keys = $(this).data('key');
