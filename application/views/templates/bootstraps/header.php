@@ -138,7 +138,6 @@
                             <a class="rd-nav-link" href="javascript:void(0)">Promo</a>
                         </li> -->
                         <li class="rd-nav-item">
-                            <!-- <a class="rd-nav-link" href="contacts.html">Contacts</a> -->
                             <a class="rd-nav-link" href="javascript:void(0)"><i class="icon fa-play-circle"></i> VOD</a>
                         </li>
                         <li class="rd-nav-item">
