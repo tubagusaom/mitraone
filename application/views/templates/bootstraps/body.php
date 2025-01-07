@@ -6,6 +6,14 @@
         <!-- <div class=""> -->
         <div class="owl-carousel owl-carousel-bio" data-loop="true" data-items="1" data-sm-items="1" data-md-items="2" data-lg-items="2" data-xl-items="3" data-xxl-items="4" data-autoplay="true" data-dots="false" data-nav="true" data-stage-padding="0" data-margin="0" data-nav-text="[&quot;prev&quot;,&quot;next&quot;]">
           
+          <!-- <div class="box-bio">
+            <div class="box-bio-body">
+              <a href="" target="_blank">
+                <img class="slide-tb" src="<?=base_url()?>assets_tv/images/slide/banner1.webp" alt="<?=$vbanner->title?>">
+              </a>
+            </div>
+          </div> -->
+
           <?php
             foreach ($banner as $keyb => $vbanner) {
           ?>
