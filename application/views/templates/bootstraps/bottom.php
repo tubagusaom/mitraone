@@ -13,7 +13,7 @@
                 <!-- <span>&nbsp;-&nbsp;</span>
                 <span>Design by <a href="https://www.terabytee.my.id/" target="_blank">terabytee</a></span> -->
                 <!-- <a href="https://www.terabytee.my.id/">terabytee</a> -->
-                <span style="float: right;">Design by <a href="https://www.terabytee.my.id/" target="_blank">terabytee</a></span>
+                <span style="float: right;">Design by <a href="https://www.terabytee.my.id/" target="_blank">M1TV Developer</a></span>
               </p>
             </div>
 
