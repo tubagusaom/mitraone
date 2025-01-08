@@ -16,22 +16,6 @@ $(document).ready(function() {
 
         // alert(_0xbe0a);
 
-        // Swal.fire({
-        //     type: 'warning',
-        //     title: 'Oops...',
-        //     text: 'Username Wajib Diisi !'
-        // });
-
-        // Swal.fire({
-        //     type: 'success',
-        //     title: 'Login Berhasil!',
-        //     text: 'Anda akan di arahkan dalam 3 Detik',
-        //     timer: 3000,
-        //     showCancelButton: false,
-        //     showConfirmButton: false
-        // });
-
-
         $.ajax({
 
             url: _0xbe0a,
@@ -49,13 +33,7 @@ $(document).ready(function() {
                     type: dataRespon.msgType,
                     title: dataRespon.msgValue,
                     text: dataRespon.msgText
-                    // text: 'Anda akan di arahkan dalam 3 Detik',
-                    // timer: 3000,
-                    // showCancelButton: false,
-                    // showConfirmButton: false
                 })
-
-                // location.reload();
 
                 if (dataRespon.msgType == "success") {
 
@@ -98,7 +76,7 @@ $(document).ready(function() {
           });
 
 
-    }); 
+    });
 
 });
 
@@ -125,5 +103,5 @@ $(document).ready(function() {
 //               'success'
 //             );
 //         });
-        
+
 // });

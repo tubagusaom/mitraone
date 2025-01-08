@@ -1,4 +1,4 @@
-<a href="<?=base_url()?>" class="logo" target="_blank">
+<a href="<?=base_url()?>" class="logo">
     <img src="<?=base_url()?>assets_tv/images/logo_mitraone_tv.png" alt="">
 </a>
 
@@ -40,7 +40,7 @@
                                     </div>
                                 </div>
                             <!-- </form> -->
-                            
+
                             <div class="card-back">
                                 <div class="center-wrap">
                                     <div class="section text-center">
