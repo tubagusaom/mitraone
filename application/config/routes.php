@@ -11,6 +11,8 @@ $host = $_SERVER['HTTP_HOST'];
 //}
 
 $route['default_controller'] = "welcome";
+// $route['default_controller'] = "welcome/dev";
+
 $route['404_override'] = '';
 $route['gambar/(:any)'] = "welcome/$1";
 

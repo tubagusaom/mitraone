@@ -32,6 +32,57 @@
         var_dump(($data)); die();
       }
 
+      public function dev() {
+          if (!$this->auth->is_logged_in()) {
+            $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();
+            $data['class_active'] = 'home';
+
+            // $data['sosmed'] = $this->welcome_model->data_sosmed();
+            // $data['biodata'] = $this->db->get(kode_lsp().'biodata')->row();
+
+            // $this->db->where('id_pekerjaan',1);
+            // $data['resume_1'] = $this->db->get('t_resume')->result();
+
+            // $this->db->where('id_pekerjaan',2);
+            // $data['resume_2'] = $this->db->get('t_resume')->result();
+
+            // $data['kategori'] = $this->db->get('t_cat_portfolio')->result();
+            // $data['portfolio'] = $this->db->get('t_portfolio')->result();
+            // $data['contact'] = $this->db->get('t_contact')->row();
+
+            // $data['pilihan_pendidikan'] = array(
+            // ''=>'-'
+            // ,'1'=>'SD'
+            // ,'2'=>'SMP'
+            // ,'3'=>'SMA/Sederajat'
+            // ,'5'=>'D3'
+            // ,'6'=>'D4'
+            // ,'7'=>'S1'
+            // ,'8'=>'S2'
+            // ,'9'=>'S3'
+            // );
+
+            // $data['umur'] = $this->hitung_umur($data['biodata']->tgl_lahir);
+
+            // $wea = $data['sosmed']->whatsapp;
+            // $cek_wa = substr($wea,0,1);
+
+            // if($cek_wa == 0){
+            //     $data['no_wa'] = "+62".substr($wea,1,15);
+            // }else{
+            //     $data['no_wa'] = "+62".$wea;
+            // }
+
+            // var_dump($data['portfolio']); die();
+
+            $this->load->view('templates/bootstraps/dev/header', $data);
+            $this->load->view('templates/bootstraps/dev/body', $data);
+            $this->load->view('templates/bootstraps/dev/bottom', $data);
+        } else {
+            redirect(base_url() . 'home');
+        }
+      }
+
       public function index()
       {
 
@@ -152,6 +203,9 @@
 
       function admin() {
         $data['aplikasi'] = $this->db->get('r_konfigurasi_aplikasi')->row();
+
+
+        // $this->load->view('templates/login/test', $data);
 
         $this->load->view('templates/login/header', $data);
         $this->load->view('templates/login/body', $data);

@@ -6,9 +6,9 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta http-equiv="cache-control" content="no-cache">
-    <meta http-equiv="expires" content="0">
-    <meta http-equiv="pragma" content="no-cache">
+    <!-- <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0"> -->
+    <!-- <meta http-equiv="pragma" content="no-cache"> -->
 
 	<title>
 		Login - <?= $aplikasi->nama_unit ?>
@@ -26,18 +26,35 @@
 
 	<!-- Mobile Metas -->
 	<!-- <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
-	<meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+	<!-- <meta content="width=device-width, initial-scale=1" name="viewport" /> -->
 
 	<!-- Web Fonts  -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+	<link rel="stylesheet" href="<?=base_url() ?>assets_tv/login/css/login.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
 
-	<!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="<?=base_url() ?>assets_tv/css/style_login_1.css">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="<?=base_url() ?>assets_tv/login/css/style_login_1.css">
+
+    <script src="<?= base_url() ?>assets/js/jquery.min.js"></script>
+
+	<!-- Head Libs -->
+	<script src="<?php echo base_url() ?>assets/vendor/modernizr/modernizr.min.js"></script>
+
+	<!-- Head Libs -->
+	<script src="<?= base_url() ?>assets/vendor/modernizr/modernizr.min.js"></script>
     
-    <script src="<?=base_url() ?>assets_tv/js/script_login_1.js" defer></script>
+
+    <script src="<?= base_url() ?>_assets\theme\js\script-tb.js"></script>
+    <script type="text/javascript">
+		var base_url = "<?php echo base_url() ?>";
+	</script>
+	<!-- <script src="<?php echo base_url() ?>assets/js/public/login.js" type="text/javascript"></script> -->
 
     <style>
         .terabytee { /* my name is terabytee */ }
     </style>
 
 </head>
+
+<body>
