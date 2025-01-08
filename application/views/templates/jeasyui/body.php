@@ -33,7 +33,7 @@
 		</div>
 	</div>
 	<div data-options="region:'south',split:true" style="height:50px;">
-		<div class="x-form-copyright" style="bottom: 10px;"> &copy;2021 <?=$aplikasi->singkatan_unit?>, Developed By <a href="http://aom.my.id" target="_blank">TB</a> Team </div>
+		<div class="x-form-copyright" style="bottom: 10px;"> &copy;2025 <?=$aplikasi->singkatan_unit?>, Developed By <a href="https://terabytee.my.id" target="_blank">terabytee</a> Team </div>
 	</div>
 	<div data-options="region:'west',split:true" title="" style="width:250px;" id="west-layout">
 		<div class="easyui-accordion" id="accordion-menu" data-options="fit:true,border:false">
