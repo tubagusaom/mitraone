@@ -3,13 +3,13 @@
          <form id="myform" enctype="multipart/form-data" action="<?php echo $url ?>">
             <table class="table-data">
                 <tr>
-                    <td style="width: 50px;">Nama Banner : </td>
+                    <td style="width: 50px;">Nama : </td>
                     <td>
                         <input id="title" name="title" style="width: 250px;" class="easyui-textbox" data-options="required: true" value="<?php echo $data->title ?>">
                     </td>
                 </tr>
                   <tr>
-                      <td style="width: 50px;">Link Banner : </td>
+                      <td style="width: 50px;">Link : </td>
                       <td>
                           <input id="link" name="link" style="width: 250px;" class="easyui-textbox" data-options="required: true" value="<?php echo $data->link ?>">
                       </td>
@@ -24,7 +24,7 @@
                   </tr>
 
                 <tr>
-                    <td style="width: 150px;">Image : </td>
+                    <td style="width: 150px;">Gambar : </td>
                     <td>
                         <input id="fileToUpload" class="easyui-filebox" name="fileToUpload" style="width: 250px;"  data-options="buttonText: 'Pilih Banner'"  />
 

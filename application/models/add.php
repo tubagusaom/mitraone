@@ -3,7 +3,7 @@
         <form id="myform" enctype="multipart/form-data" action="<?php echo $url ?>">
             <table class="table-data">
                 <tr>
-                    <td>Nama : </td>
+                    <td>Nama Banner : </td>
                     <td>
                         <input id="title" name="title" style="width: 280px;" class="easyui-textbox" >
 
@@ -11,7 +11,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Link : </td>
+                    <td>Link Banner : </td>
                     <td>
                         <input id="link" name="link" style="width: 280px;" class="easyui-textbox" >
                     </td>
@@ -36,7 +36,7 @@
                 <tr>
                     <td>Gambar : </td>
                     <td>
-                        <input id="fileToUpload" class="easyui-filebox" name="fileToUpload" style="width: 280px;" data-options="buttonText: 'Pilih Banner'" />
+                        <input id="fileToUpload" class="easyui-filebox" name="fileToUpload" style="width: 280px;" data-options="buttonText: 'Pilih gambar'" />
                         <!-- <br> <b style="color:red;font-size:11px;float:right;">Ukuran gambar 305 x 129</b> -->
                     </td>
                 </tr>
