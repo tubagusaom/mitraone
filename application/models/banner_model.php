@@ -35,6 +35,13 @@ Class Banner_model extends MY_Model {
         'save_formatter' => 'string',
         'hidden' => 'true'
     ),
+    'target' => array(
+        'label' => 'target Link',
+        'rule' => 'trim|xss_clean',
+        'formatter' => 'string',
+        'save_formatter' => 'string',
+        'hidden' => 'true'
+    ),
     'no_urut' => array(
         'label' => 'No Urut',
         'rule' => 'trim|xss_clean',
