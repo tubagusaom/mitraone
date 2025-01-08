@@ -3,23 +3,32 @@
          <form id="myform" enctype="multipart/form-data" action="<?php echo $url ?>">
             <table class="table-data">
                 <tr>
-                    <td style="width: 50px;">Text Atas : </td>
+                    <td style="width: 50px;">Nama Banner : </td>
                     <td>
-                        <input id="nama_slide1" name="nama_slide1" style="width: 250px;" class="easyui-textbox" data-options="required: true" value="<?php echo $data->nama_slide1 ?>">
+                        <input id="title" name="title" style="width: 250px;" class="easyui-textbox" data-options="required: true" value="<?php echo $data->title ?>">
                     </td>
                 </tr>
                   <tr>
-                      <td style="width: 50px;">Text Bawah : </td>
+                      <td style="width: 50px;">Link Banner : </td>
                       <td>
-                          <input id="nama_slide2" name="nama_slide2" style="width: 250px;" class="easyui-textbox" data-options="required: true" value="<?php echo $data->nama_slide2 ?>">
+                          <input id="link" name="link" style="width: 250px;" class="easyui-textbox" data-options="required: true" value="<?php echo $data->link ?>">
                       </td>
                   </tr>
+
+
+                  <tr>
+                      <td style="width: 50px;">Urutan : </td>
+                      <td>
+                          <input type="number" id="no_urut" name="no_urut" style="width: 250px;" class="easyui-textbox" data-options="required: true" value="<?php echo $data->no_urut ?>">
+                      </td>
+                  </tr>
+
                 <tr>
                     <td style="width: 150px;">Image : </td>
                     <td>
-                        <input id="fileToUpload" class="easyui-filebox" name="fileToUpload" style="width: 250px;" value="<?php echo $data->foto_slide ?>" data-options="buttonText: 'Pilih Slide'"  />
+                        <input id="fileToUpload" class="easyui-filebox" name="fileToUpload" style="width: 250px;"  data-options="buttonText: 'Pilih Banner'"  />
 
-                        <input type="hidden" name="foto_hidden" id="foto_hidden" value="<?php echo $data->foto_slide ?>" />
+                        <input type="hidden" name="foto_hidden" id="foto_hidden" value="<?php echo $data->image_slide ?>" />
                 </tr>
             </table>
         </form>

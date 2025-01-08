@@ -3,12 +3,20 @@
         <form id="myform" enctype="multipart/form-data" action="<?php echo $url ?>">
             <table class="table-data">
                 <tr>
-                    <td>Tag Iklan : </td>
+                    <td>Nama Banner : </td>
                     <td>
-                        <input id="nama_iklan" name="nama_iklan" style="width: 280px;" class="easyui-textbox" >
+                        <input id="title" name="title" style="width: 280px;" class="easyui-textbox" >
+
+                        <input type="hidden" id="target" name="target" value="_blank">
                     </td>
                 </tr>
-                  <tr>
+                <tr>
+                    <td>Link Banner : </td>
+                    <td>
+                        <input id="link" name="link" style="width: 280px;" class="easyui-textbox" >
+                    </td>
+                </tr>
+                  <!-- <tr>
                       <td>Status Iklan : </td>
                       <td>
                           <select class="form_dropdown" name="status_iklan" style="width: 280px;">
@@ -16,12 +24,12 @@
                             <option value="0">Tidak Aktif</option>
                           </select>
                       </td>
-                  </tr>
+                  </tr> -->
 
                   <tr>
                       <td>Urutan : </td>
                       <td>
-                          <input id="urutan_iklan" type="number" name="urutan_iklan" style="width: 280px;" class="easyui-numberbox" >
+                          <input id="no_urut" type="number" name="no_urut" style="width: 280px;" class="easyui-numberbox" >
                       </td>
                   </tr>
 
@@ -29,7 +37,7 @@
                     <td>image : </td>
                     <td>
                         <input id="fileToUpload" class="easyui-filebox" name="fileToUpload" style="width: 280px;" data-options="buttonText: 'Pilih gambar'" />
-                        <br> <b style="color:red;font-size:11px;float:right;">Ukuran gambar 305 x 129</b>
+                        <!-- <br> <b style="color:red;font-size:11px;float:right;">Ukuran gambar 305 x 129</b> -->
                     </td>
                 </tr>
             </table>

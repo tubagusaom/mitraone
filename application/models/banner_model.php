@@ -6,38 +6,45 @@ if (!defined('BASEPATH'))
 Class Banner_model extends MY_Model {
 
   public function __construct() {
-      $this->_table = kode_tbl()."iklan";
+      $this->_table = "tv_banner";
       parent::__construct($this->_table);
   }
 
   protected $_table;
   protected $table_label = 'Data Banner';
   protected $_columns = array(
-    'nama_iklan' => array(
-        'label' => 'Nama Iklan',
+    'title' => array(
+        'label' => 'Nama Baner',
         'rule' => 'trim|xss_clean',
         'formatter' => 'string',
         'save_formatter' => 'string',
-        'width' => 150
+        'width' => 50
     ),
-    'status_iklan' => array(
-        'label' => 'Status Iklan',
+    // 'status_iklan' => array(
+    //     'label' => 'Status Iklan',
+    //     'rule' => 'trim|xss_clean',
+    //     'formatter' => array('Tidak Aktiv','Aktiv'),
+    //     'save_formatter' => 'string',
+    //     'width' => 60,
+    //     'align' =>'center',
+    // ),
+    'link' => array(
+        'label' => 'Link Banner',
         'rule' => 'trim|xss_clean',
-        'formatter' => array('Tidak Aktiv','Aktiv'),
+        'formatter' => 'string',
         'save_formatter' => 'string',
-        'width' => 60,
-        'align' =>'center',
+        'hidden' => 'true'
     ),
-    'urutan_iklan' => array(
+    'no_urut' => array(
         'label' => 'No Urut',
         'rule' => 'trim|xss_clean',
         'formatter' => 'string',
         'save_formatter' => 'string',
-        'width' => 60,
+        'width' => 30,
         'align' =>'center',
     ),
-    'foto_iklan' => array(
-        'label' => 'Foto Iklan',
+    'image_slide' => array(
+        'label' => 'Gambar Banner',
         'rule' => 'trim|xss_clean',
         'formatter' => 'url2images',
         'save_formatter' => 'string',
@@ -51,7 +58,7 @@ Class Banner_model extends MY_Model {
 
     function url2images($url) {
         if(!is_null($url) && !empty($url)) {
-          return "<img width=100% height=100% src='" . base_url() . "assets/img/iklan/" . $url . "' class='img-thumbnail' />";
+          return "<img width=100% height=100% src='$url' class='img-thumbnail' />";
         }else {
             return "";
         }

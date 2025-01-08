@@ -70,8 +70,8 @@ class Banner extends MY_Controller {
             if ($data !== false) {
                 if ($this->banner_model->check_unique($data)) {
                     if (isset($_FILES['fileToUpload']['tmp_name']) && !empty($_FILES['fileToUpload']['tmp_name'])) {
-                        $data['foto_banner'] = str_replace(' ', '_', $_FILES['fileToUpload']['name']);
-                        $config['upload_path'] = substr(__dir__, 0, strpos(__dir__, "application")) . 'assets_tv/lide/';
+                        $data['image_slide'] = base_url() . "assets_tv/images/slide/" . str_replace(' ', '_', $_FILES['fileToUpload']['name']);
+                        $config['upload_path'] = substr(__dir__, 0, strpos(__dir__, "application")) . 'assets_tv/images/slide/';
                         $config['allowed_types'] = 'bmp|jpg|png|gif|jpeg';
                         $config['max_size'] = '512000000';
 
@@ -82,7 +82,7 @@ class Banner extends MY_Controller {
                             exit();
                         }
                     } else {
-          						$data['foto_banner'] = "";
+          						$data['image_slide'] = "";
           					}
 
                     if ($this->banner_model->insert($data) !== false) {
@@ -143,8 +143,8 @@ class Banner extends MY_Controller {
                 if ($this->banner_model->check_unique($data, intval($id))) {
                     if (isset($_FILES['fileToUpload']['tmp_name']) && !empty($_FILES['fileToUpload']['tmp_name'])) {
                         $banner = $this->banner_model->get(intval($id));
-                        $data['foto_banner'] = rand().str_replace(' ', '_', $_FILES['fileToUpload']['name']);
-                        $config['upload_path'] = substr(__dir__, 0, strpos(__dir__, "application")) . 'assets_tv/slide/';
+                        $data['image_slide'] = rand().str_replace(' ', '_', $_FILES['fileToUpload']['name']);
+                        $config['upload_path'] = substr(__dir__, 0, strpos(__dir__, "application")) . 'assets_tv/images/slide/';
                         $config['allowed_types'] = 'bmp|jpg|png|gif|jpeg';
                         $config['file_name'] = $data['foto_banner'];
                         $config['max_size'] = '51200000';
@@ -152,7 +152,7 @@ class Banner extends MY_Controller {
                         $this->load->library('upload', $config);
 
                         if ($this->upload->do_upload('fileToUpload')) {
-                            $current_file = substr(__dir__, 0, strpos(__dir__, "application")) . 'assets_tv/slide/' . $banner->foto_banner;
+                            $current_file = substr(__dir__, 0, strpos(__dir__, "application")) . 'assets_tv/images/slide/' . $banner->foto_banner;
                             if (is_file($current_file)) {
                                 unlink($current_file);
                             }
@@ -161,7 +161,7 @@ class Banner extends MY_Controller {
                             exit();
                         }
                     }else{
-                        $data['foto_banner'] = $this->input->post('foto_hidden');
+                        $data['image_slide'] = $this->input->post('foto_hidden');
                     }
 
                     if ($this->banner_model->update(intval($id), $data) !== false) {
@@ -189,7 +189,7 @@ class Banner extends MY_Controller {
 						$hapusgambar = $this->banner_model->get(intval($id));
             if (sizeof($roles) == 1) {
                 if ($this->banner_model->delete(intval($id))) {
-										$current_file = substr(__dir__, 0, strpos(__dir__, "application")) . 'assets_tv/slide/' . $hapusgambar->foto_banner;
+										$current_file = substr(__dir__, 0, strpos(__dir__, "application")) . 'assets_tv/images/slide/' . $hapusgambar->foto_banner;
 										if (is_file($current_file)) {
 												unlink($current_file);
 										}
