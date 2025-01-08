@@ -39,7 +39,7 @@ class User_Model extends MY_Model
 		'jenis_user' => array(
 		  'label'	=>	'User Category',
 			'rule'	=>	'trim|xss_clean',
-			'formatter'	=>	array(''=>'',0=>'-', 1=>'Pemegang Sertifikat', 2=>'Seller', 3=>'Buyer', 4=>'Administrator', 99=>'SuperUser'),
+			'formatter'	=>	array(''=>'',0=>'-', 1=>'Pemegang Sertifikat', 2=>'Member', 3=>'xxx', 4=>'Administrator', 5=>'Admin Finance', 99=>'SuperUser'),
 			'save_formatter' => 'string',
 			'width' => 90
 		),

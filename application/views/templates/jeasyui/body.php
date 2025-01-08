@@ -7,7 +7,7 @@
 					<tr>
 						<td>
 							<a href="">
-								<img src="<?=base_url()?>assets/img/logo_transparent.png" style="width:43px;margin:0px; padding: 0px; margin-top: 10px;margin-left: 15px; float: left;border:0px;"/>
+								<img src="<?=base_url()?>assets_tv/images/logo_mitraone_tv.png" style="width:50px;margin:0px; padding: 0px; margin-top: 0px;margin-left: 15px; float: left;border:0px;"/>
 							</a>
 						</td>
 					</tr>

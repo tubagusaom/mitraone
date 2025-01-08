@@ -9,12 +9,12 @@ class Users extends MY_Controller {
         parent::__construct();
 
         $this->load->model('User_Model');
-        // $this->load->model('contact_model');
+        // $this->load->model('contact_model'); 
     }
 
     function index() {
         $this->load->library('grid');
-        $grid = $this->grid->set_properties(array('model' => 'User_Model', 'controller' => 'users', 'rownumber', 'options' => array('id' => 'users', 'pagination')))->load_model()->set_grid();
+        $grid = $this->grid->set_properties(array('model' => 'User_Model', 'controller' => 'users', 'options' => array('id' => 'users', 'pagination', 'rownumber')))->load_model()->set_grid();
 
         $view = $this->load->view('users/index', array('grid' => $grid), true);
 
@@ -371,7 +371,7 @@ class Users extends MY_Controller {
                 $this->session->unset_userdata($sess);
                 $this->session->sess_destroy();
             }
-            redirect(base_url());
+            redirect(base_url('admin'));
         } else {
             block_access_method();
         }

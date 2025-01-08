@@ -15,9 +15,9 @@
     <meta name="author" content="tera_byte">
     <meta name="keywords" content="<?=$aplikasi->singkatan_unit?>, Home Depo belanja puas">
 	<meta charset="utf-8">
-	<title><?php echo $this->config->item('title') ?></title>
-  <link href='<?=base_url()?>assets/img/logo.jpg' rel='icon' type='image/x-icon'/>
-	<link rel="apple-touch-icon" href="<?=base_url()?>assets/img/homedepo_icon.jpg">
+	<title><?php echo $this->config->item('title') ?> - Home</title>
+  	<link href='<?=base_url()?>assets_tv/images/logo_mitraone_tv.png' rel='icon' type='image/x-icon'/>
+	<link rel="apple-touch-icon" href="<?=base_url()?>assets_tv/images/logo_mitraone_tv.png">
 	<script type="text/javascript">
 		var base_url = "<?php echo base_url() ?>";
 	</script>

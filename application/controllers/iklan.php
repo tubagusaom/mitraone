@@ -17,7 +17,7 @@ class Iklan extends MY_Controller {
 			} else {
 					block_access_method();
 			}
-		}
+	}
 
 	function datagrid() {
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
