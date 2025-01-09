@@ -204,9 +204,7 @@
             <div class="tab-column" style="padding-bottom: 80px!important;">
                 <div class="row">
 
-                <style>
-                  
-                </style>
+                <style> </style>
                 
                 <?php
                   $no=1;

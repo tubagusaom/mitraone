@@ -326,6 +326,17 @@ $(document).on('click', '[data-action=copy]', function (){
 
       $('#tabs-2-' + keys).addClass("active");
       $('#tabs-2-' + keys).addClass("show");
+      
+      $('.column_tb').each(function() {
+          var codeAnc     = $(this).data('code');
+          var myAnchorArr  = '#myAnchor-'+codeAnc;
+
+          $(myAnchorArr).removeClass("active");
+          $(myAnchorArr).removeClass("show");
+
+          // alert(myAnchor);
+          
+        });
 
       $('.tv-video').each(function() {
         var codes = $(this).data('codev');

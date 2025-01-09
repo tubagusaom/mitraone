@@ -30,20 +30,19 @@
 	<!-- <meta content="width=device-width, initial-scale=1" name="viewport" /> -->
 
 	<!-- Web Fonts  -->
-		<link rel="stylesheet" href="<?=base_url() ?>assets_tv/login/css/login.min.css">
+	<link rel="stylesheet" href="<?=base_url()?>assets_tv/login/css/login.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
 
     <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="<?=base_url() ?>assets_tv/login/css/style_login_1.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets_tv/login/css/style_login_1.css">
 
 	<!-- Head Libs -->
-	<script src="<?= base_url() ?>assets/js/jquery.min.js"></script>
-	<script src="<?php echo base_url() ?>assets/vendor/modernizr/modernizr.min.js"></script>
+	<script src="<?=base_url()?>assets/js/jquery.min.js"></script>
+	<script src="<?=base_url()?>assets/vendor/modernizr/modernizr.min.js"></script>
 
-
-  <script src="<?= base_url() ?>_assets\theme\js\script-tb.js"></script>
-  <script type="text/javascript">
-		var base_url = "<?php echo base_url() ?>";
+	<script src="<?=base_url()?>_assets\theme\js\script-tb.js"></script>
+	<script type="text/javascript">
+		var base_url = "<?=base_url()?>";
 	</script>
 
     <style>

@@ -164,8 +164,7 @@ class Users extends MY_Controller {
             $this->load->model('Auth_Config');
             $auth_config = $this->Auth_Config->get(1);
 
-            // var_dump($auth_config);
-            // die();
+            // var_dump($auth_config); die();
 
             if ($this->auth->get_login_attempts() >= $auth_config->max_attempts) {
 
@@ -193,8 +192,7 @@ class Users extends MY_Controller {
                 )
             );
 
-            // var_dump($users);
-            // die();
+            // var_dump($users); die();
 
             // if (count($users) == 1) {
             if (!empty($users)) {

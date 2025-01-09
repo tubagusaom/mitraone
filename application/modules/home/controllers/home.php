@@ -14,11 +14,12 @@ class Home extends MY_Controller {
         // var_dump($this->auth->is_logged_in());die();
         // var_dump($jenis_user);die();
 
-        if ($jenis_user == 2 || $jenis_user == 10) {
+        if ($jenis_user == 4 || $jenis_user == 99) {
             $template_header = 'templates/jeasyui/header';
             $template_body = 'templates/jeasyui/body';
             $template_bottom = 'templates/jeasyui/footer';
             $query_pesan = "";
+            $menus = "";
         } else if ($jenis_user == 1) {
 
             $template_header = 'templates/responsive/header';
@@ -26,14 +27,20 @@ class Home extends MY_Controller {
             $template_bottom = 'templates/responsive/footer_home';
 
             $query_pesan = "";
+            $menus = "";
 
         } else {
-            $template_header = 'templates/jeasyui/header';
-            $template_body = 'templates/jeasyui/body';
-            $template_bottom = 'templates/jeasyui/footer';
-            $query_pesan = "";
+          // block_access_method();
+          
+          $template_header = 'templates/jeasyui/header';
+          $template_body = 'templates/jeasyui/body';
+          $template_bottom = 'templates/jeasyui/footer';
+          $query_pesan = "";
+          $menus = "";
         }
+
         //var_dump($data_aktivitas); die();
+
         $this->load->view(
           $template_header, array(
             'aplikasi' => $this->aplikasi,
@@ -61,6 +68,9 @@ class Home extends MY_Controller {
           )
         );
     }
+
+
+
 
     function about() {
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {

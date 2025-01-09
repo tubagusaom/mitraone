@@ -514,12 +514,13 @@
 	}
 	.video-js .vjs-control-bar {
 		/* margin-bottom: -50px; */
+		margin-bottom: 14px;
 	}
 }
 
 @media (max-width: 385px) {
 	.video-js .vjs-tech {
-		margin-top: 60px;
+		/* margin-top: 60px; */
 	}
 }
 
