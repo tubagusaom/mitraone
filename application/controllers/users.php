@@ -227,12 +227,14 @@ class Users extends MY_Controller {
                         'jenis_user' => $users->jenis_user
                     );
 
-                    /* session_start();
-                    $_SESSION['username'] = $users->nama_user;
-                    $_SESSION['role_id'] = $roles->role_id;
-                    $_SESSION['users_id'] = $users->id;
-                    $_SESSION['pegawai_id'] = $users->pegawai_id; */
+                    // session_start();
+                    // $_SESSION['username'] = $users->nama_user;
+                    // $_SESSION['role_id'] = $roles->role_id;
+                    // $_SESSION['users_id'] = $users->id;
+                    // $_SESSION['pegawai_id'] = $users->pegawai_id;
+                    // // $_SESSION['jenis_user'] = $users->jenis_user;
 
+                    // var_dump($sess); die();
 
                     //edit by NN
                     $this->load->library('nativesession');

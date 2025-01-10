@@ -11,7 +11,8 @@ class Home extends MY_Controller {
 
     function index() {
         $jenis_user = $this->auth->get_user_data()->jenis_user;
-        // var_dump($this->auth->is_logged_in());die();
+        // var_dump($this->session->all_userdata());die();
+        
         // var_dump($jenis_user);die();
 
         if ($jenis_user == 4 || $jenis_user == 99) {
@@ -30,13 +31,13 @@ class Home extends MY_Controller {
             $menus = "";
 
         } else {
-          // block_access_method();
+          block_access_method();
           
-          $template_header = 'templates/jeasyui/header';
-          $template_body = 'templates/jeasyui/body';
-          $template_bottom = 'templates/jeasyui/footer';
-          $query_pesan = "";
-          $menus = "";
+          // $template_header = 'templates/jeasyui/header';
+          // $template_body = 'templates/jeasyui/body';
+          // $template_bottom = 'templates/jeasyui/footer';
+          // $query_pesan = "";
+          // $menus = "";
         }
 
         //var_dump($data_aktivitas); die();

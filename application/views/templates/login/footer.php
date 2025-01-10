@@ -1,7 +1,6 @@
 
 
-
-
+        
         <script src="<?php echo base_url() ?>assets/js/limonte-sweetalert2/sweetalert2.all.min.js"></script>
         <script src="<?php echo base_url() ?>assets/js/public/login.js" type="text/javascript"></script>
 

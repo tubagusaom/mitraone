@@ -25,8 +25,8 @@
 	<link rel="icon" href="<?= base_url() ?>assets_tv/images/logo_mitraone_tv.png" type="image/x-icon">
 
 	<!-- Mobile Metas -->
-	<!-- <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- <meta content="width=device-width, initial-scale=1" name="viewport" /> -->
 	<!-- <meta content="width=device-width, initial-scale=1" name="viewport" /> -->
 
 	<!-- Web Fonts  -->
@@ -40,10 +40,12 @@
 	<script src="<?=base_url()?>assets/js/jquery.min.js"></script>
 	<script src="<?=base_url()?>assets/vendor/modernizr/modernizr.min.js"></script>
 
-	<script src="<?=base_url()?>_assets\theme\js\script-tb.js"></script>
+	
+	
 	<script type="text/javascript">
 		var base_url = "<?=base_url()?>";
 	</script>
+	<script src="<?=base_url()?>_assets/theme/js/script-tb.js"></script>
 
     <style>
         .terabytee { /* my name is terabytee */ }
